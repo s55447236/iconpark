@@ -1,0 +1,398 @@
+[
+    {
+        "name": "edit",
+        "path": "/icons/General/edit-01.svg"
+    },
+    {
+        "name": "edit-02",
+        "path": "/icons/General/edit-02.svg"
+    },
+    {
+        "name": "edit-03",
+        "path": "/icons/General/edit-03.svg"
+    },
+    {
+        "name": "edit-04",
+        "path": "/icons/General/edit-04.svg"
+    },
+    {
+        "name": "edit-contained",
+        "path": "/icons/General/edit-contained.svg"
+    },
+    {
+        "name": "email",
+        "path": "/icons/General/email.svg"
+    },
+    {
+        "name": "embed",
+        "path": "/icons/General/embed.svg"
+    },
+    {
+        "name": "equals",
+        "path": "/icons/General/equals.svg"
+    },
+    {
+        "name": "equals-not",
+        "path": "/icons/General/equals-not.svg"
+    },
+    {
+        "name": "expand",
+        "path": "/icons/General/expand.svg"
+    },
+    {
+        "name": "expand-02",
+        "path": "/icons/General/expand-02.svg"
+    },
+    {
+        "name": "eye-open",
+        "path": "/icons/General/eye-open.svg"
+    },
+    {
+        "name": "eye-closed",
+        "path": "/icons/General/eye-closed.svg"
+    },
+    {
+        "name": "favourite",
+        "path": "/icons/General/favourite.svg"
+    },
+    {
+        "name": "file",
+        "path": "/icons/General/file.svg"
+    },
+    {
+        "name": "filter",
+        "path": "/icons/General/filter.svg"
+    },
+    {
+        "name": "gear",
+        "path": "/icons/General/gear.svg"
+    },
+    {
+        "name": "globe",
+        "path": "/icons/General/globe.svg"
+    },
+    {
+        "name": "hash-01",
+        "path": "/icons/General/hash-01.svg"
+    },
+    {
+        "name": "hash-02",
+        "path": "/icons/General/hash-02.svg"
+    },
+    {
+        "name": "heart",
+        "path": "/icons/General/heart.svg"
+    },
+    {
+        "name": "help",
+        "path": "/icons/General/help.svg"
+    },
+    {
+        "name": "help-circle-contained",
+        "path": "/icons/General/help-circle-contained.svg"
+    },
+    {
+        "name": "help-square-contained",
+        "path": "/icons/General/help-square-contained.svg"
+    },
+    {
+        "name": "home-01",
+        "path": "/icons/General/home-01.svg"
+    },
+    {
+        "name": "home-02",
+        "path": "/icons/General/home-02.svg"
+    },
+    {
+        "name": "home-03",
+        "path": "/icons/General/home-03.svg"
+    },
+    {
+        "name": "home-04",
+        "path": "/icons/General/home-04.svg"
+    },
+    {
+        "name": "home-05",
+        "path": "/icons/General/home-05.svg"
+    },
+    {
+        "name": "image",
+        "path": "/icons/General/image.svg"
+    },
+    {
+        "name": "info-square-01-contained",
+        "path": "/icons/General/info-square-01-contained.svg"
+    },
+    {
+        "name": "info-square-02-contained-filled",
+        "path": "/icons/General/info-square-02-contained-filled.svg"
+    },
+    {
+        "name": "information-circle-contained",
+        "path": "/icons/General/information-circle-contained.svg"
+    },
+    {
+        "name": "lightning-circle-contained",
+        "path": "/icons/General/lightning-circle-contained.svg"
+    },
+    {
+        "name": "lightning-filled",
+        "path": "/icons/General/lightning-filled.svg"
+    },
+    {
+        "name": "lightning-square-contained",
+        "path": "/icons/General/lightning-square-contained.svg"
+    },
+    {
+        "name": "link",
+        "path": "/icons/General/link.svg"
+    },
+    {
+        "name": "link-angled",
+        "path": "/icons/General/link-angled.svg"
+    },
+    {
+        "name": "link-broken",
+        "path": "/icons/General/link-broken.svg"
+    },
+    {
+        "name": "link-external",
+        "path": "/icons/General/link-external.svg"
+    },
+    {
+        "name": "loader-01",
+        "path": "/icons/General/loader-01.svg"
+    },
+    {
+        "name": "loader-02",
+        "path": "/icons/General/loader-02.svg"
+    },
+    {
+        "name": "logout-01",
+        "path": "/icons/General/logout-01.svg"
+    },
+    {
+        "name": "logout-02",
+        "path": "/icons/General/logout-02.svg"
+    },
+    {
+        "name": "logout-03",
+        "path": "/icons/General/logout-03.svg"
+    },
+    {
+        "name": "logout-04",
+        "path": "/icons/General/logout-04.svg"
+    },
+    {
+        "name": "menu-01",
+        "path": "/icons/General/menu-01.svg"
+    },
+    {
+        "name": "menu-02",
+        "path": "/icons/General/menu-02.svg"
+    },
+    {
+        "name": "menu-03",
+        "path": "/icons/General/menu-03.svg"
+    },
+    {
+        "name": "menu-04",
+        "path": "/icons/General/menu-04.svg"
+    },
+    {
+        "name": "menu-05",
+        "path": "/icons/General/menu-05.svg"
+    },
+    {
+        "name": "minus-circle-contained",
+        "path": "/icons/General/minus-circle-contained.svg"
+    },
+    {
+        "name": "minus-square-contained",
+        "path": "/icons/General/minus-square-contained.svg"
+    },
+    {
+        "name": "paperclip",
+        "path": "/icons/General/paperclip.svg"
+    },
+    {
+        "name": "percent-01",
+        "path": "/icons/General/percent-01.svg"
+    },
+    {
+        "name": "percent-02",
+        "path": "/icons/General/percent-02.svg"
+    },
+    {
+        "name": "percent-03",
+        "path": "/icons/General/percent-03.svg"
+    },
+    {
+        "name": "plus-01",
+        "path": "/icons/General/plus-01.svg"
+    },
+    {
+        "name": "plus-02",
+        "path": "/icons/General/plus-02.svg"
+    },
+    {
+        "name": "plus-03",
+        "path": "/icons/General/plus-03.svg"
+    },
+    {
+        "name": "progress",
+        "path": "/icons/General/progress.svg"
+    },
+    {
+        "name": "quote",
+        "path": "/icons/General/quote.svg"
+    },
+    {
+        "name": "save-01",
+        "path": "/icons/General/save-01.svg"
+    },
+    {
+        "name": "save-02",
+        "path": "/icons/General/save-02.svg"
+    },
+    {
+        "name": "search-01",
+        "path": "/icons/General/search-01.svg"
+    },
+    {
+        "name": "search-02",
+        "path": "/icons/General/search-02.svg"
+    },
+    {
+        "name": "settings",
+        "path": "/icons/General/settings.svg"
+    },
+    {
+        "name": "share",
+        "path": "/icons/General/share.svg"
+    },
+    {
+        "name": "share-1",
+        "path": "/icons/General/share-1.svg"
+    },
+    {
+        "name": "slash-01-backward",
+        "path": "/icons/General/slash-01-backward.svg"
+    },
+    {
+        "name": "slash-01-forward",
+        "path": "/icons/General/slash-01-forward.svg"
+    },
+    {
+        "name": "slash-02-forward",
+        "path": "/icons/General/slash-02-forward.svg"
+    },
+    {
+        "name": "slash-02-forward-1",
+        "path": "/icons/General/slash-02-forward-1.svg"
+    },
+    {
+        "name": "sort-horizontal",
+        "path": "/icons/General/sort-horizontal.svg"
+    },
+    {
+        "name": "sort-vertical-01",
+        "path": "/icons/General/sort-vertical-01.svg"
+    },
+    {
+        "name": "sort-vertical-02",
+        "path": "/icons/General/sort-vertical-02.svg"
+    },
+    {
+        "name": "target-01",
+        "path": "/icons/General/target-01.svg"
+    },
+    {
+        "name": "target-02",
+        "path": "/icons/General/target-02.svg"
+    },
+    {
+        "name": "target-03",
+        "path": "/icons/General/target-03.svg"
+    },
+    {
+        "name": "target-04",
+        "path": "/icons/General/target-04.svg"
+    },
+    {
+        "name": "thumb-down",
+        "path": "/icons/General/thumb-down.svg"
+    },
+    {
+        "name": "thumb-up",
+        "path": "/icons/General/thumb-up.svg"
+    },
+    {
+        "name": "toggle-right",
+        "path": "/icons/General/toggle-right.svg"
+    },
+    {
+        "name": "toogle-left",
+        "path": "/icons/General/toogle-left.svg"
+    },
+    {
+        "name": "trash-01",
+        "path": "/icons/General/trash-01.svg"
+    },
+    {
+        "name": "trash-02",
+        "path": "/icons/General/trash-02.svg"
+    },
+    {
+        "name": "trash-03",
+        "path": "/icons/General/trash-03.svg"
+    },
+    {
+        "name": "trash-04",
+        "path": "/icons/General/trash-04.svg"
+    },
+    {
+        "name": "upload-01",
+        "path": "/icons/General/upload-01.svg"
+    },
+    {
+        "name": "upload-02",
+        "path": "/icons/General/upload-02.svg"
+    },
+    {
+        "name": "upload-03",
+        "path": "/icons/General/upload-03.svg"
+    },
+    {
+        "name": "upload-04",
+        "path": "/icons/General/upload-04.svg"
+    },
+    {
+        "name": "variant",
+        "path": "/icons/General/variant.svg"
+    },
+    {
+        "name": "wrench",
+        "path": "/icons/General/wrench.svg"
+    },
+    {
+        "name": "x-01",
+        "path": "/icons/General/x-01.svg"
+    },
+    {
+        "name": "x-02",
+        "path": "/icons/General/x-02.svg"
+    },
+    {
+        "name": "x-03",
+        "path": "/icons/General/x-03.svg"
+    },
+    {
+        "name": "x-circle-contained",
+        "path": "/icons/General/x-circle-contained.svg"
+    },
+    {
+        "name": "x-square-contained",
+        "path": "/icons/General/x-square-contained.svg"
+    }
+] 

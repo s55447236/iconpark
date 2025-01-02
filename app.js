@@ -46,6 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const categories = [
         { id: 'all', name: 'All' },
         { id: 'arrow', name: 'Arrow', path: 'icons/Arrow' },
+        { id: 'general', name: 'General', path: 'icons/General' },
+        { id: 'shapes', name: 'Shapes', path: 'icons/Shapes' },
         { id: 'files', name: 'Files', path: 'icons/Files' }
     ];
 
