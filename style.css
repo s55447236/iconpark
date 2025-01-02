@@ -187,10 +187,11 @@ h1 {
     padding: 1rem;
     background: white;
     border-radius: 8px;
-    transition: all 0.3s ease;
+    transition: transform 0.2s ease;
     cursor: pointer;
     position: relative;
     width: 100px;
+    user-select: none;
 }
 
 .icon-item:hover {

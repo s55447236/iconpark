@@ -1,87 +1,67 @@
 [
     {
-        "name": "arrow-curve-left-down",
-        "path": "/icons/Arrow/arrow-curve-left-down.svg"
+        "name": "arrow-up",
+        "path": "/icons/Arrow/arrow-up.svg"
     },
     {
-        "name": "arrow-curve-left-right",
-        "path": "/icons/Arrow/arrow-curve-left-right.svg"
+        "name": "arrow-right",
+        "path": "/icons/Arrow/arrow-right.svg"
     },
     {
-        "name": "arrow-curve-left-up",
-        "path": "/icons/Arrow/arrow-curve-left-up.svg"
+        "name": "arrow-down",
+        "path": "/icons/Arrow/down-arrow.svg"
     },
     {
-        "name": "arrow-curve-right-up",
-        "path": "/icons/Arrow/arrow-curve-right-up.svg"
+        "name": "arrow-left",
+        "path": "/icons/Arrow/arrow-left.svg"
     },
     {
-        "name": "arrow-curve-up-left",
-        "path": "/icons/Arrow/arrow-curve-up-left.svg"
+        "name": "arrow-up-sm",
+        "path": "/icons/Arrow/arrow-up-sm.svg"
     },
     {
-        "name": "arrow-down-contained-01",
-        "path": "/icons/Arrow/arrow-down-contained-01.svg"
+        "name": "arrow-right-sm",
+        "path": "/icons/Arrow/arrow-right-sm.svg"
     },
     {
-        "name": "arrow-down-contained-02",
-        "path": "/icons/Arrow/arrow-down-contained-02.svg"
+        "name": "arrow-down-sm",
+        "path": "/icons/Arrow/down-arrow-sm.svg"
+    },
+    {
+        "name": "arrow-left-sm",
+        "path": "/icons/Arrow/arrow-left-sm.svg"
+    },
+    {
+        "name": "arrow-up-left",
+        "path": "/icons/Arrow/arrow-up-left.svg"
+    },
+    {
+        "name": "arrow-up-right",
+        "path": "/icons/Arrow/arrow-up-right.svg"
     },
     {
         "name": "arrow-down-left",
         "path": "/icons/Arrow/arrow-down-left.svg"
     },
     {
-        "name": "arrow-down-left-contained",
-        "path": "/icons/Arrow/arrow-down-left-contained.svg"
+        "name": "arrow-down-right",
+        "path": "/icons/Arrow/arrow-down-right.svg"
     },
     {
-        "name": "arrow-down-left-square-contained",
-        "path": "/icons/Arrow/arrow-down-left-square-contained.svg"
+        "name": "arrow-up-left-sm",
+        "path": "/icons/Arrow/arrow-up-left-sm.svg"
     },
     {
-        "name": "arrow-down-right-contained",
-        "path": "/icons/Arrow/arrow-down-right-contained.svg"
+        "name": "arrow-up-right-sm",
+        "path": "/icons/Arrow/arrow-up-right-sm.svg"
     },
     {
-        "name": "arrow-down-right-square-contained",
-        "path": "/icons/Arrow/arrow-down-right-square-contained.svg"
+        "name": "arrow-down-left-sm",
+        "path": "/icons/Arrow/arrow-down-left-sm.svg"
     },
     {
-        "name": "arrow-down-square-contained",
-        "path": "/icons/Arrow/arrow-down-square-contained.svg"
-    },
-    {
-        "name": "arrow-expand-01",
-        "path": "/icons/Arrow/arrow-expand-01.svg"
-    },
-    {
-        "name": "arrow-expand-02",
-        "path": "/icons/Arrow/arrow-expand-02.svg"
-    },
-    {
-        "name": "arrow-left-contained-01",
-        "path": "/icons/Arrow/arrow-left-contained-01.svg"
-    },
-    {
-        "name": "arrow-left-contained-02",
-        "path": "/icons/Arrow/arrow-left-contained-02.svg"
-    },
-    {
-        "name": "arrow-left-square-contained",
-        "path": "/icons/Arrow/arrow-left-square-contained.svg"
-    },
-    {
-        "name": "arrow-right-contained-01",
-        "path": "/icons/Arrow/arrow-right-contained-01.svg"
-    },
-    {
-        "name": "arrow-right-contained-02",
-        "path": "/icons/Arrow/arrow-right-contained-02.svg"
-    },
-    {
-        "name": "arrow-right-square-contained",
-        "path": "/icons/Arrow/arrow-right-square-contained.svg"
+        "name": "arrow-down-right-sm",
+        "path": "/icons/Arrow/arrow-down-right-sm.svg"
     },
     {
         "name": "arrow-up-contained-01",
@@ -92,23 +72,199 @@
         "path": "/icons/Arrow/arrow-up-contained-02.svg"
     },
     {
-        "name": "arrow-up-left-contained",
-        "path": "/icons/Arrow/arrow-up-left-contained.svg"
+        "name": "arrow-right-contained-01",
+        "path": "/icons/Arrow/arrow-right-contained-01.svg"
     },
     {
-        "name": "arrow-up-left-square-contained",
-        "path": "/icons/Arrow/arrow-up-left-square-contained.svg"
+        "name": "arrow-right-contained-02",
+        "path": "/icons/Arrow/arrow-right-contained-02.svg"
+    },
+    {
+        "name": "arrow-down-contained-01",
+        "path": "/icons/Arrow/arrow-down-contained-01.svg"
+    },
+    {
+        "name": "arrow-down-contained-02",
+        "path": "/icons/Arrow/arrow-down-contained-02.svg"
+    },
+    {
+        "name": "arrow-left-contained-01",
+        "path": "/icons/Arrow/arrow-left-contained-01.svg"
+    },
+    {
+        "name": "arrow-left-contained-02",
+        "path": "/icons/Arrow/arrow-left-contained-02.svg"
+    },
+    {
+        "name": "arrow-up-left-contained",
+        "path": "/icons/Arrow/arrow-up-left-contained.svg"
     },
     {
         "name": "arrow-up-right-contained",
         "path": "/icons/Arrow/arrow-up-right-contained.svg"
     },
     {
-        "name": "arrow-up-right-square-contained",
-        "path": "/icons/Arrow/arrow-up-right-square-contained.svg"
+        "name": "arrow-down-left-contained",
+        "path": "/icons/Arrow/arrow-down-left-contained.svg"
+    },
+    {
+        "name": "arrow-down-right-contained",
+        "path": "/icons/Arrow/arrow-down-right-contained.svg"
     },
     {
         "name": "arrow-up-square-contained",
         "path": "/icons/Arrow/arrow-up-square-contained.svg"
+    },
+    {
+        "name": "arrow-right-square-contained",
+        "path": "/icons/Arrow/arrow-right-square-contained.svg"
+    },
+    {
+        "name": "arrow-down-square-contained",
+        "path": "/icons/Arrow/arrow-down-square-contained.svg"
+    },
+    {
+        "name": "arrow-left-square-contained",
+        "path": "/icons/Arrow/arrow-left-square-contained.svg"
+    },
+    {
+        "name": "arrow-up-left-square-contained",
+        "path": "/icons/Arrow/arrow-up-left-square-contained.svg"
+    },
+    {
+        "name": "arrow-up-right-square-contained",
+        "path": "/icons/Arrow/arrow-up-right-square-contained.svg"
+    },
+    {
+        "name": "arrow-down-left-square-contained",
+        "path": "/icons/Arrow/arrow-down-left-square-contained.svg"
+    },
+    {
+        "name": "arrow-down-right-square-contained",
+        "path": "/icons/Arrow/arrow-down-right-square-contained.svg"
+    },
+    {
+        "name": "arrow-curve-up-left",
+        "path": "/icons/Arrow/arrow-curve-up-left.svg"
+    },
+    {
+        "name": "arrow-curve-up-right",
+        "path": "/icons/Arrow/arrow-curve-up-right.svg"
+    },
+    {
+        "name": "arrow-curve-left-up",
+        "path": "/icons/Arrow/arrow-curve-left-up.svg"
+    },
+    {
+        "name": "arrow-curve-right-up",
+        "path": "/icons/Arrow/arrow-curve-right-up.svg"
+    },
+    {
+        "name": "arrow-curve-left-down",
+        "path": "/icons/Arrow/arrow-curve-left-down.svg"
+    },
+    {
+        "name": "arrow-curve-left-right",
+        "path": "/icons/Arrow/arrow-curve-left-right.svg"
+    },
+    {
+        "name": "arrow-refresh-01",
+        "path": "/icons/Arrow/arrow-refresh-01.svg"
+    },
+    {
+        "name": "arrow-refresh-02",
+        "path": "/icons/Arrow/arrow-refresh-02.svg"
+    },
+    {
+        "name": "arrow-refresh-03",
+        "path": "/icons/Arrow/arrow-refresh-03.svg"
+    },
+    {
+        "name": "arrow-refresh-04",
+        "path": "/icons/Arrow/arrow-refresh-04.svg"
+    },
+    {
+        "name": "arrow-refresh-05",
+        "path": "/icons/Arrow/arrow-refresh-05.svg"
+    },
+    {
+        "name": "arrow-refresh-06",
+        "path": "/icons/Arrow/arrow-refresh-06.svg"
+    },
+    {
+        "name": "arrow-rotate-left-01",
+        "path": "/icons/Arrow/arrow-rotate-left-01.svg"
+    },
+    {
+        "name": "arrow-rotate-left-02",
+        "path": "/icons/Arrow/arrow-rotate-left-02.svg"
+    },
+    {
+        "name": "arrow-rotate-right-01",
+        "path": "/icons/Arrow/arrow-rotate-right-01.svg"
+    },
+    {
+        "name": "arrow-rotate-right-02",
+        "path": "/icons/Arrow/arrow-rotate-right-02.svg"
+    },
+    {
+        "name": "arrow-expand-01",
+        "path": "/icons/Arrow/arrow-expand-01.svg"
+    },
+    {
+        "name": "arrow-expand-02",
+        "path": "/icons/Arrow/arrow-expand-02.svg"
+    },
+    {
+        "name": "arrow-expand-03",
+        "path": "/icons/Arrow/arrow-expand-03.svg"
+    },
+    {
+        "name": "arrow-expand-04",
+        "path": "/icons/Arrow/arrow-expand-04.svg"
+    },
+    {
+        "name": "chevron-up",
+        "path": "/icons/Arrow/chevron-up.svg"
+    },
+    {
+        "name": "chevron-right",
+        "path": "/icons/Arrow/chevron-right.svg"
+    },
+    {
+        "name": "chevron-down",
+        "path": "/icons/Arrow/chevron-down.svg"
+    },
+    {
+        "name": "chevron-left",
+        "path": "/icons/Arrow/chevron-left.svg"
+    },
+    {
+        "name": "chevron-double-up",
+        "path": "/icons/Arrow/chevron-double-up.svg"
+    },
+    {
+        "name": "chevron-double-right",
+        "path": "/icons/Arrow/chevron-double-right.svg"
+    },
+    {
+        "name": "chevron-double-down",
+        "path": "/icons/Arrow/chevron-double-down.svg"
+    },
+    {
+        "name": "chevron-double-left",
+        "path": "/icons/Arrow/chevron-double-left.svg"
+    },
+    {
+        "name": "flip-left",
+        "path": "/icons/Arrow/flip-left.svg"
+    },
+    {
+        "name": "flip-right",
+        "path": "/icons/Arrow/flip-right.svg"
+    },
+    {
+        "name": "arrow-switch-horizontal",
+        "path": "/icons/Arrow/arrow-switch-horizontal.svg"
     }
 ] 

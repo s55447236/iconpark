@@ -308,7 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 categoryGrid.appendChild(iconItem);
             });
-
+            
             categorySection.appendChild(categoryGrid);
             iconGrid.appendChild(categorySection);
         });
