@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="navbar-left">
             <div class="brand">
                 <h1>iiiiicon</h1>
-                <span class="version">v1.0.0</span>
+                <button class="version-btn">v1.0.0</button>
             </div>
         </div>
         <div class="navbar-right">
@@ -36,6 +36,65 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
     `;
     document.body.insertBefore(navbar, document.body.firstChild);
+
+    // 创建版本历史弹窗
+    const versionModal = document.createElement('div');
+    versionModal.className = 'version-modal';
+    versionModal.innerHTML = `
+        <div class="version-modal-content">
+            <div class="version-modal-header">
+                <h2>版本历史</h2>
+                <button class="version-modal-close">&times;</button>
+            </div>
+            <div class="version-modal-body">
+                <div class="version-item">
+                    <h3>v2.5.0 (2024-01-02)</h3>
+                    <ul>
+                        <li class="tag tag-add">ADD</li>
+                        <li>新增 122 个图标：copyleft、reply-all、collage、ink-bottle、dashboard-2、dashboard-3、usb、draft、delete-column、delete-row、flow-chart、h-1 到 h-6、insert-column-left、insert-column-right、insert-row-bottom、insert-row-top、merge-cells-horizontal、merge-cells-vertical、mind-map、node-tree、organization-chart、question-mark</li>
+                        <li class="tag tag-update">UPDATE</li>
+                        <li>根据最新的 logo 样式，重新设计了 discord 和 gitlab 图标</li>
+                        <li class="tag tag-fix">FIX</li>
+                        <li>修改了 iconfont 的基线，现在图标应该与文字垂直对齐</li>
+                    </ul>
+                </div>
+                <div class="version-item">
+                    <h3>v1.0.0 (2024-01-01)</h3>
+                    <ul>
+                        <li class="tag tag-add">ADD</li>
+                        <li>初始版本发布</li>
+                        <li>支持箭头图标组</li>
+                        <li>支持通用图标组</li>
+                        <li>支持形状图标组</li>
+                        <li>支持文件图标组</li>
+                        <li>支持图标搜索功能</li>
+                        <li>支持图标收藏功能</li>
+                        <li>支持 SVG 和 PNG 格式下载</li>
+                        <li>支持图标颜色和尺寸调整</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(versionModal);
+
+    // 版本号点击事件
+    const versionBtn = navbar.querySelector('.version-btn');
+    const versionModalClose = versionModal.querySelector('.version-modal-close');
+
+    versionBtn.addEventListener('click', () => {
+        versionModal.classList.add('active');
+    });
+
+    versionModalClose.addEventListener('click', () => {
+        versionModal.classList.remove('active');
+    });
+
+    versionModal.addEventListener('click', (e) => {
+        if (e.target === versionModal) {
+            versionModal.classList.remove('active');
+        }
+    });
 
     // 收藏功能
     let favorites = JSON.parse(localStorage.getItem('favorites') || '[]');

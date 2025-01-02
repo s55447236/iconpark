@@ -604,4 +604,186 @@ h1 {
 /* 导航栏收藏按钮样式更新 */
 .nav-btn.favorites svg {
     color: #10B981;
+}
+
+.version-btn {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 2px 8px;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.version-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: #333;
+}
+
+.version-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.version-modal.active {
+    display: flex;
+}
+
+.version-modal-content {
+    background: white;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.version-modal-header {
+    padding: 16px 24px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.version-modal-header h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.version-modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #999;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.version-modal-close:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: #333;
+}
+
+.version-modal-body {
+    padding: 24px;
+    overflow-y: auto;
+    max-height: calc(80vh - 65px);
+}
+
+.version-item {
+    margin-bottom: 32px;
+}
+
+.version-item:last-child {
+    margin-bottom: 0;
+}
+
+.version-item h3 {
+    margin: 0 0 16px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.version-item h3:after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
+
+.version-item ul {
+    margin: 0;
+    padding-left: 20px;
+    list-style: none;
+}
+
+.version-item li {
+    margin-bottom: 8px;
+    color: #666;
+    line-height: 1.5;
+    position: relative;
+}
+
+.version-item li:first-child {
+    color: #1a73e8;
+    font-weight: 500;
+    margin-top: 16px;
+    margin-bottom: 4px;
+}
+
+.version-item li:not(:first-child) {
+    padding-left: 12px;
+}
+
+.version-item li:not(:first-child):before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #666;
+}
+
+.version-item li.tag {
+    color: #fff;
+    font-weight: 500;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 12px;
+}
+
+.version-item li.tag-add {
+    background-color: #4CAF50;
+}
+
+.version-item li.tag-update {
+    background-color: #2196F3;
+}
+
+.version-item li.tag-fix {
+    background-color: #FF9800;
+}
+
+.version-item li:not(.tag) {
+    padding-left: 12px;
+}
+
+.version-item li:not(.tag):before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #666;
 } 
