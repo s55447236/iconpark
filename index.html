@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simply Delightful Icon System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="header-content">
+                <h1>Simply Delightful Icon System</h1>
+                <p class="subtitle">Open-source neutral-style system symbols elaborately crafted for designers and developers.</p>
+                <p class="license">All of the icons are free for both personal and commercial use.</p>
+                
+                <div class="features">
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path d="M4 4h16v16H4z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <span>Pixel Perfect</span>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <span>Vector</span>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path d="M4 4l16 16M4 20L20 4" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <span>Consistency</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="search-section">
+            <div class="search-container">
+                <button class="category-btn">All</button>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search 3058 Icons">
+                    <button type="button" id="searchButton">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M20 20l-4-4" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <main>
+            <div id="iconGrid" class="icon-grid"></div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> 
