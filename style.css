@@ -269,6 +269,7 @@ h1 {
 /* 分类区域样式 */
 .category-section {
     width: 100%;
+    margin-bottom: 2rem;
 }
 
 /* 分类标题样式 */
@@ -276,10 +277,11 @@ h1 {
     font-size: 1.25rem;
     font-weight: 500;
     color: #1a1a1a;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    padding: 0 1rem;
 }
 
 .category-count {
@@ -290,9 +292,13 @@ h1 {
 
 /* 图标网格布局 */
 .icon-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* 图标项样式 */
@@ -301,17 +307,21 @@ h1 {
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    background: white;
+    background: #f8f9fa;
     border-radius: 8px;
-    transition: transform 0.2s ease;
+    transition: all 0.2s ease;
     cursor: pointer;
     position: relative;
-    width: 100px;
+    min-width: 100px;
+    height: 100px;
     user-select: none;
+    border: 1px solid #e5e7eb;
 }
 
 .icon-item:hover {
     transform: translateY(-2px);
+    background: white;
+    border-color: #d1d5db;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
