@@ -72,7 +72,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     // 优化搜索框样式
     searchContainer.innerHTML = `
         <div class="category-select">
-            <button class="category-btn">All</button>
+            <button class="category-btn">
+                <span>All</span>
+                <svg viewBox="0 0 24 24" width="16" height="16">
+                    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
             <div class="category-dropdown">
                 ${categories.map(category => `
                     <div class="category-option ${category.id === 'all' ? 'selected' : ''}" data-id="${category.id}">
@@ -456,15 +461,18 @@ document.addEventListener('DOMContentLoaded', async () => {
                             throw new Error('Invalid SVG content');
                         }
 
-                        const isFavorite = favorites.includes(icon.name);
                         iconItem.innerHTML = `
                             <div class="icon-preview">
                                 ${svgContent}
                             </div>
                             <div class="icon-name">${icon.name}</div>
-                            <button class="favorite-btn ${isFavorite ? 'active' : ''}" title="${isFavorite ? '已收藏' : '加入收藏'}">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11.4951 2.71381C11.7017 2.29527 12.2985 2.29527 12.5051 2.71381L15.1791 8.13194C15.2611 8.29814 15.4196 8.41334 15.6031 8.43999L21.5823 9.30883C22.0442 9.37595 22.2286 9.94357 21.8944 10.2694L17.5678 14.4868C17.4351 14.6162 17.3745 14.8026 17.4058 14.9852L18.4272 20.9403C18.5061 21.4004 18.0233 21.7512 17.6101 21.534L12.2621 18.7224C12.0981 18.6361 11.9021 18.6361 11.738 18.7224L6.39002 21.534C5.97689 21.7512 5.49404 21.4004 5.57294 20.9403L6.59432 14.9852C6.62565 14.8026 6.56509 14.6162 6.43236 14.4868L2.10573 10.2694C1.7715 9.94357 1.95594 9.37595 2.41783 9.30883L8.39708 8.43999C8.5805 8.41334 8.73906 8.29814 8.82109 8.13194L11.4951 2.71381Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                            <button class="favorite-btn ${favorites.includes(icon.name) ? 'active' : ''}" 
+                                    title="${favorites.includes(icon.name) ? '已收藏' : '加入收藏'}">
+                                <svg viewBox="0 0 24 24" width="16" height="16">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" 
+                                          stroke="currentColor" 
+                                          fill="${favorites.includes(icon.name) ? 'currentColor' : 'none'}" 
+                                          stroke-width="1.5"/>
                                 </svg>
                             </button>
                         `;
