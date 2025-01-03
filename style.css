@@ -1,9 +1,23 @@
+/**
+ * IconPark 样式表
+ * 
+ * 主要功能模块:
+ * 1. 基础布局和导航栏
+ * 2. 搜索和分类选择
+ * 3. 图标网格布局
+ * 4. 图标项样式
+ * 5. 下载模态框
+ * 6. 版本历史模态框
+ */
+
+/* 基础重置 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* 基础布局 */
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.6;
@@ -160,7 +174,7 @@ h1 {
 
 .category-btn {
     width: 100%;
-    height: 56px;
+    height: 46px;
     padding: 0 0.75rem;
     background: #f8f9fa;
     border: 1px solid #e5e7eb;
@@ -262,43 +276,39 @@ h1 {
 #iconGrid {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-    padding: 1rem 0;
+    gap: 2rem;
 }
 
 /* 分类区域样式 */
 .category-section {
-    width: 100%;
-    margin-bottom: 2rem;
+    background: transparent;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 /* 分类标题样式 */
 .category-title {
-    font-size: 1.25rem;
-    font-weight: 500;
-    color: #1a1a1a;
-    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #111;
+    padding: 1rem 0.8rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0 1rem;
 }
 
 .category-count {
-    font-size: 0.875rem;
-    color: #666;
+    font-size: 13px;
+    color: #6b7280;
     font-weight: normal;
 }
 
-/* 图标网格布局 */
+/* 图标网格 */
 .icon-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1.2rem;
+    align-items: stretch; /* 子项高度自动填充 */
 }
 
 /* 图标项样式 */
@@ -306,29 +316,25 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
-    background: #f8f9fa;
-    border-radius: 8px;
-    transition: all 0.2s ease;
+    justify-content: flex-start; /* 垂直顶部对齐 */
+    padding: 2rem 1rem;
+    background: white;
+    border-radius: 12px;
+    transition: all 0.2s;
     cursor: pointer;
     position: relative;
-    min-width: 100px;
-    height: 100px;
-    user-select: none;
-    border: 1px solid #e5e7eb;
+    height: auto; /* 高度随内容变化 */
 }
 
 .icon-item:hover {
     transform: translateY(-2px);
-    background: white;
-    border-color: #d1d5db;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .icon-preview {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 0.75rem;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -337,21 +343,16 @@ h1 {
 .icon-preview svg {
     width: 24px;
     height: 24px;
-    color: #1a1a1a;
-}
-
-.icon-preview svg path {
-    stroke: currentColor;
-    fill: none;
-    stroke-width: 1.5;
+    color: #111;
 }
 
 .icon-name {
-    font-size: 0.75rem;
-    color: #666;
+    font-size: 12px;
+    color: #4b5563;
     text-align: center;
+    line-height: 1.4;
+    width: 100%;
     word-break: break-word;
-    line-height: 1.2;
 }
 
 .favorite-btn {
