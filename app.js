@@ -39,14 +39,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     const versionHistory = `
         <div class="version-item">
             <h3>v2.5.1 (2024-01-03)</h3>
-            <ul>
+            <ul class="update-list">
                 <li class="tag tag-update">UPDATE</li>
                 <li>优化搜索框和分类选择按钮的交互体验</li>
                 <li>改进 hover 和 focus 状态的视觉效果</li>
                 <li>统一控件高度，提升界面一致性</li>
+            </ul>
+            <ul class="add-list">
                 <li class="tag tag-add">ADD</li>
                 <li>新增收藏操作的 Toast 提示</li>
                 <li>优化图标收藏状态的显示效果</li>
+            </ul>
+            <ul class="fix-list">
                 <li class="tag tag-fix">FIX</li>
                 <li>修复分类选择按钮的箭头图标显示问题</li>
                 <li>修复部分图标描边样式不一致的问题</li>
@@ -54,18 +58,22 @@ document.addEventListener('DOMContentLoaded', async () => {
         </div>
         <div class="version-item">
             <h3>v2.5.0 (2024-01-02)</h3>
-            <ul>
+            <ul class="add-list">
                 <li class="tag tag-add">ADD</li>
                 <li>新增 122 个图标：copyleft、reply-all、collage、ink-bottle、dashboard-2、dashboard-3、usb、draft、delete-column、delete-row、flow-chart、h-1 到 h-6、insert-column-left、insert-column-right、insert-row-bottom、insert-row-top、merge-cells-horizontal、merge-cells-vertical、mind-map、node-tree、organization-chart、question-mark</li>
+            </ul>
+            <ul class="update-list">
                 <li class="tag tag-update">UPDATE</li>
                 <li>根据最新的 logo 样式，重新设计了 discord 和 gitlab 图标</li>
+            </ul>
+            <ul class="fix-list">
                 <li class="tag tag-fix">FIX</li>
                 <li>修改了 iconfont 的基线，现在图标应该与文字垂直对齐</li>
             </ul>
         </div>
         <div class="version-item">
             <h3>v1.0.0 (2024-01-01)</h3>
-            <ul>
+            <ul class="add-list">
                 <li class="tag tag-add">ADD</li>
                 <li>初始版本发布</li>
                 <li>支持箭头图标组</li>
@@ -103,6 +111,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
+                    <span>收藏</span>
                     <span class="favorites-count">0</span>
                 </button>
                 <button class="nav-btn download">

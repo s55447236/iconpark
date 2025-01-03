@@ -674,24 +674,32 @@ h1 {
 }
 
 .nav-btn.favorites {
-    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background: none;
+    border: none;
+    color: #1a1a1a;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.nav-btn.favorites:hover {
+    background: rgba(0, 0, 0, 0.05);
 }
 
 .favorites-count {
-    position: absolute;
-    top: -2px;
-    right: -2px;
-    min-width: 18px;
-    height: 18px;
-    padding: 0 6px;
-    border-radius: 9px;
-    background: #1a73e8;
-    color: white;
+    background: rgba(26, 115, 232, 0.1);
+    color: #1a73e8;
+    padding: 2px 6px;
+    border-radius: 10px;
     font-size: 12px;
     font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-width: 20px;
+    text-align: center;
 }
 
 /* 图标项样式更新 */
@@ -853,6 +861,11 @@ h1 {
     margin: 0;
     padding-left: 20px;
     list-style: none;
+    margin-bottom: 20px;
+}
+
+.version-item ul:last-child {
+    margin-bottom: 0;
 }
 
 .version-item li {
@@ -862,51 +875,32 @@ h1 {
     position: relative;
 }
 
-.version-item li:first-child {
-    color: #1a73e8;
-    font-weight: 500;
-    margin-top: 16px;
-    margin-bottom: 4px;
-}
-
-.version-item li:not(:first-child) {
-    padding-left: 12px;
-}
-
-.version-item li:not(:first-child):before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 10px;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: #666;
-}
-
 .version-item li.tag {
     color: #fff;
     font-weight: 500;
-    margin-top: 16px;
-    margin-bottom: 8px;
-    padding: 4px 12px;
-    border-radius: 4px;
+    margin-bottom: 12px;
+    padding: 2px 8px;
+    border-radius: 3px;
     display: inline-flex;
     align-items: center;
-    font-size: 12px;
-    letter-spacing: 0.5px;
+    font-size: 11px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
 }
 
 .version-item li.tag-update {
-    background-color: #1a73e8;
+    background-color: rgba(26, 115, 232, 0.1);
+    color: #1a73e8;
 }
 
 .version-item li.tag-add {
-    background-color: #34a853;
+    background-color: rgba(52, 168, 83, 0.1);
+    color: #34a853;
 }
 
 .version-item li.tag-fix {
-    background-color: #ea4335;
+    background-color: rgba(234, 67, 53, 0.1);
+    color: #ea4335;
 }
 
 .version-item li:not(.tag) {
@@ -918,15 +912,8 @@ h1 {
     position: relative;
 }
 
-.version-item li:not(.tag):before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 10px;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: #999;
+.version-item li:not(.tag):last-child {
+    margin-bottom: 0;
 }
 
 .update-indicator {
