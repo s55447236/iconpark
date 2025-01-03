@@ -224,6 +224,9 @@ h1 {
     color: #333;
     transition: all 0.2s ease;
     font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .category-option:hover {
@@ -899,4 +902,12 @@ h1 {
     height: 4px;
     border-radius: 50%;
     background: #666;
+}
+
+.update-indicator {
+    width: 6px;
+    height: 6px;
+    background-color: #10B981;
+    border-radius: 50%;
+    display: inline-block;
 } 

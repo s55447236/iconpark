@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         { id: 'profiles', name: 'Profiles & Users', path: 'icons/Profiles & Users' },
         { id: 'security', name: 'Security', path: 'icons/Security' },
         { id: 'shapes', name: 'Shapes', path: 'icons/Shapes' },
-        { id: 'time', name: 'Time', path: 'icons/Time' },
-        { id: 'travel', name: 'Travel & Location', path: 'icons/Travel & Location' },
-        { id: 'weather', name: 'Weather', path: 'icons/Weather' }
+        { id: 'time', name: 'Time', path: 'icons/Time', hasUpdate: true },
+        { id: 'travel', name: 'Travel & Location', path: 'icons/Travel & Location', hasUpdate: true },
+        { id: 'weather', name: 'Weather', path: 'icons/Weather', hasUpdate: true }
     ];
 
     // 获取版本号
@@ -82,6 +82,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 ${categories.map(category => `
                     <div class="category-option ${category.id === 'all' ? 'selected' : ''}" data-id="${category.id}">
                         ${category.name}
+                        ${category.hasUpdate ? '<span class="update-indicator"></span>' : ''}
                     </div>
                 `).join('')}
             </div>
