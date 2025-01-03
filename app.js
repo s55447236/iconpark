@@ -74,8 +74,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         <div class="category-select">
             <button class="category-btn">
                 <span>All</span>
-                <svg viewBox="0 0 24 24" width="16" height="16">
-                    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 10L12.0008 14.58L17 10" stroke="#0A090B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </button>
             <div class="category-dropdown">
@@ -89,8 +89,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         <div class="search-box">
             <input type="text" id="searchInput" placeholder="搜索图标..." />
             <button id="searchButton">
-                <svg viewBox="0 0 24 24" width="20" height="20">
-                    <path d="M16.9269 17.0401L20.4 20.4001M19.28 11.4401C19.28 15.77 15.7699 19.2801 11.44 19.2801C7.11009 19.2801 3.60001 15.77 3.60001 11.4401C3.60001 7.11019 7.11009 3.6001 11.44 3.6001C15.7699 3.6001 19.28 7.11019 19.28 11.4401Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.927 17.0401L20.4001 20.4001M19.2801 11.4401C19.2801 15.77 15.77 19.2801 11.4401 19.2801C7.11019 19.2801 3.6001 15.77 3.6001 11.4401C3.6001 7.11019 7.11019 3.6001 11.4401 3.6001C15.77 3.6001 19.2801 7.11019 19.2801 11.4401Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 </svg>
             </button>
         </div>
