@@ -11,19 +11,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     // 分类数据
     const categories = [
         { id: 'all', name: 'All' },
-        { id: 'alert', name: 'Alert', path: 'icons/Alert' },
         { id: 'arrow', name: 'Arrow', path: 'icons/Arrow' },
         { id: 'charts', name: 'Charts', path: 'icons/Charts' },
         { id: 'communication', name: 'Communication', path: 'icons/Communication' },
         { id: 'cursor', name: 'Cursor', path: 'icons/Cursor' },
         { id: 'development', name: 'Development', path: 'icons/Development' },
         { id: 'editor', name: 'Editor', path: 'icons/Editor' },
-        { id: 'education', name: 'Education', path: 'icons/Education' },
         { id: 'files', name: 'Files', path: 'icons/Files' },
         { id: 'finance', name: 'Finance', path: 'icons/Finance' },
         { id: 'general', name: 'General', path: 'icons/General' },
-        { id: 'layout', name: 'Layout', path: 'icons/Layout' },
         { id: 'media', name: 'Media', path: 'icons/Media' },
+        { id: 'messages', name: 'Messages', path: 'icons/Messages' },
         { id: 'profiles', name: 'Profiles & Users', path: 'icons/Profiles & Users' },
         { id: 'security', name: 'Security', path: 'icons/Security' },
         { id: 'shapes', name: 'Shapes', path: 'icons/Shapes' },
@@ -335,48 +333,31 @@ document.addEventListener('DOMContentLoaded', async () => {
     // 加载图标
     async function loadIcons(category = 'all') {
         let iconsByCategory = {};
-        if (category === 'all') {
-            // 加载所有分类的图标
-            for (const cat of categories) {
-                if (cat.id !== 'all' && cat.path) {
-                    try {
-                        const response = await fetch(`${cat.path}/icons.json`);
-                        if (!response.ok) {
-                            console.error(`Failed to load icons for ${cat.name}: ${response.statusText}`);
-                            continue;
-                        }
-                        const data = await response.json();
-                        // 处理两种可能的数据格式
-                        const icons = Array.isArray(data) ? data : (data.icons || []);
-                        if (icons.length > 0) {
-                            iconsByCategory[cat.name] = icons;
-                        }
-                    } catch (error) {
-                        console.error(`Error loading icons for ${cat.name}:`, error);
-                    }
-                }
-            }
-        } else {
-            // 加载特定分类的图标
-            const selectedCategory = categories.find(c => c.id === category);
-            if (selectedCategory && selectedCategory.path) {
+        
+        // 加载所有分类的图标
+        const categoriesToLoad = category === 'all' 
+            ? categories.filter(cat => cat.id !== 'all')
+            : [categories.find(c => c.id === category)].filter(Boolean);
+
+        for (const cat of categoriesToLoad) {
+            if (cat.path) {
                 try {
-                    const response = await fetch(`${selectedCategory.path}/icons.json`);
+                    const response = await fetch(`${cat.path}/icons.json`);
                     if (!response.ok) {
-                        console.error(`Failed to load icons for ${selectedCategory.name}: ${response.statusText}`);
-                        return iconsByCategory;
+                        console.error(`Failed to load icons for ${cat.name}: ${response.statusText}`);
+                        continue;
                     }
                     const data = await response.json();
-                    // 处理两种可能的数据格式
                     const icons = Array.isArray(data) ? data : (data.icons || []);
                     if (icons.length > 0) {
-                        iconsByCategory[selectedCategory.name] = icons;
+                        iconsByCategory[cat.name] = icons;
                     }
                 } catch (error) {
-                    console.error(`Error loading icons for ${selectedCategory.name}:`, error);
+                    console.error(`Error loading icons for ${cat.name}:`, error);
                 }
             }
         }
+        
         return iconsByCategory;
     }
 
