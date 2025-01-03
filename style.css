@@ -316,14 +316,14 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* 垂直顶部对齐 */
+    justify-content: flex-start;
     padding: 2rem 1rem;
     background: white;
     border-radius: 12px;
     transition: all 0.2s;
     cursor: pointer;
     position: relative;
-    height: auto; /* 高度随内容变化 */
+    height: auto;
 }
 
 .icon-item:hover {
@@ -338,6 +338,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: color 0.2s ease;
 }
 
 .icon-preview svg {
@@ -355,38 +356,40 @@ h1 {
     word-break: break-word;
 }
 
+/* 收藏按钮样式 */
 .favorite-btn {
     position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
+    top: 0.2rem;
+    right: 0.2rem;
     width: 24px;
     height: 24px;
     border: none;
     border-radius: 6px;
-    background: none;
-    color: #666;
+    background: #f5f5f5;
+    color: #1a73e8;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
     opacity: 0;
-    transform: scale(0.8);
 }
 
 .icon-item:hover .favorite-btn {
     opacity: 1;
-    transform: scale(1);
 }
 
 .favorite-btn:hover {
-    transform: scale(1.1) !important;
+    background-color: #e8f0fe;
 }
 
 .favorite-btn.active {
-    opacity: 1;
-    transform: scale(1);
-    color: #10B981;
+    color: #1a73e8;
+}
+
+.favorite-btn svg {
+    width: 16px;
+    height: 16px;
 }
 
 /* Modal styles */
@@ -686,31 +689,6 @@ h1 {
     opacity: 1;
 }
 
-.favorite-btn {
-    width: 28px;
-    height: 28px;
-    border: none;
-    border-radius: 6px;
-    background: white;
-    color: #666;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.favorite-btn:hover {
-    color: #1a73e8;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.favorite-btn.active {
-    color: #1a73e8;
-}
-
 .download-btn {
     padding: 0.25rem 0.75rem;
     border: none;
@@ -730,7 +708,12 @@ h1 {
 
 /* 导航栏收藏按钮样式更新 */
 .nav-btn.favorites svg {
-    color: #10B981;
+    color: #1a1a1a;
+}
+
+.nav-btn.favorites:hover {
+    background: #f0f0f0;
+    color: #1a1a1a;
 }
 
 .version-btn {
@@ -921,4 +904,32 @@ h1 {
     background-color: #10B981;
     border-radius: 50%;
     display: inline-block;
+}
+
+/* 已收藏状态的图标颜色 */
+.icon-item.favorited .icon-preview svg {
+    color: #1a73e8;
+}
+
+/* Toast 提示样式 */
+.toast {
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.toast.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+    visibility: visible;
 } 
