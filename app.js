@@ -702,4 +702,74 @@ document.addEventListener('DOMContentLoaded', async () => {
     loadIcons().then(iconsByCategory => {
         renderIcons(iconsByCategory);
     });
+
+    // 添加下载所有图标的函数
+    async function downloadAllIcons() {
+        // 创建一个 JSZip 实例
+        const zip = new JSZip();
+        
+        // 创建根目录 ILOVEICON
+        const rootFolder = zip.folder("ILOVEICON");
+        
+        // 遍历所有分类
+        for (const category of categories) {
+            // 为每个分类创建文件夹
+            const categoryFolder = rootFolder.folder(category.name);
+            
+            try {
+                // 获取该分类下的所有图标
+                const response = await fetch(`icons/${category.path}/manifest.json`);
+                if (!response.ok) {
+                    console.error(`Failed to fetch manifest for ${category.name}`);
+                    continue;
+                }
+                const icons = await response.json();
+                
+                // 遍历分类下的所有图标
+                for (const icon of icons) {
+                    try {
+                        // 获取 SVG 内容
+                        const svgResponse = await fetch(`icons/${category.path}/${icon.name}.svg`);
+                        if (!svgResponse.ok) {
+                            console.error(`Failed to fetch SVG for ${icon.name}`);
+                            continue;
+                        }
+                        const svgContent = await svgResponse.text();
+                        
+                        // 将 SVG 添加到对应分类文件夹中
+                        categoryFolder.file(`${icon.name}.svg`, svgContent);
+                    } catch (error) {
+                        console.error(`Error adding icon ${icon.name}:`, error);
+                    }
+                }
+            } catch (error) {
+                console.error(`Error processing category ${category.name}:`, error);
+            }
+        }
+        
+        try {
+            // 显示下载中提示
+            showToast("Packaging icons...");
+            
+            // 生成 zip 文件
+            const content = await zip.generateAsync({type: "blob"});
+            
+            // 创建下载链接并触发下载
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(content);
+            link.download = "ILOVEICON.zip";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            // 显示下载成功提示
+            showToast("Download completed");
+        } catch (error) {
+            console.error("Error generating zip:", error);
+            showToast("Download failed, please try again");
+        }
+    }
+
+    // 更新导航栏下载按钮的点击事件
+    document.querySelector('.nav-btn.download').addEventListener('click', downloadAllIcons);
 }); 
