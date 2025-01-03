@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simply Delightful Icon System</title>
+    <title>iiiiicon - 图标库</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <header class="main-header">
-            <div class="header-content">
+        <div class="hero">
+            <div class="hero-content">
                 <h1>Simply Delightful Icon System</h1>
-                <p class="subtitle">Open-source neutral-style system symbols elaborately crafted for designers and developers.</p>
-                <p class="license">All of the icons are free for both personal and commercial use.</p>
+                <p class="hero-subtitle">Open-source neutral-style system symbols elaborately crafted for designers and developers.</p>
+                <p class="hero-license">All of the icons are free for both personal and commercial use.</p>
                 
-                <div class="features">
-                    <div class="feature">
+                <div class="hero-features">
+                    <div class="feature-item">
                         <div class="feature-icon">
                             <svg viewBox="0 0 24 24" width="24" height="24">
                                 <path d="M4 4h16v16H4z" fill="none" stroke="currentColor" stroke-width="2"/>
@@ -23,7 +23,7 @@
                         </div>
                         <span>Pixel Perfect</span>
                     </div>
-                    <div class="feature">
+                    <div class="feature-item">
                         <div class="feature-icon">
                             <svg viewBox="0 0 24 24" width="24" height="24">
                                 <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
@@ -31,7 +31,7 @@
                         </div>
                         <span>Vector</span>
                     </div>
-                    <div class="feature">
+                    <div class="feature-item">
                         <div class="feature-icon">
                             <svg viewBox="0 0 24 24" width="24" height="24">
                                 <path d="M4 4l16 16M4 20L20 4" stroke="currentColor" stroke-width="2"/>
@@ -41,27 +41,34 @@
                     </div>
                 </div>
             </div>
-        </header>
+        </div>
 
         <div class="search-section">
             <div class="search-container">
-                <button class="category-btn">All</button>
+                <div class="category-select">
+                    <button class="category-btn">
+                        <span>All</span>
+                        <svg viewBox="0 0 24 24" width="16" height="16">
+                            <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </button>
+                    <div class="category-dropdown"></div>
+                </div>
                 <div class="search-box">
-                    <input type="text" id="searchInput" placeholder="Search 3058 Icons">
+                    <input type="text" id="searchInput" placeholder="搜索图标...">
                     <button type="button" id="searchButton">
-                        <svg viewBox="0 0 24 24" width="24" height="24">
-                            <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
-                            <path d="M20 20l-4-4" stroke="currentColor" stroke-width="2"/>
+                        <svg viewBox="0 0 24 24" width="20" height="20">
+                            <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M20 20l-4-4" stroke="currentColor" stroke-width="1.5"/>
                         </svg>
                     </button>
                 </div>
             </div>
         </div>
 
-        <main>
-            <div id="iconGrid" class="icon-grid"></div>
-        </main>
+        <div id="iconGrid" class="icon-grid"></div>
     </div>
+
     <script src="app.js"></script>
 </body>
 </html> 

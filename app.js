@@ -2,6 +2,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     // 获取DOM元素
     const iconGrid = document.getElementById('iconGrid');
     const searchContainer = document.querySelector('.search-container');
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+    const categorySelect = document.querySelector('.category-select');
+    const categoryBtn = categorySelect.querySelector('.category-btn');
+    const categoryDropdown = categorySelect.querySelector('.category-dropdown');
     
     // 分类数据
     const categories = [
@@ -15,6 +20,53 @@ document.addEventListener('DOMContentLoaded', async () => {
         { id: 'security', name: 'Security', path: 'icons/Security' },
         { id: 'shapes', name: 'Shapes', path: 'icons/Shapes' }
     ];
+
+    // 初始化分类下拉选项
+    categoryDropdown.innerHTML = categories.map(category => `
+        <div class="category-option ${category.id === 'all' ? 'selected' : ''}" data-id="${category.id}">
+            ${category.name}
+        </div>
+    `).join('');
+
+    // 点击按钮显示/隐藏下拉框
+    categoryBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        categorySelect.classList.toggle('active');
+    });
+
+    // 点击其他地方关闭下拉框
+    document.addEventListener('click', (e) => {
+        if (!categorySelect.contains(e.target)) {
+            categorySelect.classList.remove('active');
+        }
+    });
+
+    // 选择分类
+    const categoryOptions = categoryDropdown.querySelectorAll('.category-option');
+    categoryOptions.forEach(option => {
+        option.addEventListener('click', async () => {
+            const categoryId = option.dataset.id;
+            const categoryName = option.textContent.trim();
+            
+            // 更新按钮文本
+            categoryBtn.querySelector('span').textContent = categoryName;
+            
+            // 更新选中状态
+            categoryOptions.forEach(opt => opt.classList.remove('selected'));
+            option.classList.add('selected');
+            
+            // 关闭下拉框
+            categorySelect.classList.remove('active');
+            
+            // 加载对应分类的图标
+            const iconsByCategory = await loadIcons(categoryId);
+            renderIcons(iconsByCategory);
+            
+            // 更新搜索处理函数
+            searchInput.oninput = () => handleSearch(iconsByCategory);
+            searchButton.onclick = () => handleSearch(iconsByCategory);
+        });
+    });
 
     // 获取版本号
     let version = 'v1.0.0';
@@ -59,36 +111,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         </div>
     `;
     document.body.insertBefore(navbar, document.body.firstChild);
-
-    // 优化搜索框样式
-    searchContainer.innerHTML = `
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="搜索图标..." />
-            <button id="searchButton">
-                <svg viewBox="0 0 24 24" width="20" height="20">
-                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
-        </div>
-        <div class="category-select">
-            <button class="category-btn">All</button>
-            <div class="category-dropdown">
-                ${categories.map(category => `
-                    <div class="category-option ${category.id === 'all' ? 'selected' : ''}" data-id="${category.id}">
-                        ${category.name}
-                    </div>
-                `).join('')}
-            </div>
-        </div>
-    `;
-
-    // 获取搜索相关元素
-    const searchInput = document.getElementById('searchInput');
-    const searchButton = document.getElementById('searchButton');
-    const categorySelect = searchContainer.querySelector('.category-select');
-    const categoryBtn = categorySelect.querySelector('.category-btn');
-    const categoryDropdown = categorySelect.querySelector('.category-dropdown');
-    const categoryOptions = categorySelect.querySelectorAll('.category-option');
 
     // 优化搜索功能
     function handleSearch(iconsByCategory) {
@@ -521,28 +543,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         img.src = url;
     }
-
-    // 分类选择
-    categoryOptions.forEach(option => {
-        option.addEventListener('click', async () => {
-            const categoryId = option.dataset.id;
-            const categoryName = option.textContent.trim();
-            
-            // 更新UI
-            categoryBtn.textContent = categoryName;
-            categorySelect.classList.remove('active');
-            categoryOptions.forEach(opt => opt.classList.remove('selected'));
-            option.classList.add('selected');
-
-            // 加载并显示图标
-            const iconsByCategory = await loadIcons(categoryId);
-            renderIcons(iconsByCategory);
-            
-            // 更新搜索处理函数
-            searchInput.oninput = () => handleSearch(iconsByCategory);
-            searchButton.onclick = () => handleSearch(iconsByCategory);
-        });
-    });
 
     // 初始化显示
     loadIcons().then(iconsByCategory => {
