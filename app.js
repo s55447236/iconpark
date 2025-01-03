@@ -74,14 +74,22 @@ document.addEventListener('DOMContentLoaded', async () => {
     `;
     document.body.insertBefore(navbar, document.body.firstChild);
 
-    // 优化搜索框样式
+    // 搜索图标
+    const searchIcon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.927 17.0401L20.4001 20.4001M19.2801 11.4401C19.2801 15.77 15.77 19.2801 11.4401 19.2801C7.11019 19.2801 3.6001 15.77 3.6001 11.4401C3.6001 7.11019 7.11019 3.6001 11.4401 3.6001C15.77 3.6001 19.2801 7.11019 19.2801 11.4401Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>`;
+
+    // 分类选择按钮的 SVG 图标
+    const arrowIcon = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 10L12.0008 14.58L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>`;
+
+    // 渲染分类选择按钮
     searchContainer.innerHTML = `
         <div class="category-select">
             <button class="category-btn">
                 <span>All</span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 10L12.0008 14.58L17 10" stroke="#0A090B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                ${arrowIcon}
             </button>
             <div class="category-dropdown">
                 ${categories.map(category => `
@@ -95,9 +103,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         <div class="search-box">
             <input type="text" id="searchInput" placeholder="搜索图标..." />
             <button id="searchButton">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.927 17.0401L20.4001 20.4001M19.2801 11.4401C19.2801 15.77 15.77 19.2801 11.4401 19.2801C7.11019 19.2801 3.6001 15.77 3.6001 11.4401C3.6001 7.11019 7.11019 3.6001 11.4401 3.6001C15.77 3.6001 19.2801 7.11019 19.2801 11.4401Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                </svg>
+                ${searchIcon}
             </button>
         </div>
     `;
