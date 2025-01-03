@@ -95,30 +95,31 @@ h1 {
     flex: 1;
     display: flex;
     align-items: center;
-    background: #f8f9fa;
+    background: #f3f4f6;
+    border: 1px solid transparent;
     border-radius: 8px;
     padding: 0 0.75rem;
     transition: all 0.2s ease;
-    border: 1px solid #e5e7eb;
+    height: 42px;
 }
 
 .search-box:hover {
-    border-color: #d1d5db;
-    background: #f3f4f6;
+    background: white;
+    border-color: #e5e7eb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .search-box:focus-within {
-    background: #fff;
+    background: white;
     border-color: #3b82f6;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-    ring-color: rgba(59, 130, 246, 0.1);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
 }
 
 .search-box input {
     flex: 1;
     border: none;
     background: none;
-    height: 40px;
+    height: 42px;
     font-size: 0.875rem;
     color: #374151;
     outline: none;
@@ -174,14 +175,13 @@ h1 {
 
 .category-btn {
     width: 100%;
-    height: 46px;
+    height: 42px;
     padding: 0 0.75rem;
-    background: #f8f9fa;
-    border: 1px solid #e5e7eb;
+    background: #f3f4f6;
+    border: 1px solid transparent;
     border-radius: 8px;
     cursor: pointer;
     font-size: 0.875rem;
-    color: #374151;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -190,14 +190,15 @@ h1 {
 }
 
 .category-btn:hover {
-    border-color: #d1d5db;
-    background: #f3f4f6;
+    background: white;
+    border-color: #e5e7eb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .category-select.active .category-btn {
+    background: white;
     border-color: #3b82f6;
-    background: #fff;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
 }
 
 .category-btn svg {
