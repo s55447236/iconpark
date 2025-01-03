@@ -13,12 +13,23 @@ document.addEventListener('DOMContentLoaded', async () => {
         { id: 'all', name: 'All' },
         { id: 'alert', name: 'Alert', path: 'icons/Alert' },
         { id: 'arrow', name: 'Arrow', path: 'icons/Arrow' },
+        { id: 'charts', name: 'Charts', path: 'icons/Charts' },
+        { id: 'communication', name: 'Communication', path: 'icons/Communication' },
+        { id: 'cursor', name: 'Cursor', path: 'icons/Cursor' },
+        { id: 'development', name: 'Development', path: 'icons/Development' },
+        { id: 'editor', name: 'Editor', path: 'icons/Editor' },
+        { id: 'education', name: 'Education', path: 'icons/Education' },
         { id: 'files', name: 'Files', path: 'icons/Files' },
         { id: 'finance', name: 'Finance', path: 'icons/Finance' },
         { id: 'general', name: 'General', path: 'icons/General' },
+        { id: 'layout', name: 'Layout', path: 'icons/Layout' },
         { id: 'media', name: 'Media', path: 'icons/Media' },
+        { id: 'profiles', name: 'Profiles & Users', path: 'icons/Profiles & Users' },
         { id: 'security', name: 'Security', path: 'icons/Security' },
-        { id: 'shapes', name: 'Shapes', path: 'icons/Shapes' }
+        { id: 'shapes', name: 'Shapes', path: 'icons/Shapes' },
+        { id: 'time', name: 'Time', path: 'icons/Time' },
+        { id: 'travel', name: 'Travel & Location', path: 'icons/Travel & Location' },
+        { id: 'weather', name: 'Weather', path: 'icons/Weather' }
     ];
 
     // 初始化分类下拉选项

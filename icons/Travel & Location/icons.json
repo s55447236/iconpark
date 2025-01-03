@@ -1,0 +1,122 @@
+[
+    {
+        "name": "cloud-01",
+        "path": "icons/Travel & Location/cloud-01.svg"
+    },
+    {
+        "name": "cloud-02",
+        "path": "icons/Travel & Location/cloud-02.svg"
+    },
+    {
+        "name": "cloud-03",
+        "path": "icons/Travel & Location/cloud-03.svg"
+    },
+    {
+        "name": "cloud-04",
+        "path": "icons/Travel & Location/cloud-04.svg"
+    },
+    {
+        "name": "cloud-lightning",
+        "path": "icons/Travel & Location/cloud-lightning.svg"
+    },
+    {
+        "name": "cloud-rain",
+        "path": "icons/Travel & Location/cloud-rain.svg"
+    },
+    {
+        "name": "cloud-snow",
+        "path": "icons/Travel & Location/cloud-snow.svg"
+    },
+    {
+        "name": "cloud-sun",
+        "path": "icons/Travel & Location/cloud-sun.svg"
+    },
+    {
+        "name": "drop",
+        "path": "icons/Travel & Location/drop.svg"
+    },
+    {
+        "name": "flame-01",
+        "path": "icons/Travel & Location/flame-01.svg"
+    },
+    {
+        "name": "lightning-01",
+        "path": "icons/Travel & Location/lightning-01.svg"
+    },
+    {
+        "name": "lightning-02",
+        "path": "icons/Travel & Location/lightning-02.svg"
+    },
+    {
+        "name": "moon-01",
+        "path": "icons/Travel & Location/moon-01.svg"
+    },
+    {
+        "name": "moon-02",
+        "path": "icons/Travel & Location/moon-02.svg"
+    },
+    {
+        "name": "snowflake",
+        "path": "icons/Travel & Location/snowflake.svg"
+    },
+    {
+        "name": "stars",
+        "path": "icons/Travel & Location/stars.svg"
+    },
+    {
+        "name": "sun-01",
+        "path": "icons/Travel & Location/sun-01.svg"
+    },
+    {
+        "name": "sun-02",
+        "path": "icons/Travel & Location/sun-02.svg"
+    },
+    {
+        "name": "sun-03",
+        "path": "icons/Travel & Location/sun-03.svg"
+    },
+    {
+        "name": "sun-down",
+        "path": "icons/Travel & Location/sun-down.svg"
+    },
+    {
+        "name": "sun-up",
+        "path": "icons/Travel & Location/sun-up.svg"
+    },
+    {
+        "name": "temperature-01",
+        "path": "icons/Travel & Location/temperature-01.svg"
+    },
+    {
+        "name": "temperature-02",
+        "path": "icons/Travel & Location/temperature-02.svg"
+    },
+    {
+        "name": "temperature-03",
+        "path": "icons/Travel & Location/temperature-03.svg"
+    },
+    {
+        "name": "temperature-04",
+        "path": "icons/Travel & Location/temperature-04.svg"
+    },
+    {
+        "name": "umbrella-01",
+        "path": "icons/Travel & Location/umbrella-01.svg"
+    },
+    {
+        "name": "umbrella-02",
+        "path": "icons/Travel & Location/umbrella-02.svg"
+    },
+    {
+        "name": "wind-01",
+        "path": "icons/Travel & Location/wind-01.svg"
+    },
+    {
+        "name": "wind-02",
+        "path": "icons/Travel & Location/wind-02.svg"
+    },
+    {
+        "name": "wind-03",
+        "path": "icons/Travel & Location/wind-03.svg"
+    }
+] 

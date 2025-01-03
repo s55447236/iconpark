@@ -1,0 +1,246 @@
+[
+    {
+        "name": "align-down-01",
+        "path": "icons/Layout/align-down-01.svg"
+    },
+    {
+        "name": "align-down-02",
+        "path": "icons/Layout/align-down-02.svg"
+    },
+    {
+        "name": "align-horizontal-center-01",
+        "path": "icons/Layout/align-horizontal-center-01.svg"
+    },
+    {
+        "name": "align-horizontal-center-02",
+        "path": "icons/Layout/align-horizontal-center-02.svg"
+    },
+    {
+        "name": "align-horizontal-center-03",
+        "path": "icons/Layout/align-horizontal-center-03.svg"
+    },
+    {
+        "name": "align-left-01",
+        "path": "icons/Layout/align-left-01.svg"
+    },
+    {
+        "name": "align-left-02",
+        "path": "icons/Layout/align-left-02.svg"
+    },
+    {
+        "name": "align-right-01",
+        "path": "icons/Layout/align-right-01.svg"
+    },
+    {
+        "name": "align-right-02",
+        "path": "icons/Layout/align-right-02.svg"
+    },
+    {
+        "name": "align-up-01",
+        "path": "icons/Layout/align-up-01.svg"
+    },
+    {
+        "name": "align-up-02",
+        "path": "icons/Layout/align-up-02.svg"
+    },
+    {
+        "name": "align-vertical-center-01",
+        "path": "icons/Layout/align-vertical-center-01.svg"
+    },
+    {
+        "name": "align-vertical-center-02",
+        "path": "icons/Layout/align-vertical-center-02.svg"
+    },
+    {
+        "name": "align-vertical-center-03",
+        "path": "icons/Layout/align-vertical-center-03.svg"
+    },
+    {
+        "name": "center",
+        "path": "icons/Layout/center.svg"
+    },
+    {
+        "name": "column-horizontal-01",
+        "path": "icons/Layout/column-horizontal-01.svg"
+    },
+    {
+        "name": "column-horizontal-02",
+        "path": "icons/Layout/column-horizontal-02.svg"
+    },
+    {
+        "name": "column-horizontal-03",
+        "path": "icons/Layout/column-horizontal-03.svg"
+    },
+    {
+        "name": "column-vertical-01",
+        "path": "icons/Layout/column-vertical-01.svg"
+    },
+    {
+        "name": "column-vertical-02",
+        "path": "icons/Layout/column-vertical-02.svg"
+    },
+    {
+        "name": "column-vertical-03",
+        "path": "icons/Layout/column-vertical-03.svg"
+    },
+    {
+        "name": "divider",
+        "path": "icons/Layout/divider.svg"
+    },
+    {
+        "name": "flex-align-bottom-01",
+        "path": "icons/Layout/flex-align-bottom-01.svg"
+    },
+    {
+        "name": "flex-align-center-01",
+        "path": "icons/Layout/flex-align-center-01.svg"
+    },
+    {
+        "name": "flex-align-left-01",
+        "path": "icons/Layout/flex-align-left-01.svg"
+    },
+    {
+        "name": "flex-align-right-01",
+        "path": "icons/Layout/flex-align-right-01.svg"
+    },
+    {
+        "name": "flex-align-spaced-01",
+        "path": "icons/Layout/flex-align-spaced-01.svg"
+    },
+    {
+        "name": "flex-align-top-01",
+        "path": "icons/Layout/flex-align-top-01.svg"
+    },
+    {
+        "name": "flex-columns",
+        "path": "icons/Layout/flex-columns.svg"
+    },
+    {
+        "name": "flex-rows",
+        "path": "icons/Layout/flex-rows.svg"
+    },
+    {
+        "name": "grid-01",
+        "path": "icons/Layout/grid-01.svg"
+    },
+    {
+        "name": "grid-02",
+        "path": "icons/Layout/grid-02.svg"
+    },
+    {
+        "name": "grid-03",
+        "path": "icons/Layout/grid-03.svg"
+    },
+    {
+        "name": "grid-04-filled",
+        "path": "icons/Layout/grid-04-filled.svg"
+    },
+    {
+        "name": "intersect",
+        "path": "icons/Layout/intersect.svg"
+    },
+    {
+        "name": "layers-01",
+        "path": "icons/Layout/layers-01.svg"
+    },
+    {
+        "name": "layers-02",
+        "path": "icons/Layout/layers-02.svg"
+    },
+    {
+        "name": "layers-03",
+        "path": "icons/Layout/layers-03.svg"
+    },
+    {
+        "name": "layers-04",
+        "path": "icons/Layout/layers-04.svg"
+    },
+    {
+        "name": "layers-05",
+        "path": "icons/Layout/layers-05.svg"
+    },
+    {
+        "name": "layout-01",
+        "path": "icons/Layout/layout-01.svg"
+    },
+    {
+        "name": "layout-02",
+        "path": "icons/Layout/layout-02.svg"
+    },
+    {
+        "name": "layout-03",
+        "path": "icons/Layout/layout-03.svg"
+    },
+    {
+        "name": "layout-04",
+        "path": "icons/Layout/layout-04.svg"
+    },
+    {
+        "name": "layout-bottom",
+        "path": "icons/Layout/layout-bottom.svg"
+    },
+    {
+        "name": "layout-grid-01",
+        "path": "icons/Layout/layout-grid-01.svg"
+    },
+    {
+        "name": "layout-left",
+        "path": "icons/Layout/layout-left.svg"
+    },
+    {
+        "name": "layout-right",
+        "path": "icons/Layout/layout-right.svg"
+    },
+    {
+        "name": "layout-scale",
+        "path": "icons/Layout/layout-scale.svg"
+    },
+    {
+        "name": "layout-top",
+        "path": "icons/Layout/layout-top.svg"
+    },
+    {
+        "name": "maximise-01",
+        "path": "icons/Layout/maximise-01.svg"
+    },
+    {
+        "name": "maximise-02",
+        "path": "icons/Layout/maximise-02.svg"
+    },
+    {
+        "name": "minimise-01",
+        "path": "icons/Layout/minimise-01.svg"
+    },
+    {
+        "name": "minimise-02",
+        "path": "icons/Layout/minimise-02.svg"
+    },
+    {
+        "name": "overlap",
+        "path": "icons/Layout/overlap.svg"
+    },
+    {
+        "name": "space-height",
+        "path": "icons/Layout/space-height.svg"
+    },
+    {
+        "name": "space-horizontal",
+        "path": "icons/Layout/space-horizontal.svg"
+    },
+    {
+        "name": "space-vertical",
+        "path": "icons/Layout/space-vertical.svg"
+    },
+    {
+        "name": "space-width",
+        "path": "icons/Layout/space-width.svg"
+    },
+    {
+        "name": "table",
+        "path": "icons/Layout/table.svg"
+    },
+    {
+        "name": "union",
+        "path": "icons/Layout/union.svg"
+    }
+] 
