@@ -8,12 +8,21 @@ document.addEventListener('DOMContentLoaded', async () => {
         { id: 'all', name: 'All' },
         { id: 'alert', name: 'Alert', path: 'icons/Alert' },
         { id: 'arrow', name: 'Arrow', path: 'icons/Arrow' },
+        { id: 'charts', name: 'Charts', path: 'icons/Charts' },
+        { id: 'communication', name: 'Communication', path: 'icons/Communication' },
+        { id: 'development', name: 'Development', path: 'icons/Development' },
+        { id: 'editor', name: 'Editor', path: 'icons/Editor' },
         { id: 'files', name: 'Files', path: 'icons/Files' },
         { id: 'finance', name: 'Finance', path: 'icons/Finance' },
         { id: 'general', name: 'General', path: 'icons/General' },
+        { id: 'images', name: 'Images', path: 'icons/Images' },
+        { id: 'layout', name: 'Layout', path: 'icons/Layout' },
         { id: 'media', name: 'Media', path: 'icons/Media' },
+        { id: 'profiles', name: 'Profiles & Users', path: 'icons/Profiles & Users' },
         { id: 'security', name: 'Security', path: 'icons/Security' },
-        { id: 'shapes', name: 'Shapes', path: 'icons/Shapes' }
+        { id: 'shapes', name: 'Shapes', path: 'icons/Shapes' },
+        { id: 'time', name: 'Time', path: 'icons/Time' },
+        { id: 'weather', name: 'Weather', path: 'icons/Weather' }
     ];
 
     // 获取版本号
@@ -62,14 +71,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // 优化搜索框样式
     searchContainer.innerHTML = `
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="搜索图标..." />
-            <button id="searchButton">
-                <svg viewBox="0 0 24 24" width="20" height="20">
-                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
-        </div>
         <div class="category-select">
             <button class="category-btn">All</button>
             <div class="category-dropdown">
@@ -79,6 +80,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                     </div>
                 `).join('')}
             </div>
+        </div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="搜索图标..." />
+            <button id="searchButton">
+                <svg viewBox="0 0 24 24" width="20" height="20">
+                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
         </div>
     `;
 
@@ -90,9 +99,31 @@ document.addEventListener('DOMContentLoaded', async () => {
     const categoryDropdown = categorySelect.querySelector('.category-dropdown');
     const categoryOptions = categorySelect.querySelectorAll('.category-option');
 
+    // 添加下拉框交互
+    categoryBtn.addEventListener('click', () => {
+        categorySelect.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!categorySelect.contains(e.target)) {
+            categorySelect.classList.remove('active');
+        }
+    });
+
     // 优化搜索功能
-    function handleSearch(iconsByCategory) {
+    async function handleSearch() {
         const searchTerm = searchInput.value.toLowerCase().trim();
+        const currentCategory = document.querySelector('.category-option.selected').dataset.id;
+        
+        // 如果没有搜索词，直接显示当前分类的所有图标
+        if (!searchTerm) {
+            const iconsByCategory = await loadIcons(currentCategory);
+            renderIcons(iconsByCategory);
+            return;
+        }
+
+        // 加载图标并搜索
+        const iconsByCategory = await loadIcons(currentCategory);
         const results = {};
         
         Object.entries(iconsByCategory).forEach(([category, icons]) => {
@@ -119,15 +150,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // 添加搜索事件监听
-    searchInput.addEventListener('input', debounce(() => {
-        const currentCategory = document.querySelector('.category-option.selected').dataset.id;
-        loadIcons(currentCategory).then(handleSearch);
-    }, 300));
-
-    searchButton.addEventListener('click', () => {
-        const currentCategory = document.querySelector('.category-option.selected').dataset.id;
-        loadIcons(currentCategory).then(handleSearch);
-    });
+    searchInput.addEventListener('input', debounce(handleSearch, 300));
+    searchButton.addEventListener('click', handleSearch);
 
     // 防抖函数
     function debounce(func, wait) {
@@ -534,21 +558,19 @@ document.addEventListener('DOMContentLoaded', async () => {
             categoryOptions.forEach(opt => opt.classList.remove('selected'));
             option.classList.add('selected');
 
-            // 加载并显示图标
-            const iconsByCategory = await loadIcons(categoryId);
-            renderIcons(iconsByCategory);
-            
-            // 更新搜索处理函数
-            searchInput.oninput = () => handleSearch(iconsByCategory);
-            searchButton.onclick = () => handleSearch(iconsByCategory);
+            // 如果搜索框有内容，在新分类中搜索
+            if (searchInput.value.trim()) {
+                handleSearch();
+            } else {
+                // 否则显示该分类的所有图标
+                const iconsByCategory = await loadIcons(categoryId);
+                renderIcons(iconsByCategory);
+            }
         });
     });
 
     // 初始化显示
     loadIcons().then(iconsByCategory => {
         renderIcons(iconsByCategory);
-        // 设置初始搜索处理函数
-        searchInput.oninput = () => handleSearch(iconsByCategory);
-        searchButton.onclick = () => handleSearch(iconsByCategory);
     });
 }); 
