@@ -21,13 +21,6 @@
     "path": "icons/Arrow/arrow-curve-left-up.svg"
   },
   {
-    "name": "arrow-curve-right-up",
-    "title": "Arrow Curve Right Up",
-    "category": "Arrow",
-    "fileName": "arrow-curve-right-up.svg",
-    "path": "icons/Arrow/arrow-curve-right-up.svg"
-  },
-  {
     "name": "arrow-curve-up-left",
     "title": "Arrow Curve Up Left",
     "category": "Arrow",
@@ -35,39 +28,39 @@
     "path": "icons/Arrow/arrow-curve-up-left.svg"
   },
   {
-    "name": "arrow-curve-up-right",
-    "title": "Arrow Curve Up Right",
+    "name": "arrow-curve-right-up",
+    "title": "Arrow Curve Right Up",
     "category": "Arrow",
-    "fileName": "arrow-curve-up-right.svg",
-    "path": "icons/Arrow/arrow-curve-up-right.svg"
+    "fileName": "arrow-curve-right-up.svg",
+    "path": "icons/Arrow/arrow-curve-right-up.svg"
   },
   {
-    "name": "arrow-down-contained-01",
-    "title": "Arrow Down Contained 01",
+    "name": "arrow-left-square-contained",
+    "title": "Arrow Left Square Contained",
     "category": "Arrow",
-    "fileName": "arrow-down-contained-01.svg",
-    "path": "icons/Arrow/arrow-down-contained-01.svg"
+    "fileName": "arrow-left-square-contained.svg",
+    "path": "icons/Arrow/arrow-left-square-contained.svg"
   },
   {
-    "name": "arrow-down-contained-02",
-    "title": "Arrow Down Contained 02",
+    "name": "arrow-right-square-contained",
+    "title": "Arrow Right Square Contained",
     "category": "Arrow",
-    "fileName": "arrow-down-contained-02.svg",
-    "path": "icons/Arrow/arrow-down-contained-02.svg"
+    "fileName": "arrow-right-square-contained.svg",
+    "path": "icons/Arrow/arrow-right-square-contained.svg"
   },
   {
-    "name": "arrow-down-left-contained",
-    "title": "Arrow Down Left Contained",
+    "name": "arrow-up-square-contained",
+    "title": "Arrow Up Square Contained",
     "category": "Arrow",
-    "fileName": "arrow-down-left-contained.svg",
-    "path": "icons/Arrow/arrow-down-left-contained.svg"
+    "fileName": "arrow-up-square-contained.svg",
+    "path": "icons/Arrow/arrow-up-square-contained.svg"
   },
   {
-    "name": "arrow-down-left-sm",
-    "title": "Arrow Down Left Sm",
+    "name": "arrow-down-square-contained",
+    "title": "Arrow Down Square Contained",
     "category": "Arrow",
-    "fileName": "arrow-down-left-sm.svg",
-    "path": "icons/Arrow/arrow-down-left-sm.svg"
+    "fileName": "arrow-down-square-contained.svg",
+    "path": "icons/Arrow/arrow-down-square-contained.svg"
   },
   {
     "name": "arrow-down-left-square-contained",
@@ -77,25 +70,11 @@
     "path": "icons/Arrow/arrow-down-left-square-contained.svg"
   },
   {
-    "name": "arrow-down-left",
-    "title": "Arrow Down Left",
+    "name": "arrow-up-right-square-contained",
+    "title": "Arrow Up Right Square Contained",
     "category": "Arrow",
-    "fileName": "arrow-down-left.svg",
-    "path": "icons/Arrow/arrow-down-left.svg"
-  },
-  {
-    "name": "arrow-down-right-contained",
-    "title": "Arrow Down Right Contained",
-    "category": "Arrow",
-    "fileName": "arrow-down-right-contained.svg",
-    "path": "icons/Arrow/arrow-down-right-contained.svg"
-  },
-  {
-    "name": "arrow-down-right-sm",
-    "title": "Arrow Down Right Sm",
-    "category": "Arrow",
-    "fileName": "arrow-down-right-sm.svg",
-    "path": "icons/Arrow/arrow-down-right-sm.svg"
+    "fileName": "arrow-up-right-square-contained.svg",
+    "path": "icons/Arrow/arrow-up-right-square-contained.svg"
   },
   {
     "name": "arrow-down-right-square-contained",
@@ -105,18 +84,95 @@
     "path": "icons/Arrow/arrow-down-right-square-contained.svg"
   },
   {
-    "name": "arrow-down-right",
-    "title": "Arrow Down Right",
+    "name": "arrow-up-left-square-contained",
+    "title": "Arrow Up Left Square Contained",
     "category": "Arrow",
-    "fileName": "arrow-down-right.svg",
-    "path": "icons/Arrow/arrow-down-right.svg"
+    "fileName": "arrow-up-left-square-contained.svg",
+    "path": "icons/Arrow/arrow-up-left-square-contained.svg"
   },
   {
-    "name": "arrow-down-square-contained",
-    "title": "Arrow Down Square Contained",
+    "name": "arrow-left-contained-02",
+    "title": "Arrow Left Contained 02",
     "category": "Arrow",
-    "fileName": "arrow-down-square-contained.svg",
-    "path": "icons/Arrow/arrow-down-square-contained.svg"
+    "fileName": "arrow-left-contained-02.svg",
+    "path": "icons/Arrow/arrow-left-contained-02.svg"
+  },
+  {
+    "name": "arrow-up-left-contained",
+    "title": "Arrow Up Left Contained",
+    "category": "Arrow",
+    "fileName": "arrow-up-left-contained.svg",
+    "path": "icons/Arrow/arrow-up-left-contained.svg"
+  },
+  {
+    "name": "arrow-down-left-contained",
+    "title": "Arrow Down Left Contained",
+    "category": "Arrow",
+    "fileName": "arrow-down-left-contained.svg",
+    "path": "icons/Arrow/arrow-down-left-contained.svg"
+  },
+  {
+    "name": "arrow-down-right-contained",
+    "title": "Arrow Down Right Contained",
+    "category": "Arrow",
+    "fileName": "arrow-down-right-contained.svg",
+    "path": "icons/Arrow/arrow-down-right-contained.svg"
+  },
+  {
+    "name": "arrow-up-right-contained",
+    "title": "Arrow Up Right Contained",
+    "category": "Arrow",
+    "fileName": "arrow-up-right-contained.svg",
+    "path": "icons/Arrow/arrow-up-right-contained.svg"
+  },
+  {
+    "name": "arrow-right-contained-02",
+    "title": "Arrow Right Contained 02",
+    "category": "Arrow",
+    "fileName": "arrow-right-contained-02.svg",
+    "path": "icons/Arrow/arrow-right-contained-02.svg"
+  },
+  {
+    "name": "arrow-up-contained-02",
+    "title": "Arrow Up Contained 02",
+    "category": "Arrow",
+    "fileName": "arrow-up-contained-02.svg",
+    "path": "icons/Arrow/arrow-up-contained-02.svg"
+  },
+  {
+    "name": "arrow-down-contained-02",
+    "title": "Arrow Down Contained 02",
+    "category": "Arrow",
+    "fileName": "arrow-down-contained-02.svg",
+    "path": "icons/Arrow/arrow-down-contained-02.svg"
+  },
+  {
+    "name": "arrow-left-contained-01",
+    "title": "Arrow Left Contained 01",
+    "category": "Arrow",
+    "fileName": "arrow-left-contained-01.svg",
+    "path": "icons/Arrow/arrow-left-contained-01.svg"
+  },
+  {
+    "name": "arrow-up-contained-01",
+    "title": "Arrow Up Contained 01",
+    "category": "Arrow",
+    "fileName": "arrow-up-contained-01.svg",
+    "path": "icons/Arrow/arrow-up-contained-01.svg"
+  },
+  {
+    "name": "arrow-right-contained-01",
+    "title": "Arrow Right Contained 01",
+    "category": "Arrow",
+    "fileName": "arrow-right-contained-01.svg",
+    "path": "icons/Arrow/arrow-right-contained-01.svg"
+  },
+  {
+    "name": "arrow-down-contained-01",
+    "title": "Arrow Down Contained 01",
+    "category": "Arrow",
+    "fileName": "arrow-down-contained-01.svg",
+    "path": "icons/Arrow/arrow-down-contained-01.svg"
   },
   {
     "name": "arrow-expand-01",
@@ -147,32 +203,25 @@
     "path": "icons/Arrow/arrow-expand-04.svg"
   },
   {
-    "name": "arrow-left-contained-01",
-    "title": "Arrow Left Contained 01",
+    "name": "arrow-up",
+    "title": "Arrow Up",
     "category": "Arrow",
-    "fileName": "arrow-left-contained-01.svg",
-    "path": "icons/Arrow/arrow-left-contained-01.svg"
+    "fileName": "arrow-up.svg",
+    "path": "icons/Arrow/arrow-up.svg"
   },
   {
-    "name": "arrow-left-contained-02",
-    "title": "Arrow Left Contained 02",
+    "name": "down-arrow",
+    "title": "Down Arrow",
     "category": "Arrow",
-    "fileName": "arrow-left-contained-02.svg",
-    "path": "icons/Arrow/arrow-left-contained-02.svg"
+    "fileName": "down-arrow.svg",
+    "path": "icons/Arrow/down-arrow.svg"
   },
   {
-    "name": "arrow-left-sm",
-    "title": "Arrow Left Sm",
+    "name": "arrow-right",
+    "title": "Arrow Right",
     "category": "Arrow",
-    "fileName": "arrow-left-sm.svg",
-    "path": "icons/Arrow/arrow-left-sm.svg"
-  },
-  {
-    "name": "arrow-left-square-contained",
-    "title": "Arrow Left Square Contained",
-    "category": "Arrow",
-    "fileName": "arrow-left-square-contained.svg",
-    "path": "icons/Arrow/arrow-left-square-contained.svg"
+    "fileName": "arrow-right.svg",
+    "path": "icons/Arrow/arrow-right.svg"
   },
   {
     "name": "arrow-left",
@@ -180,6 +229,48 @@
     "category": "Arrow",
     "fileName": "arrow-left.svg",
     "path": "icons/Arrow/arrow-left.svg"
+  },
+  {
+    "name": "arrow-up-left",
+    "title": "Arrow Up Left",
+    "category": "Arrow",
+    "fileName": "arrow-up-left.svg",
+    "path": "icons/Arrow/arrow-up-left.svg"
+  },
+  {
+    "name": "arrow-down-left",
+    "title": "Arrow Down Left",
+    "category": "Arrow",
+    "fileName": "arrow-down-left.svg",
+    "path": "icons/Arrow/arrow-down-left.svg"
+  },
+  {
+    "name": "arrow-up-right",
+    "title": "Arrow Up Right",
+    "category": "Arrow",
+    "fileName": "arrow-up-right.svg",
+    "path": "icons/Arrow/arrow-up-right.svg"
+  },
+  {
+    "name": "arrow-down-right",
+    "title": "Arrow Down Right",
+    "category": "Arrow",
+    "fileName": "arrow-down-right.svg",
+    "path": "icons/Arrow/arrow-down-right.svg"
+  },
+  {
+    "name": "arrow-curve-up-right",
+    "title": "Arrow Curve Up Right",
+    "category": "Arrow",
+    "fileName": "arrow-curve-up-right.svg",
+    "path": "icons/Arrow/arrow-curve-up-right.svg"
+  },
+  {
+    "name": "arrow-switch-horizontal",
+    "title": "Arrow Switch Horizontal",
+    "category": "Arrow",
+    "fileName": "arrow-switch-horizontal.svg",
+    "path": "icons/Arrow/arrow-switch-horizontal.svg"
   },
   {
     "name": "arrow-refresh-01",
@@ -224,41 +315,6 @@
     "path": "icons/Arrow/arrow-refresh-06.svg"
   },
   {
-    "name": "arrow-right-contained-01",
-    "title": "Arrow Right Contained 01",
-    "category": "Arrow",
-    "fileName": "arrow-right-contained-01.svg",
-    "path": "icons/Arrow/arrow-right-contained-01.svg"
-  },
-  {
-    "name": "arrow-right-contained-02",
-    "title": "Arrow Right Contained 02",
-    "category": "Arrow",
-    "fileName": "arrow-right-contained-02.svg",
-    "path": "icons/Arrow/arrow-right-contained-02.svg"
-  },
-  {
-    "name": "arrow-right-sm",
-    "title": "Arrow Right Sm",
-    "category": "Arrow",
-    "fileName": "arrow-right-sm.svg",
-    "path": "icons/Arrow/arrow-right-sm.svg"
-  },
-  {
-    "name": "arrow-right-square-contained",
-    "title": "Arrow Right Square Contained",
-    "category": "Arrow",
-    "fileName": "arrow-right-square-contained.svg",
-    "path": "icons/Arrow/arrow-right-square-contained.svg"
-  },
-  {
-    "name": "arrow-right",
-    "title": "Arrow Right",
-    "category": "Arrow",
-    "fileName": "arrow-right.svg",
-    "path": "icons/Arrow/arrow-right.svg"
-  },
-  {
     "name": "arrow-rotate-left-01",
     "title": "Arrow Rotate Left 01",
     "category": "Arrow",
@@ -285,104 +341,6 @@
     "category": "Arrow",
     "fileName": "arrow-rotate-right-02.svg",
     "path": "icons/Arrow/arrow-rotate-right-02.svg"
-  },
-  {
-    "name": "arrow-switch-horizontal",
-    "title": "Arrow Switch Horizontal",
-    "category": "Arrow",
-    "fileName": "arrow-switch-horizontal.svg",
-    "path": "icons/Arrow/arrow-switch-horizontal.svg"
-  },
-  {
-    "name": "arrow-up-contained-01",
-    "title": "Arrow Up Contained 01",
-    "category": "Arrow",
-    "fileName": "arrow-up-contained-01.svg",
-    "path": "icons/Arrow/arrow-up-contained-01.svg"
-  },
-  {
-    "name": "arrow-up-contained-02",
-    "title": "Arrow Up Contained 02",
-    "category": "Arrow",
-    "fileName": "arrow-up-contained-02.svg",
-    "path": "icons/Arrow/arrow-up-contained-02.svg"
-  },
-  {
-    "name": "arrow-up-left-contained",
-    "title": "Arrow Up Left Contained",
-    "category": "Arrow",
-    "fileName": "arrow-up-left-contained.svg",
-    "path": "icons/Arrow/arrow-up-left-contained.svg"
-  },
-  {
-    "name": "arrow-up-left-sm",
-    "title": "Arrow Up Left Sm",
-    "category": "Arrow",
-    "fileName": "arrow-up-left-sm.svg",
-    "path": "icons/Arrow/arrow-up-left-sm.svg"
-  },
-  {
-    "name": "arrow-up-left-square-contained",
-    "title": "Arrow Up Left Square Contained",
-    "category": "Arrow",
-    "fileName": "arrow-up-left-square-contained.svg",
-    "path": "icons/Arrow/arrow-up-left-square-contained.svg"
-  },
-  {
-    "name": "arrow-up-left",
-    "title": "Arrow Up Left",
-    "category": "Arrow",
-    "fileName": "arrow-up-left.svg",
-    "path": "icons/Arrow/arrow-up-left.svg"
-  },
-  {
-    "name": "arrow-up-right-contained",
-    "title": "Arrow Up Right Contained",
-    "category": "Arrow",
-    "fileName": "arrow-up-right-contained.svg",
-    "path": "icons/Arrow/arrow-up-right-contained.svg"
-  },
-  {
-    "name": "arrow-up-right-sm",
-    "title": "Arrow Up Right Sm",
-    "category": "Arrow",
-    "fileName": "arrow-up-right-sm.svg",
-    "path": "icons/Arrow/arrow-up-right-sm.svg"
-  },
-  {
-    "name": "arrow-up-right-square-contained",
-    "title": "Arrow Up Right Square Contained",
-    "category": "Arrow",
-    "fileName": "arrow-up-right-square-contained.svg",
-    "path": "icons/Arrow/arrow-up-right-square-contained.svg"
-  },
-  {
-    "name": "arrow-up-right",
-    "title": "Arrow Up Right",
-    "category": "Arrow",
-    "fileName": "arrow-up-right.svg",
-    "path": "icons/Arrow/arrow-up-right.svg"
-  },
-  {
-    "name": "arrow-up-sm",
-    "title": "Arrow Up Sm",
-    "category": "Arrow",
-    "fileName": "arrow-up-sm.svg",
-    "path": "icons/Arrow/arrow-up-sm.svg"
-  },
-  {
-    "name": "arrow-up-square-contained",
-    "title": "Arrow Up Square Contained",
-    "category": "Arrow",
-    "fileName": "arrow-up-square-contained.svg",
-    "path": "icons/Arrow/arrow-up-square-contained.svg"
-  },
-  {
-    "name": "arrow-up",
-    "title": "Arrow Up",
-    "category": "Arrow",
-    "fileName": "arrow-up.svg",
-    "path": "icons/Arrow/arrow-up.svg"
   },
   {
     "name": "chevron-double-down",
@@ -441,20 +399,6 @@
     "path": "icons/Arrow/chevron-up.svg"
   },
   {
-    "name": "down-arrow-sm",
-    "title": "Down Arrow Sm",
-    "category": "Arrow",
-    "fileName": "down-arrow-sm.svg",
-    "path": "icons/Arrow/down-arrow-sm.svg"
-  },
-  {
-    "name": "down-arrow",
-    "title": "Down Arrow",
-    "category": "Arrow",
-    "fileName": "down-arrow.svg",
-    "path": "icons/Arrow/down-arrow.svg"
-  },
-  {
     "name": "flip-left",
     "title": "Flip Left",
     "category": "Arrow",
@@ -467,5 +411,61 @@
     "category": "Arrow",
     "fileName": "flip-right.svg",
     "path": "icons/Arrow/flip-right.svg"
+  },
+  {
+    "name": "arrow-up-sm",
+    "title": "Arrow Up Sm",
+    "category": "Arrow",
+    "fileName": "arrow-up-sm.svg",
+    "path": "icons/Arrow/arrow-up-sm.svg"
+  },
+  {
+    "name": "down-arrow-sm",
+    "title": "Down Arrow Sm",
+    "category": "Arrow",
+    "fileName": "down-arrow-sm.svg",
+    "path": "icons/Arrow/down-arrow-sm.svg"
+  },
+  {
+    "name": "arrow-right-sm",
+    "title": "Arrow Right Sm",
+    "category": "Arrow",
+    "fileName": "arrow-right-sm.svg",
+    "path": "icons/Arrow/arrow-right-sm.svg"
+  },
+  {
+    "name": "arrow-left-sm",
+    "title": "Arrow Left Sm",
+    "category": "Arrow",
+    "fileName": "arrow-left-sm.svg",
+    "path": "icons/Arrow/arrow-left-sm.svg"
+  },
+  {
+    "name": "arrow-up-left-sm",
+    "title": "Arrow Up Left Sm",
+    "category": "Arrow",
+    "fileName": "arrow-up-left-sm.svg",
+    "path": "icons/Arrow/arrow-up-left-sm.svg"
+  },
+  {
+    "name": "arrow-down-right-sm",
+    "title": "Arrow Down Right Sm",
+    "category": "Arrow",
+    "fileName": "arrow-down-right-sm.svg",
+    "path": "icons/Arrow/arrow-down-right-sm.svg"
+  },
+  {
+    "name": "arrow-down-left-sm",
+    "title": "Arrow Down Left Sm",
+    "category": "Arrow",
+    "fileName": "arrow-down-left-sm.svg",
+    "path": "icons/Arrow/arrow-down-left-sm.svg"
+  },
+  {
+    "name": "arrow-up-right-sm",
+    "title": "Arrow Up Right Sm",
+    "category": "Arrow",
+    "fileName": "arrow-up-right-sm.svg",
+    "path": "icons/Arrow/arrow-up-right-sm.svg"
   }
 ]
