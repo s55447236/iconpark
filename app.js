@@ -35,6 +35,51 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.error('Error loading version:', error);
     }
 
+    // 版本更新记录
+    const versionHistory = `
+        <div class="version-item">
+            <h3>v2.5.1 (2024-01-03)</h3>
+            <ul>
+                <li class="tag tag-update">UPDATE</li>
+                <li>优化搜索框和分类选择按钮的交互体验</li>
+                <li>改进 hover 和 focus 状态的视觉效果</li>
+                <li>统一控件高度，提升界面一致性</li>
+                <li class="tag tag-add">ADD</li>
+                <li>新增收藏操作的 Toast 提示</li>
+                <li>优化图标收藏状态的显示效果</li>
+                <li class="tag tag-fix">FIX</li>
+                <li>修复分类选择按钮的箭头图标显示问题</li>
+                <li>修复部分图标描边样式不一致的问题</li>
+            </ul>
+        </div>
+        <div class="version-item">
+            <h3>v2.5.0 (2024-01-02)</h3>
+            <ul>
+                <li class="tag tag-add">ADD</li>
+                <li>新增 122 个图标：copyleft、reply-all、collage、ink-bottle、dashboard-2、dashboard-3、usb、draft、delete-column、delete-row、flow-chart、h-1 到 h-6、insert-column-left、insert-column-right、insert-row-bottom、insert-row-top、merge-cells-horizontal、merge-cells-vertical、mind-map、node-tree、organization-chart、question-mark</li>
+                <li class="tag tag-update">UPDATE</li>
+                <li>根据最新的 logo 样式，重新设计了 discord 和 gitlab 图标</li>
+                <li class="tag tag-fix">FIX</li>
+                <li>修改了 iconfont 的基线，现在图标应该与文字垂直对齐</li>
+            </ul>
+        </div>
+        <div class="version-item">
+            <h3>v1.0.0 (2024-01-01)</h3>
+            <ul>
+                <li class="tag tag-add">ADD</li>
+                <li>初始版本发布</li>
+                <li>支持箭头图标组</li>
+                <li>支持通用图标组</li>
+                <li>支持形状图标组</li>
+                <li>支持文件图标组</li>
+                <li>支持图标搜索功能</li>
+                <li>支持图标收藏功能</li>
+                <li>支持 SVG 和 PNG 格式下载</li>
+                <li>支持图标颜色和尺寸调整</li>
+            </ul>
+        </div>
+    `;
+
     // 导航栏收藏按钮图标
     const navStarIcon = `
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,37 +87,50 @@ document.addEventListener('DOMContentLoaded', async () => {
     </svg>
     `;
 
-    // 添加导航栏
+    // 创建导航栏
     const navbar = document.createElement('nav');
     navbar.className = 'navbar';
     navbar.innerHTML = `
-        <div class="navbar-left">
-            <div class="brand">
-                <h1>iiiiicon</h1>
-                <button class="version-btn">${version}</button>
+        <div class="nav-content">
+            <div class="nav-left">
+                <div class="brand">
+                    <img src="assets/logo.png" alt="IconPark" class="logo" />
+                    <button class="version-btn">${version}</button>
+                </div>
             </div>
-        </div>
-        <div class="navbar-right">
-            <button class="nav-btn favorites">
-                ${navStarIcon}
-                收藏夹
-                <span class="favorites-count">0</span>
-            </button>
-            <button class="nav-btn download-all">
-                <svg viewBox="0 0 24 24" width="16" height="16">
-                    <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" stroke="currentColor" fill="none" stroke-width="1.5"/>
-                </svg>
-                下载全部
-            </button>
-            <button class="nav-btn donate">
-                <svg viewBox="0 0 24 24" width="16" height="16">
-                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" fill="none" stroke-width="1.5"/>
-                </svg>
-                打赏
-            </button>
+            <div class="nav-right">
+                <button class="nav-btn favorites">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="favorites-count">0</span>
+                </button>
+                <button class="nav-btn download">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    下载
+                </button>
+                <button class="nav-btn donate">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    打赏
+                </button>
+            </div>
         </div>
     `;
     document.body.insertBefore(navbar, document.body.firstChild);
+
+    // 收藏图标
+    const starIcon = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>`;
+
+    // 加号图标
+    const plusIcon = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>`;
 
     // 搜索图标
     const searchIcon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -214,32 +272,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <button class="version-modal-close">&times;</button>
             </div>
             <div class="version-modal-body">
-                <div class="version-item">
-                    <h3>v2.5.0 (2024-01-02)</h3>
-                    <ul>
-                        <li class="tag tag-add">ADD</li>
-                        <li>新增 122 个图标：copyleft、reply-all、collage、ink-bottle、dashboard-2、dashboard-3、usb、draft、delete-column、delete-row、flow-chart、h-1 到 h-6、insert-column-left、insert-column-right、insert-row-bottom、insert-row-top、merge-cells-horizontal、merge-cells-vertical、mind-map、node-tree、organization-chart、question-mark</li>
-                        <li class="tag tag-update">UPDATE</li>
-                        <li>根据最新的 logo 样式，重新设计了 discord 和 gitlab 图标</li>
-                        <li class="tag tag-fix">FIX</li>
-                        <li>修改了 iconfont 的基线，现在图标应该与文字垂直对齐</li>
-                    </ul>
-                </div>
-                <div class="version-item">
-                    <h3>v1.0.0 (2024-01-01)</h3>
-                    <ul>
-                        <li class="tag tag-add">ADD</li>
-                        <li>初始版本发布</li>
-                        <li>支持箭头图标组</li>
-                        <li>支持通用图标组</li>
-                        <li>支持形状图标组</li>
-                        <li>支持文件图标组</li>
-                        <li>支持图标搜索功能</li>
-                        <li>支持图标收藏功能</li>
-                        <li>支持 SVG 和 PNG 格式下载</li>
-                        <li>支持图标颜色和尺寸调整</li>
-                    </ul>
-                </div>
+                ${versionHistory}
             </div>
         </div>
     `;
@@ -421,20 +454,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         return iconsByCategory;
     }
-
-    // 未收藏状态的图标
-    const plusIcon = `
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12.0001 4.7998L12 19.1998M19.2 11.9998L4.80005 11.9998" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    </svg>
-    `;
-
-    // 已收藏状态的图标
-    const starIcon = `
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M11.4951 2.71381C11.7017 2.29527 12.2985 2.29527 12.5051 2.71381L15.1791 8.13194C15.2611 8.29814 15.4196 8.41334 15.6031 8.43999L21.5823 9.30883C22.0442 9.37595 22.2286 9.94357 21.8944 10.2694L17.5678 14.4868C17.4351 14.6162 17.3745 14.8026 17.4058 14.9852L18.4272 20.9403C18.5061 21.4004 18.0233 21.7512 17.6101 21.534L12.2621 18.7224C12.0981 18.6361 11.9021 18.6361 11.738 18.7224L6.39002 21.534C5.97689 21.7512 5.49404 21.4004 5.57294 20.9403L6.59432 14.9852C6.62565 14.8026 6.56509 14.6162 6.43236 14.4868L2.10573 10.2694C1.7715 9.94357 1.95594 9.37595 2.41783 9.30883L8.39708 8.43999C8.5805 8.41334 8.73906 8.29814 8.82109 8.13194L11.4951 2.71381Z" fill="currentColor"/>
-    </svg>
-    `;
 
     // 渲染图标
     function renderIcons(iconsByCategory) {

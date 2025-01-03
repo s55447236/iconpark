@@ -1,7 +1,16 @@
 {
-  "name": "iiiiicon",
-  "version": "2.5.0",
-  "description": "A beautiful and modern icon library",
-  "author": "Your Name",
+  "name": "iconpark",
+  "version": "2.5.1",
+  "description": "IconPark - 开源图标库",
+  "main": "app.js",
+  "scripts": {
+    "start": "http-server -p 3000"
+  },
+  "keywords": [
+    "icons",
+    "svg",
+    "library"
+  ],
+  "author": "",
   "license": "MIT"
 } 
