@@ -1,0 +1,268 @@
+[
+  {
+    "name": "bar-chart-01",
+    "title": "Bar Chart 01",
+    "category": "Charts",
+    "fileName": "bar-chart-01.svg",
+    "path": "icons/Charts/bar-chart-01.svg"
+  },
+  {
+    "name": "bar-chart-02",
+    "title": "Bar Chart 02",
+    "category": "Charts",
+    "fileName": "bar-chart-02.svg",
+    "path": "icons/Charts/bar-chart-02.svg"
+  },
+  {
+    "name": "bar-chart-03",
+    "title": "Bar Chart 03",
+    "category": "Charts",
+    "fileName": "bar-chart-03.svg",
+    "path": "icons/Charts/bar-chart-03.svg"
+  },
+  {
+    "name": "bar-chart-04",
+    "title": "Bar Chart 04",
+    "category": "Charts",
+    "fileName": "bar-chart-04.svg",
+    "path": "icons/Charts/bar-chart-04.svg"
+  },
+  {
+    "name": "bar-chart-05",
+    "title": "Bar Chart 05",
+    "category": "Charts",
+    "fileName": "bar-chart-05.svg",
+    "path": "icons/Charts/bar-chart-05.svg"
+  },
+  {
+    "name": "bar-chart-square-01",
+    "title": "Bar Chart Square 01",
+    "category": "Charts",
+    "fileName": "bar-chart-square-01.svg",
+    "path": "icons/Charts/bar-chart-square-01.svg"
+  },
+  {
+    "name": "bar-chart-square-02",
+    "title": "Bar Chart Square 02",
+    "category": "Charts",
+    "fileName": "bar-chart-square-02.svg",
+    "path": "icons/Charts/bar-chart-square-02.svg"
+  },
+  {
+    "name": "bar-chart-square-03",
+    "title": "Bar Chart Square 03",
+    "category": "Charts",
+    "fileName": "bar-chart-square-03.svg",
+    "path": "icons/Charts/bar-chart-square-03.svg"
+  },
+  {
+    "name": "bar-chart-square-down-01",
+    "title": "Bar Chart Square Down 01",
+    "category": "Charts",
+    "fileName": "bar-chart-square-down-01.svg",
+    "path": "icons/Charts/bar-chart-square-down-01.svg"
+  },
+  {
+    "name": "bar-chart-square-down-02",
+    "title": "Bar Chart Square Down 02",
+    "category": "Charts",
+    "fileName": "bar-chart-square-down-02.svg",
+    "path": "icons/Charts/bar-chart-square-down-02.svg"
+  },
+  {
+    "name": "bar-chart-square-up-01-1",
+    "title": "Bar Chart Square Up 01 1",
+    "category": "Charts",
+    "fileName": "bar-chart-square-up-01-1.svg",
+    "path": "icons/Charts/bar-chart-square-up-01-1.svg"
+  },
+  {
+    "name": "bar-chart-square-up-01",
+    "title": "Bar Chart Square Up 01",
+    "category": "Charts",
+    "fileName": "bar-chart-square-up-01.svg",
+    "path": "icons/Charts/bar-chart-square-up-01.svg"
+  },
+  {
+    "name": "bar-group-01",
+    "title": "Bar Group 01",
+    "category": "Charts",
+    "fileName": "bar-group-01.svg",
+    "path": "icons/Charts/bar-group-01.svg"
+  },
+  {
+    "name": "bar-group-02",
+    "title": "Bar Group 02",
+    "category": "Charts",
+    "fileName": "bar-group-02.svg",
+    "path": "icons/Charts/bar-group-02.svg"
+  },
+  {
+    "name": "bar-group-03",
+    "title": "Bar Group 03",
+    "category": "Charts",
+    "fileName": "bar-group-03.svg",
+    "path": "icons/Charts/bar-group-03.svg"
+  },
+  {
+    "name": "calculator-02",
+    "title": "Calculator 02",
+    "category": "Charts",
+    "fileName": "calculator-02.svg",
+    "path": "icons/Charts/calculator-02.svg"
+  },
+  {
+    "name": "chart-breakout-circle",
+    "title": "Chart Breakout Circle",
+    "category": "Charts",
+    "fileName": "chart-breakout-circle.svg",
+    "path": "icons/Charts/chart-breakout-circle.svg"
+  },
+  {
+    "name": "chart-breakout-square",
+    "title": "Chart Breakout Square",
+    "category": "Charts",
+    "fileName": "chart-breakout-square.svg",
+    "path": "icons/Charts/chart-breakout-square.svg"
+  },
+  {
+    "name": "compass",
+    "title": "Compass",
+    "category": "Charts",
+    "fileName": "compass.svg",
+    "path": "icons/Charts/compass.svg"
+  },
+  {
+    "name": "glasses-01",
+    "title": "Glasses 01",
+    "category": "Charts",
+    "fileName": "glasses-01.svg",
+    "path": "icons/Charts/glasses-01.svg"
+  },
+  {
+    "name": "glasses-02",
+    "title": "Glasses 02",
+    "category": "Charts",
+    "fileName": "glasses-02.svg",
+    "path": "icons/Charts/glasses-02.svg"
+  },
+  {
+    "name": "horizontal-chart-01",
+    "title": "Horizontal Chart 01",
+    "category": "Charts",
+    "fileName": "horizontal-chart-01.svg",
+    "path": "icons/Charts/horizontal-chart-01.svg"
+  },
+  {
+    "name": "horizontal-chart-02",
+    "title": "Horizontal Chart 02",
+    "category": "Charts",
+    "fileName": "horizontal-chart-02.svg",
+    "path": "icons/Charts/horizontal-chart-02.svg"
+  },
+  {
+    "name": "horizontal-chart-03",
+    "title": "Horizontal Chart 03",
+    "category": "Charts",
+    "fileName": "horizontal-chart-03.svg",
+    "path": "icons/Charts/horizontal-chart-03.svg"
+  },
+  {
+    "name": "line-chart-down-01",
+    "title": "Line Chart Down 01",
+    "category": "Charts",
+    "fileName": "line-chart-down-01.svg",
+    "path": "icons/Charts/line-chart-down-01.svg"
+  },
+  {
+    "name": "line-chart-down-02",
+    "title": "Line Chart Down 02",
+    "category": "Charts",
+    "fileName": "line-chart-down-02.svg",
+    "path": "icons/Charts/line-chart-down-02.svg"
+  },
+  {
+    "name": "line-chart-up-01",
+    "title": "Line Chart Up 01",
+    "category": "Charts",
+    "fileName": "line-chart-up-01.svg",
+    "path": "icons/Charts/line-chart-up-01.svg"
+  },
+  {
+    "name": "line-chart-up-02",
+    "title": "Line Chart Up 02",
+    "category": "Charts",
+    "fileName": "line-chart-up-02.svg",
+    "path": "icons/Charts/line-chart-up-02.svg"
+  },
+  {
+    "name": "pie-chart-01",
+    "title": "Pie Chart 01",
+    "category": "Charts",
+    "fileName": "pie-chart-01.svg",
+    "path": "icons/Charts/pie-chart-01.svg"
+  },
+  {
+    "name": "pie-chart-02",
+    "title": "Pie Chart 02",
+    "category": "Charts",
+    "fileName": "pie-chart-02.svg",
+    "path": "icons/Charts/pie-chart-02.svg"
+  },
+  {
+    "name": "pie-chart-03",
+    "title": "Pie Chart 03",
+    "category": "Charts",
+    "fileName": "pie-chart-03.svg",
+    "path": "icons/Charts/pie-chart-03.svg"
+  },
+  {
+    "name": "presentation-01",
+    "title": "Presentation 01",
+    "category": "Charts",
+    "fileName": "presentation-01.svg",
+    "path": "icons/Charts/presentation-01.svg"
+  },
+  {
+    "name": "presentation-02",
+    "title": "Presentation 02",
+    "category": "Charts",
+    "fileName": "presentation-02.svg",
+    "path": "icons/Charts/presentation-02.svg"
+  },
+  {
+    "name": "presentation-03",
+    "title": "Presentation 03",
+    "category": "Charts",
+    "fileName": "presentation-03.svg",
+    "path": "icons/Charts/presentation-03.svg"
+  },
+  {
+    "name": "trend-down-01",
+    "title": "Trend Down 01",
+    "category": "Charts",
+    "fileName": "trend-down-01.svg",
+    "path": "icons/Charts/trend-down-01.svg"
+  },
+  {
+    "name": "trend-down-02",
+    "title": "Trend Down 02",
+    "category": "Charts",
+    "fileName": "trend-down-02.svg",
+    "path": "icons/Charts/trend-down-02.svg"
+  },
+  {
+    "name": "trend-up-01",
+    "title": "Trend Up 01",
+    "category": "Charts",
+    "fileName": "trend-up-01.svg",
+    "path": "icons/Charts/trend-up-01.svg"
+  },
+  {
+    "name": "trend-up-02",
+    "title": "Trend Up 02",
+    "category": "Charts",
+    "fileName": "trend-up-02.svg",
+    "path": "icons/Charts/trend-up-02.svg"
+  }
+]

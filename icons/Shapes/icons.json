@@ -1,6 +1,65 @@
 [
-    {
-        "name": "star-02",
-        "path": "/icons/Shapes/star-02.svg"
-    }
-] 
+  {
+    "name": "circle",
+    "title": "Circle",
+    "category": "Shapes",
+    "fileName": "circle.svg",
+    "path": "icons/Shapes/circle.svg"
+  },
+  {
+    "name": "diamond",
+    "title": "Diamond",
+    "category": "Shapes",
+    "fileName": "diamond.svg",
+    "path": "icons/Shapes/diamond.svg"
+  },
+  {
+    "name": "hexagon",
+    "title": "Hexagon",
+    "category": "Shapes",
+    "fileName": "hexagon.svg",
+    "path": "icons/Shapes/hexagon.svg"
+  },
+  {
+    "name": "octagon",
+    "title": "Octagon",
+    "category": "Shapes",
+    "fileName": "octagon.svg",
+    "path": "icons/Shapes/octagon.svg"
+  },
+  {
+    "name": "pentagon",
+    "title": "Pentagon",
+    "category": "Shapes",
+    "fileName": "pentagon.svg",
+    "path": "icons/Shapes/pentagon.svg"
+  },
+  {
+    "name": "square",
+    "title": "Square",
+    "category": "Shapes",
+    "fileName": "square.svg",
+    "path": "icons/Shapes/square.svg"
+  },
+  {
+    "name": "star-01",
+    "title": "Star 01",
+    "category": "Shapes",
+    "fileName": "star-01.svg",
+    "path": "icons/Shapes/star-01.svg"
+  },
+  {
+    "name": "star-02",
+    "title": "Star 02",
+    "category": "Shapes",
+    "fileName": "star-02.svg",
+    "path": "icons/Shapes/star-02.svg"
+  },
+  {
+    "name": "triangle",
+    "title": "Triangle",
+    "category": "Shapes",
+    "fileName": "triangle.svg",
+    "path": "icons/Shapes/triangle.svg"
+  }
+]

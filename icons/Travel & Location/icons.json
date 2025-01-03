@@ -1,0 +1,240 @@
+[
+  {
+    "name": "box",
+    "title": "Box",
+    "category": "Travel & Location",
+    "fileName": "box.svg",
+    "path": "icons/Travel & Location/box.svg"
+  },
+  {
+    "name": "car",
+    "title": "Car",
+    "category": "Travel & Location",
+    "fileName": "car.svg",
+    "path": "icons/Travel & Location/car.svg"
+  },
+  {
+    "name": "compass",
+    "title": "Compass",
+    "category": "Travel & Location",
+    "fileName": "compass.svg",
+    "path": "icons/Travel & Location/compass.svg"
+  },
+  {
+    "name": "globe-01",
+    "title": "Globe 01",
+    "category": "Travel & Location",
+    "fileName": "globe-01.svg",
+    "path": "icons/Travel & Location/globe-01.svg"
+  },
+  {
+    "name": "globe-02",
+    "title": "Globe 02",
+    "category": "Travel & Location",
+    "fileName": "globe-02.svg",
+    "path": "icons/Travel & Location/globe-02.svg"
+  },
+  {
+    "name": "globe-03",
+    "title": "Globe 03",
+    "category": "Travel & Location",
+    "fileName": "globe-03.svg",
+    "path": "icons/Travel & Location/globe-03.svg"
+  },
+  {
+    "name": "globe-04",
+    "title": "Globe 04",
+    "category": "Travel & Location",
+    "fileName": "globe-04.svg",
+    "path": "icons/Travel & Location/globe-04.svg"
+  },
+  {
+    "name": "globe-05",
+    "title": "Globe 05",
+    "category": "Travel & Location",
+    "fileName": "globe-05.svg",
+    "path": "icons/Travel & Location/globe-05.svg"
+  },
+  {
+    "name": "luggage-01",
+    "title": "Luggage 01",
+    "category": "Travel & Location",
+    "fileName": "luggage-01.svg",
+    "path": "icons/Travel & Location/luggage-01.svg"
+  },
+  {
+    "name": "luggage-02",
+    "title": "Luggage 02",
+    "category": "Travel & Location",
+    "fileName": "luggage-02.svg",
+    "path": "icons/Travel & Location/luggage-02.svg"
+  },
+  {
+    "name": "luggage-03",
+    "title": "Luggage 03",
+    "category": "Travel & Location",
+    "fileName": "luggage-03.svg",
+    "path": "icons/Travel & Location/luggage-03.svg"
+  },
+  {
+    "name": "luggage-04",
+    "title": "Luggage 04",
+    "category": "Travel & Location",
+    "fileName": "luggage-04.svg",
+    "path": "icons/Travel & Location/luggage-04.svg"
+  },
+  {
+    "name": "map-01-1",
+    "title": "Map 01 1",
+    "category": "Travel & Location",
+    "fileName": "map-01-1.svg",
+    "path": "icons/Travel & Location/map-01-1.svg"
+  },
+  {
+    "name": "map-01",
+    "title": "Map 01",
+    "category": "Travel & Location",
+    "fileName": "map-01.svg",
+    "path": "icons/Travel & Location/map-01.svg"
+  },
+  {
+    "name": "map-02",
+    "title": "Map 02",
+    "category": "Travel & Location",
+    "fileName": "map-02.svg",
+    "path": "icons/Travel & Location/map-02.svg"
+  },
+  {
+    "name": "map-03",
+    "title": "Map 03",
+    "category": "Travel & Location",
+    "fileName": "map-03.svg",
+    "path": "icons/Travel & Location/map-03.svg"
+  },
+  {
+    "name": "map-04",
+    "title": "Map 04",
+    "category": "Travel & Location",
+    "fileName": "map-04.svg",
+    "path": "icons/Travel & Location/map-04.svg"
+  },
+  {
+    "name": "marker-01",
+    "title": "Marker 01",
+    "category": "Travel & Location",
+    "fileName": "marker-01.svg",
+    "path": "icons/Travel & Location/marker-01.svg"
+  },
+  {
+    "name": "marker-02",
+    "title": "Marker 02",
+    "category": "Travel & Location",
+    "fileName": "marker-02.svg",
+    "path": "icons/Travel & Location/marker-02.svg"
+  },
+  {
+    "name": "marker-03",
+    "title": "Marker 03",
+    "category": "Travel & Location",
+    "fileName": "marker-03.svg",
+    "path": "icons/Travel & Location/marker-03.svg"
+  },
+  {
+    "name": "marker-04",
+    "title": "Marker 04",
+    "category": "Travel & Location",
+    "fileName": "marker-04.svg",
+    "path": "icons/Travel & Location/marker-04.svg"
+  },
+  {
+    "name": "marker-05",
+    "title": "Marker 05",
+    "category": "Travel & Location",
+    "fileName": "marker-05.svg",
+    "path": "icons/Travel & Location/marker-05.svg"
+  },
+  {
+    "name": "marker-06",
+    "title": "Marker 06",
+    "category": "Travel & Location",
+    "fileName": "marker-06.svg",
+    "path": "icons/Travel & Location/marker-06.svg"
+  },
+  {
+    "name": "passport",
+    "title": "Passport",
+    "category": "Travel & Location",
+    "fileName": "passport.svg",
+    "path": "icons/Travel & Location/passport.svg"
+  },
+  {
+    "name": "plane",
+    "title": "Plane",
+    "category": "Travel & Location",
+    "fileName": "plane.svg",
+    "path": "icons/Travel & Location/plane.svg"
+  },
+  {
+    "name": "pointer-01",
+    "title": "Pointer 01",
+    "category": "Travel & Location",
+    "fileName": "pointer-01.svg",
+    "path": "icons/Travel & Location/pointer-01.svg"
+  },
+  {
+    "name": "pointer-02",
+    "title": "Pointer 02",
+    "category": "Travel & Location",
+    "fileName": "pointer-02.svg",
+    "path": "icons/Travel & Location/pointer-02.svg"
+  },
+  {
+    "name": "target-01",
+    "title": "Target 01",
+    "category": "Travel & Location",
+    "fileName": "target-01.svg",
+    "path": "icons/Travel & Location/target-01.svg"
+  },
+  {
+    "name": "target-02",
+    "title": "Target 02",
+    "category": "Travel & Location",
+    "fileName": "target-02.svg",
+    "path": "icons/Travel & Location/target-02.svg"
+  },
+  {
+    "name": "ticket-01",
+    "title": "Ticket 01",
+    "category": "Travel & Location",
+    "fileName": "ticket-01.svg",
+    "path": "icons/Travel & Location/ticket-01.svg"
+  },
+  {
+    "name": "ticket-02",
+    "title": "Ticket 02",
+    "category": "Travel & Location",
+    "fileName": "ticket-02.svg",
+    "path": "icons/Travel & Location/ticket-02.svg"
+  },
+  {
+    "name": "train",
+    "title": "Train",
+    "category": "Travel & Location",
+    "fileName": "train.svg",
+    "path": "icons/Travel & Location/train.svg"
+  },
+  {
+    "name": "truck",
+    "title": "Truck",
+    "category": "Travel & Location",
+    "fileName": "truck.svg",
+    "path": "icons/Travel & Location/truck.svg"
+  },
+  {
+    "name": "umbrella",
+    "title": "Umbrella",
+    "category": "Travel & Location",
+    "fileName": "umbrella.svg",
+    "path": "icons/Travel & Location/umbrella.svg"
+  }
+]

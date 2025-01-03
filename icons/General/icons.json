@@ -1,398 +1,884 @@
 [
-    {
-        "name": "edit",
-        "path": "/icons/General/edit-01.svg"
-    },
-    {
-        "name": "edit-02",
-        "path": "/icons/General/edit-02.svg"
-    },
-    {
-        "name": "edit-03",
-        "path": "/icons/General/edit-03.svg"
-    },
-    {
-        "name": "edit-04",
-        "path": "/icons/General/edit-04.svg"
-    },
-    {
-        "name": "edit-contained",
-        "path": "/icons/General/edit-contained.svg"
-    },
-    {
-        "name": "email",
-        "path": "/icons/General/email.svg"
-    },
-    {
-        "name": "embed",
-        "path": "/icons/General/embed.svg"
-    },
-    {
-        "name": "equals",
-        "path": "/icons/General/equals.svg"
-    },
-    {
-        "name": "equals-not",
-        "path": "/icons/General/equals-not.svg"
-    },
-    {
-        "name": "expand",
-        "path": "/icons/General/expand.svg"
-    },
-    {
-        "name": "expand-02",
-        "path": "/icons/General/expand-02.svg"
-    },
-    {
-        "name": "eye-open",
-        "path": "/icons/General/eye-open.svg"
-    },
-    {
-        "name": "eye-closed",
-        "path": "/icons/General/eye-closed.svg"
-    },
-    {
-        "name": "favourite",
-        "path": "/icons/General/favourite.svg"
-    },
-    {
-        "name": "file",
-        "path": "/icons/General/file.svg"
-    },
-    {
-        "name": "filter",
-        "path": "/icons/General/filter.svg"
-    },
-    {
-        "name": "gear",
-        "path": "/icons/General/gear.svg"
-    },
-    {
-        "name": "globe",
-        "path": "/icons/General/globe.svg"
-    },
-    {
-        "name": "hash-01",
-        "path": "/icons/General/hash-01.svg"
-    },
-    {
-        "name": "hash-02",
-        "path": "/icons/General/hash-02.svg"
-    },
-    {
-        "name": "heart",
-        "path": "/icons/General/heart.svg"
-    },
-    {
-        "name": "help",
-        "path": "/icons/General/help.svg"
-    },
-    {
-        "name": "help-circle-contained",
-        "path": "/icons/General/help-circle-contained.svg"
-    },
-    {
-        "name": "help-square-contained",
-        "path": "/icons/General/help-square-contained.svg"
-    },
-    {
-        "name": "home-01",
-        "path": "/icons/General/home-01.svg"
-    },
-    {
-        "name": "home-02",
-        "path": "/icons/General/home-02.svg"
-    },
-    {
-        "name": "home-03",
-        "path": "/icons/General/home-03.svg"
-    },
-    {
-        "name": "home-04",
-        "path": "/icons/General/home-04.svg"
-    },
-    {
-        "name": "home-05",
-        "path": "/icons/General/home-05.svg"
-    },
-    {
-        "name": "image",
-        "path": "/icons/General/image.svg"
-    },
-    {
-        "name": "info-square-01-contained",
-        "path": "/icons/General/info-square-01-contained.svg"
-    },
-    {
-        "name": "info-square-02-contained-filled",
-        "path": "/icons/General/info-square-02-contained-filled.svg"
-    },
-    {
-        "name": "information-circle-contained",
-        "path": "/icons/General/information-circle-contained.svg"
-    },
-    {
-        "name": "lightning-circle-contained",
-        "path": "/icons/General/lightning-circle-contained.svg"
-    },
-    {
-        "name": "lightning-filled",
-        "path": "/icons/General/lightning-filled.svg"
-    },
-    {
-        "name": "lightning-square-contained",
-        "path": "/icons/General/lightning-square-contained.svg"
-    },
-    {
-        "name": "link",
-        "path": "/icons/General/link.svg"
-    },
-    {
-        "name": "link-angled",
-        "path": "/icons/General/link-angled.svg"
-    },
-    {
-        "name": "link-broken",
-        "path": "/icons/General/link-broken.svg"
-    },
-    {
-        "name": "link-external",
-        "path": "/icons/General/link-external.svg"
-    },
-    {
-        "name": "loader-01",
-        "path": "/icons/General/loader-01.svg"
-    },
-    {
-        "name": "loader-02",
-        "path": "/icons/General/loader-02.svg"
-    },
-    {
-        "name": "logout-01",
-        "path": "/icons/General/logout-01.svg"
-    },
-    {
-        "name": "logout-02",
-        "path": "/icons/General/logout-02.svg"
-    },
-    {
-        "name": "logout-03",
-        "path": "/icons/General/logout-03.svg"
-    },
-    {
-        "name": "logout-04",
-        "path": "/icons/General/logout-04.svg"
-    },
-    {
-        "name": "menu-01",
-        "path": "/icons/General/menu-01.svg"
-    },
-    {
-        "name": "menu-02",
-        "path": "/icons/General/menu-02.svg"
-    },
-    {
-        "name": "menu-03",
-        "path": "/icons/General/menu-03.svg"
-    },
-    {
-        "name": "menu-04",
-        "path": "/icons/General/menu-04.svg"
-    },
-    {
-        "name": "menu-05",
-        "path": "/icons/General/menu-05.svg"
-    },
-    {
-        "name": "minus-circle-contained",
-        "path": "/icons/General/minus-circle-contained.svg"
-    },
-    {
-        "name": "minus-square-contained",
-        "path": "/icons/General/minus-square-contained.svg"
-    },
-    {
-        "name": "paperclip",
-        "path": "/icons/General/paperclip.svg"
-    },
-    {
-        "name": "percent-01",
-        "path": "/icons/General/percent-01.svg"
-    },
-    {
-        "name": "percent-02",
-        "path": "/icons/General/percent-02.svg"
-    },
-    {
-        "name": "percent-03",
-        "path": "/icons/General/percent-03.svg"
-    },
-    {
-        "name": "plus-01",
-        "path": "/icons/General/plus-01.svg"
-    },
-    {
-        "name": "plus-02",
-        "path": "/icons/General/plus-02.svg"
-    },
-    {
-        "name": "plus-03",
-        "path": "/icons/General/plus-03.svg"
-    },
-    {
-        "name": "progress",
-        "path": "/icons/General/progress.svg"
-    },
-    {
-        "name": "quote",
-        "path": "/icons/General/quote.svg"
-    },
-    {
-        "name": "save-01",
-        "path": "/icons/General/save-01.svg"
-    },
-    {
-        "name": "save-02",
-        "path": "/icons/General/save-02.svg"
-    },
-    {
-        "name": "search-01",
-        "path": "/icons/General/search-01.svg"
-    },
-    {
-        "name": "search-02",
-        "path": "/icons/General/search-02.svg"
-    },
-    {
-        "name": "settings",
-        "path": "/icons/General/settings.svg"
-    },
-    {
-        "name": "share",
-        "path": "/icons/General/share.svg"
-    },
-    {
-        "name": "share-1",
-        "path": "/icons/General/share-1.svg"
-    },
-    {
-        "name": "slash-01-backward",
-        "path": "/icons/General/slash-01-backward.svg"
-    },
-    {
-        "name": "slash-01-forward",
-        "path": "/icons/General/slash-01-forward.svg"
-    },
-    {
-        "name": "slash-02-forward",
-        "path": "/icons/General/slash-02-forward.svg"
-    },
-    {
-        "name": "slash-02-forward-1",
-        "path": "/icons/General/slash-02-forward-1.svg"
-    },
-    {
-        "name": "sort-horizontal",
-        "path": "/icons/General/sort-horizontal.svg"
-    },
-    {
-        "name": "sort-vertical-01",
-        "path": "/icons/General/sort-vertical-01.svg"
-    },
-    {
-        "name": "sort-vertical-02",
-        "path": "/icons/General/sort-vertical-02.svg"
-    },
-    {
-        "name": "target-01",
-        "path": "/icons/General/target-01.svg"
-    },
-    {
-        "name": "target-02",
-        "path": "/icons/General/target-02.svg"
-    },
-    {
-        "name": "target-03",
-        "path": "/icons/General/target-03.svg"
-    },
-    {
-        "name": "target-04",
-        "path": "/icons/General/target-04.svg"
-    },
-    {
-        "name": "thumb-down",
-        "path": "/icons/General/thumb-down.svg"
-    },
-    {
-        "name": "thumb-up",
-        "path": "/icons/General/thumb-up.svg"
-    },
-    {
-        "name": "toggle-right",
-        "path": "/icons/General/toggle-right.svg"
-    },
-    {
-        "name": "toogle-left",
-        "path": "/icons/General/toogle-left.svg"
-    },
-    {
-        "name": "trash-01",
-        "path": "/icons/General/trash-01.svg"
-    },
-    {
-        "name": "trash-02",
-        "path": "/icons/General/trash-02.svg"
-    },
-    {
-        "name": "trash-03",
-        "path": "/icons/General/trash-03.svg"
-    },
-    {
-        "name": "trash-04",
-        "path": "/icons/General/trash-04.svg"
-    },
-    {
-        "name": "upload-01",
-        "path": "/icons/General/upload-01.svg"
-    },
-    {
-        "name": "upload-02",
-        "path": "/icons/General/upload-02.svg"
-    },
-    {
-        "name": "upload-03",
-        "path": "/icons/General/upload-03.svg"
-    },
-    {
-        "name": "upload-04",
-        "path": "/icons/General/upload-04.svg"
-    },
-    {
-        "name": "variant",
-        "path": "/icons/General/variant.svg"
-    },
-    {
-        "name": "wrench",
-        "path": "/icons/General/wrench.svg"
-    },
-    {
-        "name": "x-01",
-        "path": "/icons/General/x-01.svg"
-    },
-    {
-        "name": "x-02",
-        "path": "/icons/General/x-02.svg"
-    },
-    {
-        "name": "x-03",
-        "path": "/icons/General/x-03.svg"
-    },
-    {
-        "name": "x-circle-contained",
-        "path": "/icons/General/x-circle-contained.svg"
-    },
-    {
-        "name": "x-square-contained",
-        "path": "/icons/General/x-square-contained.svg"
-    }
-] 
+  {
+    "name": "activity",
+    "title": "Activity",
+    "category": "General",
+    "fileName": "activity.svg",
+    "path": "icons/General/activity.svg"
+  },
+  {
+    "name": "add-square-01",
+    "title": "Add Square 01",
+    "category": "General",
+    "fileName": "add-square-01.svg",
+    "path": "icons/General/add-square-01.svg"
+  },
+  {
+    "name": "add-square-02",
+    "title": "Add Square 02",
+    "category": "General",
+    "fileName": "add-square-02.svg",
+    "path": "icons/General/add-square-02.svg"
+  },
+  {
+    "name": "add-square-03",
+    "title": "Add Square 03",
+    "category": "General",
+    "fileName": "add-square-03.svg",
+    "path": "icons/General/add-square-03.svg"
+  },
+  {
+    "name": "add-square-04",
+    "title": "Add Square 04",
+    "category": "General",
+    "fileName": "add-square-04.svg",
+    "path": "icons/General/add-square-04.svg"
+  },
+  {
+    "name": "calendar-05",
+    "title": "Calendar 05",
+    "category": "General",
+    "fileName": "calendar-05.svg",
+    "path": "icons/General/calendar-05.svg"
+  },
+  {
+    "name": "calendar-06",
+    "title": "Calendar 06",
+    "category": "General",
+    "fileName": "calendar-06.svg",
+    "path": "icons/General/calendar-06.svg"
+  },
+  {
+    "name": "calendar-07",
+    "title": "Calendar 07",
+    "category": "General",
+    "fileName": "calendar-07.svg",
+    "path": "icons/General/calendar-07.svg"
+  },
+  {
+    "name": "cancel-left",
+    "title": "Cancel Left",
+    "category": "General",
+    "fileName": "cancel-left.svg",
+    "path": "icons/General/cancel-left.svg"
+  },
+  {
+    "name": "cancel-right",
+    "title": "Cancel Right",
+    "category": "General",
+    "fileName": "cancel-right.svg",
+    "path": "icons/General/cancel-right.svg"
+  },
+  {
+    "name": "check-01",
+    "title": "Check 01",
+    "category": "General",
+    "fileName": "check-01.svg",
+    "path": "icons/General/check-01.svg"
+  },
+  {
+    "name": "check-02",
+    "title": "Check 02",
+    "category": "General",
+    "fileName": "check-02.svg",
+    "path": "icons/General/check-02.svg"
+  },
+  {
+    "name": "check-broken",
+    "title": "Check Broken",
+    "category": "General",
+    "fileName": "check-broken.svg",
+    "path": "icons/General/check-broken.svg"
+  },
+  {
+    "name": "check-contained",
+    "title": "Check Contained",
+    "category": "General",
+    "fileName": "check-contained.svg",
+    "path": "icons/General/check-contained.svg"
+  },
+  {
+    "name": "check-square-broken",
+    "title": "Check Square Broken",
+    "category": "General",
+    "fileName": "check-square-broken.svg",
+    "path": "icons/General/check-square-broken.svg"
+  },
+  {
+    "name": "check-square-contained",
+    "title": "Check Square Contained",
+    "category": "General",
+    "fileName": "check-square-contained.svg",
+    "path": "icons/General/check-square-contained.svg"
+  },
+  {
+    "name": "compare",
+    "title": "Compare",
+    "category": "General",
+    "fileName": "compare.svg",
+    "path": "icons/General/compare.svg"
+  },
+  {
+    "name": "component",
+    "title": "Component",
+    "category": "General",
+    "fileName": "component.svg",
+    "path": "icons/General/component.svg"
+  },
+  {
+    "name": "copy-left",
+    "title": "Copy Left",
+    "category": "General",
+    "fileName": "copy-left.svg",
+    "path": "icons/General/copy-left.svg"
+  },
+  {
+    "name": "copy-right",
+    "title": "Copy Right",
+    "category": "General",
+    "fileName": "copy-right.svg",
+    "path": "icons/General/copy-right.svg"
+  },
+  {
+    "name": "dash",
+    "title": "Dash",
+    "category": "General",
+    "fileName": "dash.svg",
+    "path": "icons/General/dash.svg"
+  },
+  {
+    "name": "delivery",
+    "title": "Delivery",
+    "category": "General",
+    "fileName": "delivery.svg",
+    "path": "icons/General/delivery.svg"
+  },
+  {
+    "name": "dot-horizontal",
+    "title": "Dot Horizontal",
+    "category": "General",
+    "fileName": "dot-horizontal.svg",
+    "path": "icons/General/dot-horizontal.svg"
+  },
+  {
+    "name": "dot-vertical",
+    "title": "Dot Vertical",
+    "category": "General",
+    "fileName": "dot-vertical.svg",
+    "path": "icons/General/dot-vertical.svg"
+  },
+  {
+    "name": "download-01",
+    "title": "Download 01",
+    "category": "General",
+    "fileName": "download-01.svg",
+    "path": "icons/General/download-01.svg"
+  },
+  {
+    "name": "download-02",
+    "title": "Download 02",
+    "category": "General",
+    "fileName": "download-02.svg",
+    "path": "icons/General/download-02.svg"
+  },
+  {
+    "name": "download",
+    "title": "Download",
+    "category": "General",
+    "fileName": "download.svg",
+    "path": "icons/General/download.svg"
+  },
+  {
+    "name": "edit-01",
+    "title": "Edit 01",
+    "category": "General",
+    "fileName": "edit-01.svg",
+    "path": "icons/General/edit-01.svg"
+  },
+  {
+    "name": "edit-02",
+    "title": "Edit 02",
+    "category": "General",
+    "fileName": "edit-02.svg",
+    "path": "icons/General/edit-02.svg"
+  },
+  {
+    "name": "edit-03",
+    "title": "Edit 03",
+    "category": "General",
+    "fileName": "edit-03.svg",
+    "path": "icons/General/edit-03.svg"
+  },
+  {
+    "name": "edit-04",
+    "title": "Edit 04",
+    "category": "General",
+    "fileName": "edit-04.svg",
+    "path": "icons/General/edit-04.svg"
+  },
+  {
+    "name": "edit-contained",
+    "title": "Edit Contained",
+    "category": "General",
+    "fileName": "edit-contained.svg",
+    "path": "icons/General/edit-contained.svg"
+  },
+  {
+    "name": "email",
+    "title": "Email",
+    "category": "General",
+    "fileName": "email.svg",
+    "path": "icons/General/email.svg"
+  },
+  {
+    "name": "embed",
+    "title": "Embed",
+    "category": "General",
+    "fileName": "embed.svg",
+    "path": "icons/General/embed.svg"
+  },
+  {
+    "name": "equals-not",
+    "title": "Equals Not",
+    "category": "General",
+    "fileName": "equals-not.svg",
+    "path": "icons/General/equals-not.svg"
+  },
+  {
+    "name": "equals",
+    "title": "Equals",
+    "category": "General",
+    "fileName": "equals.svg",
+    "path": "icons/General/equals.svg"
+  },
+  {
+    "name": "expand-02",
+    "title": "Expand 02",
+    "category": "General",
+    "fileName": "expand-02.svg",
+    "path": "icons/General/expand-02.svg"
+  },
+  {
+    "name": "expand",
+    "title": "Expand",
+    "category": "General",
+    "fileName": "expand.svg",
+    "path": "icons/General/expand.svg"
+  },
+  {
+    "name": "eye-closed",
+    "title": "Eye Closed",
+    "category": "General",
+    "fileName": "eye-closed.svg",
+    "path": "icons/General/eye-closed.svg"
+  },
+  {
+    "name": "eye-open",
+    "title": "Eye Open",
+    "category": "General",
+    "fileName": "eye-open.svg",
+    "path": "icons/General/eye-open.svg"
+  },
+  {
+    "name": "favourite",
+    "title": "Favourite",
+    "category": "General",
+    "fileName": "favourite.svg",
+    "path": "icons/General/favourite.svg"
+  },
+  {
+    "name": "file",
+    "title": "File",
+    "category": "General",
+    "fileName": "file.svg",
+    "path": "icons/General/file.svg"
+  },
+  {
+    "name": "filter",
+    "title": "Filter",
+    "category": "General",
+    "fileName": "filter.svg",
+    "path": "icons/General/filter.svg"
+  },
+  {
+    "name": "gear",
+    "title": "Gear",
+    "category": "General",
+    "fileName": "gear.svg",
+    "path": "icons/General/gear.svg"
+  },
+  {
+    "name": "globe",
+    "title": "Globe",
+    "category": "General",
+    "fileName": "globe.svg",
+    "path": "icons/General/globe.svg"
+  },
+  {
+    "name": "hash-01",
+    "title": "Hash 01",
+    "category": "General",
+    "fileName": "hash-01.svg",
+    "path": "icons/General/hash-01.svg"
+  },
+  {
+    "name": "hash-02",
+    "title": "Hash 02",
+    "category": "General",
+    "fileName": "hash-02.svg",
+    "path": "icons/General/hash-02.svg"
+  },
+  {
+    "name": "heart",
+    "title": "Heart",
+    "category": "General",
+    "fileName": "heart.svg",
+    "path": "icons/General/heart.svg"
+  },
+  {
+    "name": "help-circle-contained",
+    "title": "Help Circle Contained",
+    "category": "General",
+    "fileName": "help-circle-contained.svg",
+    "path": "icons/General/help-circle-contained.svg"
+  },
+  {
+    "name": "help-square-contained",
+    "title": "Help Square Contained",
+    "category": "General",
+    "fileName": "help-square-contained.svg",
+    "path": "icons/General/help-square-contained.svg"
+  },
+  {
+    "name": "help",
+    "title": "Help",
+    "category": "General",
+    "fileName": "help.svg",
+    "path": "icons/General/help.svg"
+  },
+  {
+    "name": "home-01",
+    "title": "Home 01",
+    "category": "General",
+    "fileName": "home-01.svg",
+    "path": "icons/General/home-01.svg"
+  },
+  {
+    "name": "home-02",
+    "title": "Home 02",
+    "category": "General",
+    "fileName": "home-02.svg",
+    "path": "icons/General/home-02.svg"
+  },
+  {
+    "name": "home-03",
+    "title": "Home 03",
+    "category": "General",
+    "fileName": "home-03.svg",
+    "path": "icons/General/home-03.svg"
+  },
+  {
+    "name": "home-04",
+    "title": "Home 04",
+    "category": "General",
+    "fileName": "home-04.svg",
+    "path": "icons/General/home-04.svg"
+  },
+  {
+    "name": "home-05",
+    "title": "Home 05",
+    "category": "General",
+    "fileName": "home-05.svg",
+    "path": "icons/General/home-05.svg"
+  },
+  {
+    "name": "image",
+    "title": "Image",
+    "category": "General",
+    "fileName": "image.svg",
+    "path": "icons/General/image.svg"
+  },
+  {
+    "name": "info-square-01-contained",
+    "title": "Info Square 01 Contained",
+    "category": "General",
+    "fileName": "info-square-01-contained.svg",
+    "path": "icons/General/info-square-01-contained.svg"
+  },
+  {
+    "name": "info-square-02-contained-filled",
+    "title": "Info Square 02 Contained Filled",
+    "category": "General",
+    "fileName": "info-square-02-contained-filled.svg",
+    "path": "icons/General/info-square-02-contained-filled.svg"
+  },
+  {
+    "name": "information-circle-contained",
+    "title": "Information Circle Contained",
+    "category": "General",
+    "fileName": "information-circle-contained.svg",
+    "path": "icons/General/information-circle-contained.svg"
+  },
+  {
+    "name": "lightning-circle-contained",
+    "title": "Lightning Circle Contained",
+    "category": "General",
+    "fileName": "lightning-circle-contained.svg",
+    "path": "icons/General/lightning-circle-contained.svg"
+  },
+  {
+    "name": "lightning-filled",
+    "title": "Lightning Filled",
+    "category": "General",
+    "fileName": "lightning-filled.svg",
+    "path": "icons/General/lightning-filled.svg"
+  },
+  {
+    "name": "lightning-square-contained",
+    "title": "Lightning Square Contained",
+    "category": "General",
+    "fileName": "lightning-square-contained.svg",
+    "path": "icons/General/lightning-square-contained.svg"
+  },
+  {
+    "name": "link-angled",
+    "title": "Link Angled",
+    "category": "General",
+    "fileName": "link-angled.svg",
+    "path": "icons/General/link-angled.svg"
+  },
+  {
+    "name": "link-broken",
+    "title": "Link Broken",
+    "category": "General",
+    "fileName": "link-broken.svg",
+    "path": "icons/General/link-broken.svg"
+  },
+  {
+    "name": "link-external",
+    "title": "Link External",
+    "category": "General",
+    "fileName": "link-external.svg",
+    "path": "icons/General/link-external.svg"
+  },
+  {
+    "name": "link",
+    "title": "Link",
+    "category": "General",
+    "fileName": "link.svg",
+    "path": "icons/General/link.svg"
+  },
+  {
+    "name": "loader-01",
+    "title": "Loader 01",
+    "category": "General",
+    "fileName": "loader-01.svg",
+    "path": "icons/General/loader-01.svg"
+  },
+  {
+    "name": "loader-02",
+    "title": "Loader 02",
+    "category": "General",
+    "fileName": "loader-02.svg",
+    "path": "icons/General/loader-02.svg"
+  },
+  {
+    "name": "logout-01",
+    "title": "Logout 01",
+    "category": "General",
+    "fileName": "logout-01.svg",
+    "path": "icons/General/logout-01.svg"
+  },
+  {
+    "name": "logout-02",
+    "title": "Logout 02",
+    "category": "General",
+    "fileName": "logout-02.svg",
+    "path": "icons/General/logout-02.svg"
+  },
+  {
+    "name": "logout-03",
+    "title": "Logout 03",
+    "category": "General",
+    "fileName": "logout-03.svg",
+    "path": "icons/General/logout-03.svg"
+  },
+  {
+    "name": "logout-04",
+    "title": "Logout 04",
+    "category": "General",
+    "fileName": "logout-04.svg",
+    "path": "icons/General/logout-04.svg"
+  },
+  {
+    "name": "menu-01",
+    "title": "Menu 01",
+    "category": "General",
+    "fileName": "menu-01.svg",
+    "path": "icons/General/menu-01.svg"
+  },
+  {
+    "name": "menu-02",
+    "title": "Menu 02",
+    "category": "General",
+    "fileName": "menu-02.svg",
+    "path": "icons/General/menu-02.svg"
+  },
+  {
+    "name": "menu-03",
+    "title": "Menu 03",
+    "category": "General",
+    "fileName": "menu-03.svg",
+    "path": "icons/General/menu-03.svg"
+  },
+  {
+    "name": "menu-04",
+    "title": "Menu 04",
+    "category": "General",
+    "fileName": "menu-04.svg",
+    "path": "icons/General/menu-04.svg"
+  },
+  {
+    "name": "menu-05",
+    "title": "Menu 05",
+    "category": "General",
+    "fileName": "menu-05.svg",
+    "path": "icons/General/menu-05.svg"
+  },
+  {
+    "name": "minus-circle-contained",
+    "title": "Minus Circle Contained",
+    "category": "General",
+    "fileName": "minus-circle-contained.svg",
+    "path": "icons/General/minus-circle-contained.svg"
+  },
+  {
+    "name": "minus-square-contained",
+    "title": "Minus Square Contained",
+    "category": "General",
+    "fileName": "minus-square-contained.svg",
+    "path": "icons/General/minus-square-contained.svg"
+  },
+  {
+    "name": "paperclip",
+    "title": "Paperclip",
+    "category": "General",
+    "fileName": "paperclip.svg",
+    "path": "icons/General/paperclip.svg"
+  },
+  {
+    "name": "percent-01",
+    "title": "Percent 01",
+    "category": "General",
+    "fileName": "percent-01.svg",
+    "path": "icons/General/percent-01.svg"
+  },
+  {
+    "name": "percent-02",
+    "title": "Percent 02",
+    "category": "General",
+    "fileName": "percent-02.svg",
+    "path": "icons/General/percent-02.svg"
+  },
+  {
+    "name": "percent-03",
+    "title": "Percent 03",
+    "category": "General",
+    "fileName": "percent-03.svg",
+    "path": "icons/General/percent-03.svg"
+  },
+  {
+    "name": "plus-01",
+    "title": "Plus 01",
+    "category": "General",
+    "fileName": "plus-01.svg",
+    "path": "icons/General/plus-01.svg"
+  },
+  {
+    "name": "plus-02",
+    "title": "Plus 02",
+    "category": "General",
+    "fileName": "plus-02.svg",
+    "path": "icons/General/plus-02.svg"
+  },
+  {
+    "name": "plus-03",
+    "title": "Plus 03",
+    "category": "General",
+    "fileName": "plus-03.svg",
+    "path": "icons/General/plus-03.svg"
+  },
+  {
+    "name": "progress",
+    "title": "Progress",
+    "category": "General",
+    "fileName": "progress.svg",
+    "path": "icons/General/progress.svg"
+  },
+  {
+    "name": "quote",
+    "title": "Quote",
+    "category": "General",
+    "fileName": "quote.svg",
+    "path": "icons/General/quote.svg"
+  },
+  {
+    "name": "save-01",
+    "title": "Save 01",
+    "category": "General",
+    "fileName": "save-01.svg",
+    "path": "icons/General/save-01.svg"
+  },
+  {
+    "name": "save-02",
+    "title": "Save 02",
+    "category": "General",
+    "fileName": "save-02.svg",
+    "path": "icons/General/save-02.svg"
+  },
+  {
+    "name": "search-01",
+    "title": "Search 01",
+    "category": "General",
+    "fileName": "search-01.svg",
+    "path": "icons/General/search-01.svg"
+  },
+  {
+    "name": "search-02",
+    "title": "Search 02",
+    "category": "General",
+    "fileName": "search-02.svg",
+    "path": "icons/General/search-02.svg"
+  },
+  {
+    "name": "settings",
+    "title": "Settings",
+    "category": "General",
+    "fileName": "settings.svg",
+    "path": "icons/General/settings.svg"
+  },
+  {
+    "name": "share-1",
+    "title": "Share 1",
+    "category": "General",
+    "fileName": "share-1.svg",
+    "path": "icons/General/share-1.svg"
+  },
+  {
+    "name": "share",
+    "title": "Share",
+    "category": "General",
+    "fileName": "share.svg",
+    "path": "icons/General/share.svg"
+  },
+  {
+    "name": "slash-01-backward",
+    "title": "Slash 01 Backward",
+    "category": "General",
+    "fileName": "slash-01-backward.svg",
+    "path": "icons/General/slash-01-backward.svg"
+  },
+  {
+    "name": "slash-01-forward",
+    "title": "Slash 01 Forward",
+    "category": "General",
+    "fileName": "slash-01-forward.svg",
+    "path": "icons/General/slash-01-forward.svg"
+  },
+  {
+    "name": "slash-02-forward-1",
+    "title": "Slash 02 Forward 1",
+    "category": "General",
+    "fileName": "slash-02-forward-1.svg",
+    "path": "icons/General/slash-02-forward-1.svg"
+  },
+  {
+    "name": "slash-02-forward",
+    "title": "Slash 02 Forward",
+    "category": "General",
+    "fileName": "slash-02-forward.svg",
+    "path": "icons/General/slash-02-forward.svg"
+  },
+  {
+    "name": "sort-horizontal",
+    "title": "Sort Horizontal",
+    "category": "General",
+    "fileName": "sort-horizontal.svg",
+    "path": "icons/General/sort-horizontal.svg"
+  },
+  {
+    "name": "sort-vertical-01",
+    "title": "Sort Vertical 01",
+    "category": "General",
+    "fileName": "sort-vertical-01.svg",
+    "path": "icons/General/sort-vertical-01.svg"
+  },
+  {
+    "name": "sort-vertical-02",
+    "title": "Sort Vertical 02",
+    "category": "General",
+    "fileName": "sort-vertical-02.svg",
+    "path": "icons/General/sort-vertical-02.svg"
+  },
+  {
+    "name": "target-01",
+    "title": "Target 01",
+    "category": "General",
+    "fileName": "target-01.svg",
+    "path": "icons/General/target-01.svg"
+  },
+  {
+    "name": "target-02",
+    "title": "Target 02",
+    "category": "General",
+    "fileName": "target-02.svg",
+    "path": "icons/General/target-02.svg"
+  },
+  {
+    "name": "target-03",
+    "title": "Target 03",
+    "category": "General",
+    "fileName": "target-03.svg",
+    "path": "icons/General/target-03.svg"
+  },
+  {
+    "name": "target-04",
+    "title": "Target 04",
+    "category": "General",
+    "fileName": "target-04.svg",
+    "path": "icons/General/target-04.svg"
+  },
+  {
+    "name": "thumb-down",
+    "title": "Thumb Down",
+    "category": "General",
+    "fileName": "thumb-down.svg",
+    "path": "icons/General/thumb-down.svg"
+  },
+  {
+    "name": "thumb-up",
+    "title": "Thumb Up",
+    "category": "General",
+    "fileName": "thumb-up.svg",
+    "path": "icons/General/thumb-up.svg"
+  },
+  {
+    "name": "toggle-right",
+    "title": "Toggle Right",
+    "category": "General",
+    "fileName": "toggle-right.svg",
+    "path": "icons/General/toggle-right.svg"
+  },
+  {
+    "name": "toogle-left",
+    "title": "Toogle Left",
+    "category": "General",
+    "fileName": "toogle-left.svg",
+    "path": "icons/General/toogle-left.svg"
+  },
+  {
+    "name": "trash-01",
+    "title": "Trash 01",
+    "category": "General",
+    "fileName": "trash-01.svg",
+    "path": "icons/General/trash-01.svg"
+  },
+  {
+    "name": "trash-02",
+    "title": "Trash 02",
+    "category": "General",
+    "fileName": "trash-02.svg",
+    "path": "icons/General/trash-02.svg"
+  },
+  {
+    "name": "trash-03",
+    "title": "Trash 03",
+    "category": "General",
+    "fileName": "trash-03.svg",
+    "path": "icons/General/trash-03.svg"
+  },
+  {
+    "name": "trash-04",
+    "title": "Trash 04",
+    "category": "General",
+    "fileName": "trash-04.svg",
+    "path": "icons/General/trash-04.svg"
+  },
+  {
+    "name": "upload-01",
+    "title": "Upload 01",
+    "category": "General",
+    "fileName": "upload-01.svg",
+    "path": "icons/General/upload-01.svg"
+  },
+  {
+    "name": "upload-02",
+    "title": "Upload 02",
+    "category": "General",
+    "fileName": "upload-02.svg",
+    "path": "icons/General/upload-02.svg"
+  },
+  {
+    "name": "upload-03",
+    "title": "Upload 03",
+    "category": "General",
+    "fileName": "upload-03.svg",
+    "path": "icons/General/upload-03.svg"
+  },
+  {
+    "name": "upload-04",
+    "title": "Upload 04",
+    "category": "General",
+    "fileName": "upload-04.svg",
+    "path": "icons/General/upload-04.svg"
+  },
+  {
+    "name": "variant",
+    "title": "Variant",
+    "category": "General",
+    "fileName": "variant.svg",
+    "path": "icons/General/variant.svg"
+  },
+  {
+    "name": "wrench",
+    "title": "Wrench",
+    "category": "General",
+    "fileName": "wrench.svg",
+    "path": "icons/General/wrench.svg"
+  },
+  {
+    "name": "x-01",
+    "title": "X 01",
+    "category": "General",
+    "fileName": "x-01.svg",
+    "path": "icons/General/x-01.svg"
+  },
+  {
+    "name": "x-02",
+    "title": "X 02",
+    "category": "General",
+    "fileName": "x-02.svg",
+    "path": "icons/General/x-02.svg"
+  },
+  {
+    "name": "x-03",
+    "title": "X 03",
+    "category": "General",
+    "fileName": "x-03.svg",
+    "path": "icons/General/x-03.svg"
+  },
+  {
+    "name": "x-circle-contained",
+    "title": "X Circle Contained",
+    "category": "General",
+    "fileName": "x-circle-contained.svg",
+    "path": "icons/General/x-circle-contained.svg"
+  },
+  {
+    "name": "x-square-contained",
+    "title": "X Square Contained",
+    "category": "General",
+    "fileName": "x-square-contained.svg",
+    "path": "icons/General/x-square-contained.svg"
+  }
+]

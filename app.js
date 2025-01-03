@@ -6,22 +6,22 @@ document.addEventListener('DOMContentLoaded', async () => {
     // 分类数据
     const categories = [
         { id: 'all', name: 'All' },
-        { id: 'alert', name: 'Alert', path: 'icons/Alert' },
         { id: 'arrow', name: 'Arrow', path: 'icons/Arrow' },
         { id: 'charts', name: 'Charts', path: 'icons/Charts' },
         { id: 'communication', name: 'Communication', path: 'icons/Communication' },
+        { id: 'cursor', name: 'Cursor', path: 'icons/Cursor' },
         { id: 'development', name: 'Development', path: 'icons/Development' },
         { id: 'editor', name: 'Editor', path: 'icons/Editor' },
         { id: 'files', name: 'Files', path: 'icons/Files' },
         { id: 'finance', name: 'Finance', path: 'icons/Finance' },
         { id: 'general', name: 'General', path: 'icons/General' },
-        { id: 'images', name: 'Images', path: 'icons/Images' },
-        { id: 'layout', name: 'Layout', path: 'icons/Layout' },
         { id: 'media', name: 'Media', path: 'icons/Media' },
+        { id: 'messages', name: 'Messages', path: 'icons/Messages' },
         { id: 'profiles', name: 'Profiles & Users', path: 'icons/Profiles & Users' },
         { id: 'security', name: 'Security', path: 'icons/Security' },
         { id: 'shapes', name: 'Shapes', path: 'icons/Shapes' },
         { id: 'time', name: 'Time', path: 'icons/Time' },
+        { id: 'travel', name: 'Travel & Location', path: 'icons/Travel & Location' },
         { id: 'weather', name: 'Weather', path: 'icons/Weather' }
     ];
 
@@ -102,6 +102,27 @@ document.addEventListener('DOMContentLoaded', async () => {
     // 添加下拉框交互
     categoryBtn.addEventListener('click', () => {
         categorySelect.classList.toggle('active');
+    });
+
+    // 添加分类选择事件
+    categoryOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            const selectedId = option.dataset.id;
+            const selectedName = option.textContent.trim();
+            
+            // 更新选中状态
+            categoryOptions.forEach(opt => opt.classList.remove('selected'));
+            option.classList.add('selected');
+            
+            // 更新按钮文本
+            categoryBtn.textContent = selectedName;
+            
+            // 关闭下拉框
+            categorySelect.classList.remove('active');
+            
+            // 触发搜索
+            handleSearch();
+        });
     });
 
     document.addEventListener('click', (e) => {
@@ -326,48 +347,61 @@ document.addEventListener('DOMContentLoaded', async () => {
     // 加载图标
     async function loadIcons(category = 'all') {
         let iconsByCategory = {};
+        
+        const loadCategoryIcons = async (cat) => {
+            if (!cat.path) return null;
+            
+            try {
+                console.log(`Loading icons for category: ${cat.name} from ${cat.path}/icons.json`);
+                const response = await fetch(`${cat.path}/icons.json`);
+                
+                if (!response.ok) {
+                    console.error(`Failed to load icons for ${cat.name}: ${response.statusText} (${response.status})`);
+                    return null;
+                }
+                
+                const data = await response.json();
+                // 处理两种可能的数据格式
+                const icons = Array.isArray(data) ? data : (data.icons || []);
+                
+                if (icons.length > 0) {
+                    console.log(`Successfully loaded ${icons.length} icons for ${cat.name}`);
+                    return { [cat.name]: icons };
+                } else {
+                    console.warn(`No icons found for category ${cat.name}`);
+                    return null;
+                }
+            } catch (error) {
+                console.error(`Error loading icons for ${cat.name}:`, error);
+                return null;
+            }
+        };
+
         if (category === 'all') {
             // 加载所有分类的图标
-            for (const cat of categories) {
-                if (cat.id !== 'all' && cat.path) {
-                    try {
-                        const response = await fetch(`${cat.path}/icons.json`);
-                        if (!response.ok) {
-                            console.error(`Failed to load icons for ${cat.name}: ${response.statusText}`);
-                            continue;
-                        }
-                        const data = await response.json();
-                        // 处理两种可能的数据格式
-                        const icons = Array.isArray(data) ? data : (data.icons || []);
-                        if (icons.length > 0) {
-                            iconsByCategory[cat.name] = icons;
-                        }
-                    } catch (error) {
-                        console.error(`Error loading icons for ${cat.name}:`, error);
-                    }
+            const loadPromises = categories
+                .filter(cat => cat.id !== 'all' && cat.path)
+                .map(loadCategoryIcons);
+            
+            const results = await Promise.all(loadPromises);
+            
+            // 合并所有有效的结果
+            results.forEach(result => {
+                if (result) {
+                    iconsByCategory = { ...iconsByCategory, ...result };
                 }
-            }
+            });
         } else {
             // 加载特定分类的图标
             const selectedCategory = categories.find(c => c.id === category);
-            if (selectedCategory && selectedCategory.path) {
-                try {
-                    const response = await fetch(`${selectedCategory.path}/icons.json`);
-                    if (!response.ok) {
-                        console.error(`Failed to load icons for ${selectedCategory.name}: ${response.statusText}`);
-                        return iconsByCategory;
-                    }
-                    const data = await response.json();
-                    // 处理两种可能的数据格式
-                    const icons = Array.isArray(data) ? data : (data.icons || []);
-                    if (icons.length > 0) {
-                        iconsByCategory[selectedCategory.name] = icons;
-                    }
-                } catch (error) {
-                    console.error(`Error loading icons for ${selectedCategory.name}:`, error);
+            if (selectedCategory) {
+                const result = await loadCategoryIcons(selectedCategory);
+                if (result) {
+                    iconsByCategory = result;
                 }
             }
         }
+
         return iconsByCategory;
     }
 
@@ -375,7 +409,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     function renderIcons(iconsByCategory) {
         iconGrid.innerHTML = '';
         
+        if (Object.keys(iconsByCategory).length === 0) {
+            iconGrid.innerHTML = `
+                <div class="no-icons-message">
+                    <p>暂无图标</p>
+                </div>
+            `;
+            return;
+        }
+        
         Object.entries(iconsByCategory).forEach(([categoryName, icons]) => {
+            if (!icons || icons.length === 0) return;
+            
             const categorySection = document.createElement('div');
             categorySection.className = 'category-section';
             
@@ -391,12 +436,26 @@ document.addEventListener('DOMContentLoaded', async () => {
             categoryGrid.className = 'icon-grid';
 
             icons.forEach(icon => {
+                if (!icon || !icon.path) {
+                    console.warn('Invalid icon data:', icon);
+                    return;
+                }
+
                 const iconItem = document.createElement('div');
                 iconItem.className = 'icon-item';
                 
                 fetch(icon.path)
-                    .then(response => response.text())
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`Failed to load SVG: ${response.statusText}`);
+                        }
+                        return response.text();
+                    })
                     .then(svgContent => {
+                        if (!svgContent.trim().startsWith('<svg')) {
+                            throw new Error('Invalid SVG content');
+                        }
+
                         const isFavorite = favorites.includes(icon.name);
                         iconItem.innerHTML = `
                             <div class="icon-preview">
@@ -469,6 +528,17 @@ document.addEventListener('DOMContentLoaded', async () => {
                                 };
                             });
                         });
+                    })
+                    .catch(error => {
+                        console.error(`Error loading icon ${icon.name}:`, error);
+                        iconItem.innerHTML = `
+                            <div class="icon-preview error">
+                                <svg viewBox="0 0 24 24" width="24" height="24">
+                                    <path d="M12 4v12m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                            </div>
+                            <div class="icon-name">${icon.name}</div>
+                        `;
                     });
 
                 categoryGrid.appendChild(iconItem);
@@ -545,29 +615,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         img.src = url;
     }
-
-    // 分类选择
-    categoryOptions.forEach(option => {
-        option.addEventListener('click', async () => {
-            const categoryId = option.dataset.id;
-            const categoryName = option.textContent.trim();
-            
-            // 更新UI
-            categoryBtn.textContent = categoryName;
-            categorySelect.classList.remove('active');
-            categoryOptions.forEach(opt => opt.classList.remove('selected'));
-            option.classList.add('selected');
-
-            // 如果搜索框有内容，在新分类中搜索
-            if (searchInput.value.trim()) {
-                handleSearch();
-            } else {
-                // 否则显示该分类的所有图标
-                const iconsByCategory = await loadIcons(categoryId);
-                renderIcons(iconsByCategory);
-            }
-        });
-    });
 
     // 初始化显示
     loadIcons().then(iconsByCategory => {

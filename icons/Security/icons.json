@@ -1,116 +1,198 @@
-{
-  "icons": [
-    {
-      "name": "face-id-01",
-      "path": "/icons/Security/face-id-01.svg"
-    },
-    {
-      "name": "face-id-02",
-      "path": "/icons/Security/face-id-02.svg"
-    },
-    {
-      "name": "file-lock-01",
-      "path": "/icons/Security/file-lock-01.svg"
-    },
-    {
-      "name": "file-lock-02",
-      "path": "/icons/Security/file-lock-02.svg"
-    },
-    {
-      "name": "file-lock-03",
-      "path": "/icons/Security/file-lock-03.svg"
-    },
-    {
-      "name": "file-shield-01",
-      "path": "/icons/Security/file-shield-01.svg"
-    },
-    {
-      "name": "file-shield-02",
-      "path": "/icons/Security/file-shield-02.svg"
-    },
-    {
-      "name": "file-shield-03",
-      "path": "/icons/Security/file-shield-03.svg"
-    },
-    {
-      "name": "fingerpint-01",
-      "path": "/icons/Security/fingerpint-01.svg"
-    },
-    {
-      "name": "fingerpint-02",
-      "path": "/icons/Security/fingerpint-02.svg"
-    },
-    {
-      "name": "folder-shield",
-      "path": "/icons/Security/folder-shield.svg"
-    },
-    {
-      "name": "key-01",
-      "path": "/icons/Security/key-01.svg"
-    },
-    {
-      "name": "key-02",
-      "path": "/icons/Security/key-02.svg"
-    },
-    {
-      "name": "lock-01",
-      "path": "/icons/Security/lock-01.svg"
-    },
-    {
-      "name": "lock-02",
-      "path": "/icons/Security/lock-02.svg"
-    },
-    {
-      "name": "lock-03",
-      "path": "/icons/Security/lock-03.svg"
-    },
-    {
-      "name": "lock-04",
-      "path": "/icons/Security/lock-04.svg"
-    },
-    {
-      "name": "lock-open-01",
-      "path": "/icons/Security/lock-open-01.svg"
-    },
-    {
-      "name": "lock-open-02",
-      "path": "/icons/Security/lock-open-02.svg"
-    },
-    {
-      "name": "lock-open-03",
-      "path": "/icons/Security/lock-open-03.svg"
-    },
-    {
-      "name": "lock-open-04",
-      "path": "/icons/Security/lock-open-04.svg"
-    },
-    {
-      "name": "password-01",
-      "path": "/icons/Security/password-01.svg"
-    },
-    {
-      "name": "password-02",
-      "path": "/icons/Security/password-02.svg"
-    },
-    {
-      "name": "scan",
-      "path": "/icons/Security/scan.svg"
-    },
-    {
-      "name": "shield-01",
-      "path": "/icons/Security/shield-01.svg"
-    },
-    {
-      "name": "shield-02",
-      "path": "/icons/Security/shield-02.svg"
-    },
-    {
-      "name": "shield-check",
-      "path": "/icons/Security/shield-check.svg"
-    },
-    {
-      "name": "shield-plus",
-      "path": "/icons/Security/shield-plus.svg"
-    }
-  ]
-} 
+[
+  {
+    "name": "face-id-01",
+    "title": "Face Id 01",
+    "category": "Security",
+    "fileName": "face-id-01.svg",
+    "path": "icons/Security/face-id-01.svg"
+  },
+  {
+    "name": "face-id-02",
+    "title": "Face Id 02",
+    "category": "Security",
+    "fileName": "face-id-02.svg",
+    "path": "icons/Security/face-id-02.svg"
+  },
+  {
+    "name": "file-lock-01",
+    "title": "File Lock 01",
+    "category": "Security",
+    "fileName": "file-lock-01.svg",
+    "path": "icons/Security/file-lock-01.svg"
+  },
+  {
+    "name": "file-lock-02",
+    "title": "File Lock 02",
+    "category": "Security",
+    "fileName": "file-lock-02.svg",
+    "path": "icons/Security/file-lock-02.svg"
+  },
+  {
+    "name": "file-lock-03",
+    "title": "File Lock 03",
+    "category": "Security",
+    "fileName": "file-lock-03.svg",
+    "path": "icons/Security/file-lock-03.svg"
+  },
+  {
+    "name": "file-shield-01",
+    "title": "File Shield 01",
+    "category": "Security",
+    "fileName": "file-shield-01.svg",
+    "path": "icons/Security/file-shield-01.svg"
+  },
+  {
+    "name": "file-shield-02",
+    "title": "File Shield 02",
+    "category": "Security",
+    "fileName": "file-shield-02.svg",
+    "path": "icons/Security/file-shield-02.svg"
+  },
+  {
+    "name": "file-shield-03",
+    "title": "File Shield 03",
+    "category": "Security",
+    "fileName": "file-shield-03.svg",
+    "path": "icons/Security/file-shield-03.svg"
+  },
+  {
+    "name": "fingerpint-01",
+    "title": "Fingerpint 01",
+    "category": "Security",
+    "fileName": "fingerpint-01.svg",
+    "path": "icons/Security/fingerpint-01.svg"
+  },
+  {
+    "name": "fingerpint-02",
+    "title": "Fingerpint 02",
+    "category": "Security",
+    "fileName": "fingerpint-02.svg",
+    "path": "icons/Security/fingerpint-02.svg"
+  },
+  {
+    "name": "folder-shield",
+    "title": "Folder Shield",
+    "category": "Security",
+    "fileName": "folder-shield.svg",
+    "path": "icons/Security/folder-shield.svg"
+  },
+  {
+    "name": "key-01",
+    "title": "Key 01",
+    "category": "Security",
+    "fileName": "key-01.svg",
+    "path": "icons/Security/key-01.svg"
+  },
+  {
+    "name": "key-02",
+    "title": "Key 02",
+    "category": "Security",
+    "fileName": "key-02.svg",
+    "path": "icons/Security/key-02.svg"
+  },
+  {
+    "name": "lock-01",
+    "title": "Lock 01",
+    "category": "Security",
+    "fileName": "lock-01.svg",
+    "path": "icons/Security/lock-01.svg"
+  },
+  {
+    "name": "lock-02",
+    "title": "Lock 02",
+    "category": "Security",
+    "fileName": "lock-02.svg",
+    "path": "icons/Security/lock-02.svg"
+  },
+  {
+    "name": "lock-03",
+    "title": "Lock 03",
+    "category": "Security",
+    "fileName": "lock-03.svg",
+    "path": "icons/Security/lock-03.svg"
+  },
+  {
+    "name": "lock-04",
+    "title": "Lock 04",
+    "category": "Security",
+    "fileName": "lock-04.svg",
+    "path": "icons/Security/lock-04.svg"
+  },
+  {
+    "name": "lock-open-01",
+    "title": "Lock Open 01",
+    "category": "Security",
+    "fileName": "lock-open-01.svg",
+    "path": "icons/Security/lock-open-01.svg"
+  },
+  {
+    "name": "lock-open-02",
+    "title": "Lock Open 02",
+    "category": "Security",
+    "fileName": "lock-open-02.svg",
+    "path": "icons/Security/lock-open-02.svg"
+  },
+  {
+    "name": "lock-open-03",
+    "title": "Lock Open 03",
+    "category": "Security",
+    "fileName": "lock-open-03.svg",
+    "path": "icons/Security/lock-open-03.svg"
+  },
+  {
+    "name": "lock-open-04",
+    "title": "Lock Open 04",
+    "category": "Security",
+    "fileName": "lock-open-04.svg",
+    "path": "icons/Security/lock-open-04.svg"
+  },
+  {
+    "name": "password-01",
+    "title": "Password 01",
+    "category": "Security",
+    "fileName": "password-01.svg",
+    "path": "icons/Security/password-01.svg"
+  },
+  {
+    "name": "password-02",
+    "title": "Password 02",
+    "category": "Security",
+    "fileName": "password-02.svg",
+    "path": "icons/Security/password-02.svg"
+  },
+  {
+    "name": "scan",
+    "title": "Scan",
+    "category": "Security",
+    "fileName": "scan.svg",
+    "path": "icons/Security/scan.svg"
+  },
+  {
+    "name": "shield-01",
+    "title": "Shield 01",
+    "category": "Security",
+    "fileName": "shield-01.svg",
+    "path": "icons/Security/shield-01.svg"
+  },
+  {
+    "name": "shield-02",
+    "title": "Shield 02",
+    "category": "Security",
+    "fileName": "shield-02.svg",
+    "path": "icons/Security/shield-02.svg"
+  },
+  {
+    "name": "shield-check",
+    "title": "Shield Check",
+    "category": "Security",
+    "fileName": "shield-check.svg",
+    "path": "icons/Security/shield-check.svg"
+  },
+  {
+    "name": "shield-plus",
+    "title": "Shield Plus",
+    "category": "Security",
+    "fileName": "shield-plus.svg",
+    "path": "icons/Security/shield-plus.svg"
+  }
+]

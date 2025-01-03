@@ -1,18 +1,373 @@
 [
-    {
-        "name": "file-attach-01",
-        "path": "/icons/Files/file-attach-01.svg"
-    },
-    {
-        "name": "file-01",
-        "path": "/icons/Files/file-01.svg"
-    },
-    {
-        "name": "file-02",
-        "path": "/icons/Files/file-02.svg"
-    },
-    {
-        "name": "file-03",
-        "path": "/icons/Files/file-03.svg"
-    }
-] 
+  {
+    "name": "file-01",
+    "title": "File 01",
+    "category": "Files",
+    "fileName": "file-01.svg",
+    "path": "icons/Files/file-01.svg"
+  },
+  {
+    "name": "file-02",
+    "title": "File 02",
+    "category": "Files",
+    "fileName": "file-02.svg",
+    "path": "icons/Files/file-02.svg"
+  },
+  {
+    "name": "file-03",
+    "title": "File 03",
+    "category": "Files",
+    "fileName": "file-03.svg",
+    "path": "icons/Files/file-03.svg"
+  },
+  {
+    "name": "file-04",
+    "title": "File 04",
+    "category": "Files",
+    "fileName": "file-04.svg",
+    "path": "icons/Files/file-04.svg"
+  },
+  {
+    "name": "file-05",
+    "title": "File 05",
+    "category": "Files",
+    "fileName": "file-05.svg",
+    "path": "icons/Files/file-05.svg"
+  },
+  {
+    "name": "file-06",
+    "title": "File 06",
+    "category": "Files",
+    "fileName": "file-06.svg",
+    "path": "icons/Files/file-06.svg"
+  },
+  {
+    "name": "file-attach-01",
+    "title": "File Attach 01",
+    "category": "Files",
+    "fileName": "file-attach-01.svg",
+    "path": "icons/Files/file-attach-01.svg"
+  },
+  {
+    "name": "file-attach-02",
+    "title": "File Attach 02",
+    "category": "Files",
+    "fileName": "file-attach-02.svg",
+    "path": "icons/Files/file-attach-02.svg"
+  },
+  {
+    "name": "file-attach-03",
+    "title": "File Attach 03",
+    "category": "Files",
+    "fileName": "file-attach-03.svg",
+    "path": "icons/Files/file-attach-03.svg"
+  },
+  {
+    "name": "file-branch",
+    "title": "File Branch",
+    "category": "Files",
+    "fileName": "file-branch.svg",
+    "path": "icons/Files/file-branch.svg"
+  },
+  {
+    "name": "file-check-01",
+    "title": "File Check 01",
+    "category": "Files",
+    "fileName": "file-check-01.svg",
+    "path": "icons/Files/file-check-01.svg"
+  },
+  {
+    "name": "file-check-02",
+    "title": "File Check 02",
+    "category": "Files",
+    "fileName": "file-check-02.svg",
+    "path": "icons/Files/file-check-02.svg"
+  },
+  {
+    "name": "file-down-01",
+    "title": "File Down 01",
+    "category": "Files",
+    "fileName": "file-down-01.svg",
+    "path": "icons/Files/file-down-01.svg"
+  },
+  {
+    "name": "file-down-02",
+    "title": "File Down 02",
+    "category": "Files",
+    "fileName": "file-down-02.svg",
+    "path": "icons/Files/file-down-02.svg"
+  },
+  {
+    "name": "file-edit-01",
+    "title": "File Edit 01",
+    "category": "Files",
+    "fileName": "file-edit-01.svg",
+    "path": "icons/Files/file-edit-01.svg"
+  },
+  {
+    "name": "file-edit-02",
+    "title": "File Edit 02",
+    "category": "Files",
+    "fileName": "file-edit-02.svg",
+    "path": "icons/Files/file-edit-02.svg"
+  },
+  {
+    "name": "file-eye-01",
+    "title": "File Eye 01",
+    "category": "Files",
+    "fileName": "file-eye-01.svg",
+    "path": "icons/Files/file-eye-01.svg"
+  },
+  {
+    "name": "file-eye-02",
+    "title": "File Eye 02",
+    "category": "Files",
+    "fileName": "file-eye-02.svg",
+    "path": "icons/Files/file-eye-02.svg"
+  },
+  {
+    "name": "file-minus-01",
+    "title": "File Minus 01",
+    "category": "Files",
+    "fileName": "file-minus-01.svg",
+    "path": "icons/Files/file-minus-01.svg"
+  },
+  {
+    "name": "file-minus-02",
+    "title": "File Minus 02",
+    "category": "Files",
+    "fileName": "file-minus-02.svg",
+    "path": "icons/Files/file-minus-02.svg"
+  },
+  {
+    "name": "file-minus",
+    "title": "File Minus",
+    "category": "Files",
+    "fileName": "file-minus.svg",
+    "path": "icons/Files/file-minus.svg"
+  },
+  {
+    "name": "file-multiple",
+    "title": "File Multiple",
+    "category": "Files",
+    "fileName": "file-multiple.svg",
+    "path": "icons/Files/file-multiple.svg"
+  },
+  {
+    "name": "file-none",
+    "title": "File None",
+    "category": "Files",
+    "fileName": "file-none.svg",
+    "path": "icons/Files/file-none.svg"
+  },
+  {
+    "name": "file-plus-01",
+    "title": "File Plus 01",
+    "category": "Files",
+    "fileName": "file-plus-01.svg",
+    "path": "icons/Files/file-plus-01.svg"
+  },
+  {
+    "name": "file-plus-02",
+    "title": "File Plus 02",
+    "category": "Files",
+    "fileName": "file-plus-02.svg",
+    "path": "icons/Files/file-plus-02.svg"
+  },
+  {
+    "name": "file-question-01",
+    "title": "File Question 01",
+    "category": "Files",
+    "fileName": "file-question-01.svg",
+    "path": "icons/Files/file-question-01.svg"
+  },
+  {
+    "name": "file-question-02",
+    "title": "File Question 02",
+    "category": "Files",
+    "fileName": "file-question-02.svg",
+    "path": "icons/Files/file-question-02.svg"
+  },
+  {
+    "name": "file-return-01",
+    "title": "File Return 01",
+    "category": "Files",
+    "fileName": "file-return-01.svg",
+    "path": "icons/Files/file-return-01.svg"
+  },
+  {
+    "name": "file-return-02",
+    "title": "File Return 02",
+    "category": "Files",
+    "fileName": "file-return-02.svg",
+    "path": "icons/Files/file-return-02.svg"
+  },
+  {
+    "name": "file-search-01",
+    "title": "File Search 01",
+    "category": "Files",
+    "fileName": "file-search-01.svg",
+    "path": "icons/Files/file-search-01.svg"
+  },
+  {
+    "name": "file-search-02",
+    "title": "File Search 02",
+    "category": "Files",
+    "fileName": "file-search-02.svg",
+    "path": "icons/Files/file-search-02.svg"
+  },
+  {
+    "name": "file-shred",
+    "title": "File Shred",
+    "category": "Files",
+    "fileName": "file-shred.svg",
+    "path": "icons/Files/file-shred.svg"
+  },
+  {
+    "name": "file-up-01",
+    "title": "File Up 01",
+    "category": "Files",
+    "fileName": "file-up-01.svg",
+    "path": "icons/Files/file-up-01.svg"
+  },
+  {
+    "name": "file-up-02",
+    "title": "File Up 02",
+    "category": "Files",
+    "fileName": "file-up-02.svg",
+    "path": "icons/Files/file-up-02.svg"
+  },
+  {
+    "name": "file-x-02",
+    "title": "File X 02",
+    "category": "Files",
+    "fileName": "file-x-02.svg",
+    "path": "icons/Files/file-x-02.svg"
+  },
+  {
+    "name": "folder-down-01",
+    "title": "Folder Down 01",
+    "category": "Files",
+    "fileName": "folder-down-01.svg",
+    "path": "icons/Files/folder-down-01.svg"
+  },
+  {
+    "name": "folder-down-02",
+    "title": "Folder Down 02",
+    "category": "Files",
+    "fileName": "folder-down-02.svg",
+    "path": "icons/Files/folder-down-02.svg"
+  },
+  {
+    "name": "folder-minus-01-1",
+    "title": "Folder Minus 01 1",
+    "category": "Files",
+    "fileName": "folder-minus-01-1.svg",
+    "path": "icons/Files/folder-minus-01-1.svg"
+  },
+  {
+    "name": "folder-minus-01",
+    "title": "Folder Minus 01",
+    "category": "Files",
+    "fileName": "folder-minus-01.svg",
+    "path": "icons/Files/folder-minus-01.svg"
+  },
+  {
+    "name": "folder-open-01",
+    "title": "Folder Open 01",
+    "category": "Files",
+    "fileName": "folder-open-01.svg",
+    "path": "icons/Files/folder-open-01.svg"
+  },
+  {
+    "name": "folder-open-02",
+    "title": "Folder Open 02",
+    "category": "Files",
+    "fileName": "folder-open-02.svg",
+    "path": "icons/Files/folder-open-02.svg"
+  },
+  {
+    "name": "folder-open-03",
+    "title": "Folder Open 03",
+    "category": "Files",
+    "fileName": "folder-open-03.svg",
+    "path": "icons/Files/folder-open-03.svg"
+  },
+  {
+    "name": "folder-plus-01",
+    "title": "Folder Plus 01",
+    "category": "Files",
+    "fileName": "folder-plus-01.svg",
+    "path": "icons/Files/folder-plus-01.svg"
+  },
+  {
+    "name": "folder-plus-02",
+    "title": "Folder Plus 02",
+    "category": "Files",
+    "fileName": "folder-plus-02.svg",
+    "path": "icons/Files/folder-plus-02.svg"
+  },
+  {
+    "name": "folder-search-01",
+    "title": "Folder Search 01",
+    "category": "Files",
+    "fileName": "folder-search-01.svg",
+    "path": "icons/Files/folder-search-01.svg"
+  },
+  {
+    "name": "folder-search-02",
+    "title": "Folder Search 02",
+    "category": "Files",
+    "fileName": "folder-search-02.svg",
+    "path": "icons/Files/folder-search-02.svg"
+  },
+  {
+    "name": "folder-up-01",
+    "title": "Folder Up 01",
+    "category": "Files",
+    "fileName": "folder-up-01.svg",
+    "path": "icons/Files/folder-up-01.svg"
+  },
+  {
+    "name": "folder-up-02",
+    "title": "Folder Up 02",
+    "category": "Files",
+    "fileName": "folder-up-02.svg",
+    "path": "icons/Files/folder-up-02.svg"
+  },
+  {
+    "name": "folder-x-01",
+    "title": "Folder X 01",
+    "category": "Files",
+    "fileName": "folder-x-01.svg",
+    "path": "icons/Files/folder-x-01.svg"
+  },
+  {
+    "name": "folder-x-02",
+    "title": "Folder X 02",
+    "category": "Files",
+    "fileName": "folder-x-02.svg",
+    "path": "icons/Files/folder-x-02.svg"
+  },
+  {
+    "name": "folder",
+    "title": "Folder",
+    "category": "Files",
+    "fileName": "folder.svg",
+    "path": "icons/Files/folder.svg"
+  },
+  {
+    "name": "paperclip-01",
+    "title": "Paperclip 01",
+    "category": "Files",
+    "fileName": "paperclip-01.svg",
+    "path": "icons/Files/paperclip-01.svg"
+  },
+  {
+    "name": "paperclip-02",
+    "title": "Paperclip 02",
+    "category": "Files",
+    "fileName": "paperclip-02.svg",
+    "path": "icons/Files/paperclip-02.svg"
+  }
+]

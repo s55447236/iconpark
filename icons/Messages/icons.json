@@ -1,0 +1,121 @@
+[
+  {
+    "name": "alert-circle",
+    "title": "Alert Circle",
+    "category": "Messages",
+    "fileName": "alert-circle.svg",
+    "path": "icons/Messages/alert-circle.svg"
+  },
+  {
+    "name": "alert-square",
+    "title": "Alert Square",
+    "category": "Messages",
+    "fileName": "alert-square.svg",
+    "path": "icons/Messages/alert-square.svg"
+  },
+  {
+    "name": "alert-triangle",
+    "title": "Alert Triangle",
+    "category": "Messages",
+    "fileName": "alert-triangle.svg",
+    "path": "icons/Messages/alert-triangle.svg"
+  },
+  {
+    "name": "bell-01",
+    "title": "Bell 01",
+    "category": "Messages",
+    "fileName": "bell-01.svg",
+    "path": "icons/Messages/bell-01.svg"
+  },
+  {
+    "name": "bell-02",
+    "title": "Bell 02",
+    "category": "Messages",
+    "fileName": "bell-02.svg",
+    "path": "icons/Messages/bell-02.svg"
+  },
+  {
+    "name": "bell-03",
+    "title": "Bell 03",
+    "category": "Messages",
+    "fileName": "bell-03.svg",
+    "path": "icons/Messages/bell-03.svg"
+  },
+  {
+    "name": "bell-04",
+    "title": "Bell 04",
+    "category": "Messages",
+    "fileName": "bell-04.svg",
+    "path": "icons/Messages/bell-04.svg"
+  },
+  {
+    "name": "bell-off-01",
+    "title": "Bell Off 01",
+    "category": "Messages",
+    "fileName": "bell-off-01.svg",
+    "path": "icons/Messages/bell-off-01.svg"
+  },
+  {
+    "name": "bell-off-02",
+    "title": "Bell Off 02",
+    "category": "Messages",
+    "fileName": "bell-off-02.svg",
+    "path": "icons/Messages/bell-off-02.svg"
+  },
+  {
+    "name": "bell-ringing-01",
+    "title": "Bell Ringing 01",
+    "category": "Messages",
+    "fileName": "bell-ringing-01.svg",
+    "path": "icons/Messages/bell-ringing-01.svg"
+  },
+  {
+    "name": "bell-ringing-02",
+    "title": "Bell Ringing 02",
+    "category": "Messages",
+    "fileName": "bell-ringing-02.svg",
+    "path": "icons/Messages/bell-ringing-02.svg"
+  },
+  {
+    "name": "bell-ringing-03",
+    "title": "Bell Ringing 03",
+    "category": "Messages",
+    "fileName": "bell-ringing-03.svg",
+    "path": "icons/Messages/bell-ringing-03.svg"
+  },
+  {
+    "name": "bell-ringing-04",
+    "title": "Bell Ringing 04",
+    "category": "Messages",
+    "fileName": "bell-ringing-04.svg",
+    "path": "icons/Messages/bell-ringing-04.svg"
+  },
+  {
+    "name": "notification-box",
+    "title": "Notification Box",
+    "category": "Messages",
+    "fileName": "notification-box.svg",
+    "path": "icons/Messages/notification-box.svg"
+  },
+  {
+    "name": "notification-bubble",
+    "title": "Notification Bubble",
+    "category": "Messages",
+    "fileName": "notification-bubble.svg",
+    "path": "icons/Messages/notification-bubble.svg"
+  },
+  {
+    "name": "notification-square-01",
+    "title": "Notification Square 01",
+    "category": "Messages",
+    "fileName": "notification-square-01.svg",
+    "path": "icons/Messages/notification-square-01.svg"
+  },
+  {
+    "name": "notification-square-02",
+    "title": "Notification Square 02",
+    "category": "Messages",
+    "fileName": "notification-square-02.svg",
+    "path": "icons/Messages/notification-square-02.svg"
+  }
+]

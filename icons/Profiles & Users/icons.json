@@ -1,0 +1,233 @@
+[
+  {
+    "name": "smiley-happy-plus",
+    "title": "Smiley Happy Plus",
+    "category": "Profiles & Users",
+    "fileName": "smiley-happy-plus.svg",
+    "path": "icons/Profiles & Users/smiley-happy-plus.svg"
+  },
+  {
+    "name": "smiley-happy",
+    "title": "Smiley Happy",
+    "category": "Profiles & Users",
+    "fileName": "smiley-happy.svg",
+    "path": "icons/Profiles & Users/smiley-happy.svg"
+  },
+  {
+    "name": "smiley-neutral",
+    "title": "Smiley Neutral",
+    "category": "Profiles & Users",
+    "fileName": "smiley-neutral.svg",
+    "path": "icons/Profiles & Users/smiley-neutral.svg"
+  },
+  {
+    "name": "smiley-sad",
+    "title": "Smiley Sad",
+    "category": "Profiles & Users",
+    "fileName": "smiley-sad.svg",
+    "path": "icons/Profiles & Users/smiley-sad.svg"
+  },
+  {
+    "name": "smiley-wink",
+    "title": "Smiley Wink",
+    "category": "Profiles & Users",
+    "fileName": "smiley-wink.svg",
+    "path": "icons/Profiles & Users/smiley-wink.svg"
+  },
+  {
+    "name": "user-profile-01",
+    "title": "User Profile 01",
+    "category": "Profiles & Users",
+    "fileName": "user-profile-01.svg",
+    "path": "icons/Profiles & Users/user-profile-01.svg"
+  },
+  {
+    "name": "user-profile-02",
+    "title": "User Profile 02",
+    "category": "Profiles & Users",
+    "fileName": "user-profile-02.svg",
+    "path": "icons/Profiles & Users/user-profile-02.svg"
+  },
+  {
+    "name": "user-profile-03-1",
+    "title": "User Profile 03 1",
+    "category": "Profiles & Users",
+    "fileName": "user-profile-03-1.svg",
+    "path": "icons/Profiles & Users/user-profile-03-1.svg"
+  },
+  {
+    "name": "user-profile-03",
+    "title": "User Profile 03",
+    "category": "Profiles & Users",
+    "fileName": "user-profile-03.svg",
+    "path": "icons/Profiles & Users/user-profile-03.svg"
+  },
+  {
+    "name": "user-profile-add-01",
+    "title": "User Profile Add 01",
+    "category": "Profiles & Users",
+    "fileName": "user-profile-add-01.svg",
+    "path": "icons/Profiles & Users/user-profile-add-01.svg"
+  },
+  {
+    "name": "user-profile-add-02",
+    "title": "User Profile Add 02",
+    "category": "Profiles & Users",
+    "fileName": "user-profile-add-02.svg",
+    "path": "icons/Profiles & Users/user-profile-add-02.svg"
+  },
+  {
+    "name": "user-profile-check",
+    "title": "User Profile Check",
+    "category": "Profiles & Users",
+    "fileName": "user-profile-check.svg",
+    "path": "icons/Profiles & Users/user-profile-check.svg"
+  },
+  {
+    "name": "user-profile-circle",
+    "title": "User Profile Circle",
+    "category": "Profiles & Users",
+    "fileName": "user-profile-circle.svg",
+    "path": "icons/Profiles & Users/user-profile-circle.svg"
+  },
+  {
+    "name": "user-profile-down",
+    "title": "User Profile Down",
+    "category": "Profiles & Users",
+    "fileName": "user-profile-down.svg",
+    "path": "icons/Profiles & Users/user-profile-down.svg"
+  },
+  {
+    "name": "user-profile-group",
+    "title": "User Profile Group",
+    "category": "Profiles & Users",
+    "fileName": "user-profile-group.svg",
+    "path": "icons/Profiles & Users/user-profile-group.svg"
+  },
+  {
+    "name": "user-profile-left",
+    "title": "User Profile Left",
+    "category": "Profiles & Users",
+    "fileName": "user-profile-left.svg",
+    "path": "icons/Profiles & Users/user-profile-left.svg"
+  },
+  {
+    "name": "user-profile-minus",
+    "title": "User Profile Minus",
+    "category": "Profiles & Users",
+    "fileName": "user-profile-minus.svg",
+    "path": "icons/Profiles & Users/user-profile-minus.svg"
+  },
+  {
+    "name": "user-profile-right",
+    "title": "User Profile Right",
+    "category": "Profiles & Users",
+    "fileName": "user-profile-right.svg",
+    "path": "icons/Profiles & Users/user-profile-right.svg"
+  },
+  {
+    "name": "user-profile-square",
+    "title": "User Profile Square",
+    "category": "Profiles & Users",
+    "fileName": "user-profile-square.svg",
+    "path": "icons/Profiles & Users/user-profile-square.svg"
+  },
+  {
+    "name": "user-profile-star",
+    "title": "User Profile Star",
+    "category": "Profiles & Users",
+    "fileName": "user-profile-star.svg",
+    "path": "icons/Profiles & Users/user-profile-star.svg"
+  },
+  {
+    "name": "user-profile-up",
+    "title": "User Profile Up",
+    "category": "Profiles & Users",
+    "fileName": "user-profile-up.svg",
+    "path": "icons/Profiles & Users/user-profile-up.svg"
+  },
+  {
+    "name": "user-profile-x",
+    "title": "User Profile X",
+    "category": "Profiles & Users",
+    "fileName": "user-profile-x.svg",
+    "path": "icons/Profiles & Users/user-profile-x.svg"
+  },
+  {
+    "name": "users-profiles-01",
+    "title": "Users Profiles 01",
+    "category": "Profiles & Users",
+    "fileName": "users-profiles-01.svg",
+    "path": "icons/Profiles & Users/users-profiles-01.svg"
+  },
+  {
+    "name": "users-profiles-02",
+    "title": "Users Profiles 02",
+    "category": "Profiles & Users",
+    "fileName": "users-profiles-02.svg",
+    "path": "icons/Profiles & Users/users-profiles-02.svg"
+  },
+  {
+    "name": "users-profiles-03",
+    "title": "Users Profiles 03",
+    "category": "Profiles & Users",
+    "fileName": "users-profiles-03.svg",
+    "path": "icons/Profiles & Users/users-profiles-03.svg"
+  },
+  {
+    "name": "users-profiles-check",
+    "title": "Users Profiles Check",
+    "category": "Profiles & Users",
+    "fileName": "users-profiles-check.svg",
+    "path": "icons/Profiles & Users/users-profiles-check.svg"
+  },
+  {
+    "name": "users-profiles-down",
+    "title": "Users Profiles Down",
+    "category": "Profiles & Users",
+    "fileName": "users-profiles-down.svg",
+    "path": "icons/Profiles & Users/users-profiles-down.svg"
+  },
+  {
+    "name": "users-profiles-left",
+    "title": "Users Profiles Left",
+    "category": "Profiles & Users",
+    "fileName": "users-profiles-left.svg",
+    "path": "icons/Profiles & Users/users-profiles-left.svg"
+  },
+  {
+    "name": "users-profiles-minus",
+    "title": "Users Profiles Minus",
+    "category": "Profiles & Users",
+    "fileName": "users-profiles-minus.svg",
+    "path": "icons/Profiles & Users/users-profiles-minus.svg"
+  },
+  {
+    "name": "users-profiles-plus",
+    "title": "Users Profiles Plus",
+    "category": "Profiles & Users",
+    "fileName": "users-profiles-plus.svg",
+    "path": "icons/Profiles & Users/users-profiles-plus.svg"
+  },
+  {
+    "name": "users-profiles-right",
+    "title": "Users Profiles Right",
+    "category": "Profiles & Users",
+    "fileName": "users-profiles-right.svg",
+    "path": "icons/Profiles & Users/users-profiles-right.svg"
+  },
+  {
+    "name": "users-profiles-up",
+    "title": "Users Profiles Up",
+    "category": "Profiles & Users",
+    "fileName": "users-profiles-up.svg",
+    "path": "icons/Profiles & Users/users-profiles-up.svg"
+  },
+  {
+    "name": "users-profiles-x",
+    "title": "Users Profiles X",
+    "category": "Profiles & Users",
+    "fileName": "users-profiles-x.svg",
+    "path": "icons/Profiles & Users/users-profiles-x.svg"
+  }
+]

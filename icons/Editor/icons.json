@@ -1,0 +1,975 @@
+[
+  {
+    "name": "align-center",
+    "title": "Align Center",
+    "category": "Editor",
+    "fileName": "align-center.svg",
+    "path": "icons/Editor/align-center.svg"
+  },
+  {
+    "name": "align-down-01",
+    "title": "Align Down 01",
+    "category": "Editor",
+    "fileName": "align-down-01.svg",
+    "path": "icons/Editor/align-down-01.svg"
+  },
+  {
+    "name": "align-down-02",
+    "title": "Align Down 02",
+    "category": "Editor",
+    "fileName": "align-down-02.svg",
+    "path": "icons/Editor/align-down-02.svg"
+  },
+  {
+    "name": "align-horizontal-center-01",
+    "title": "Align Horizontal Center 01",
+    "category": "Editor",
+    "fileName": "align-horizontal-center-01.svg",
+    "path": "icons/Editor/align-horizontal-center-01.svg"
+  },
+  {
+    "name": "align-horizontal-center-02",
+    "title": "Align Horizontal Center 02",
+    "category": "Editor",
+    "fileName": "align-horizontal-center-02.svg",
+    "path": "icons/Editor/align-horizontal-center-02.svg"
+  },
+  {
+    "name": "align-horizontal-center-03",
+    "title": "Align Horizontal Center 03",
+    "category": "Editor",
+    "fileName": "align-horizontal-center-03.svg",
+    "path": "icons/Editor/align-horizontal-center-03.svg"
+  },
+  {
+    "name": "align-justify",
+    "title": "Align Justify",
+    "category": "Editor",
+    "fileName": "align-justify.svg",
+    "path": "icons/Editor/align-justify.svg"
+  },
+  {
+    "name": "align-left-01",
+    "title": "Align Left 01",
+    "category": "Editor",
+    "fileName": "align-left-01.svg",
+    "path": "icons/Editor/align-left-01.svg"
+  },
+  {
+    "name": "align-left-02",
+    "title": "Align Left 02",
+    "category": "Editor",
+    "fileName": "align-left-02.svg",
+    "path": "icons/Editor/align-left-02.svg"
+  },
+  {
+    "name": "align-left",
+    "title": "Align Left",
+    "category": "Editor",
+    "fileName": "align-left.svg",
+    "path": "icons/Editor/align-left.svg"
+  },
+  {
+    "name": "align-right-01",
+    "title": "Align Right 01",
+    "category": "Editor",
+    "fileName": "align-right-01.svg",
+    "path": "icons/Editor/align-right-01.svg"
+  },
+  {
+    "name": "align-right-02",
+    "title": "Align Right 02",
+    "category": "Editor",
+    "fileName": "align-right-02.svg",
+    "path": "icons/Editor/align-right-02.svg"
+  },
+  {
+    "name": "align-right",
+    "title": "Align Right",
+    "category": "Editor",
+    "fileName": "align-right.svg",
+    "path": "icons/Editor/align-right.svg"
+  },
+  {
+    "name": "align-up-01",
+    "title": "Align Up 01",
+    "category": "Editor",
+    "fileName": "align-up-01.svg",
+    "path": "icons/Editor/align-up-01.svg"
+  },
+  {
+    "name": "align-up-02",
+    "title": "Align Up 02",
+    "category": "Editor",
+    "fileName": "align-up-02.svg",
+    "path": "icons/Editor/align-up-02.svg"
+  },
+  {
+    "name": "align-vertical-center-01",
+    "title": "Align Vertical Center 01",
+    "category": "Editor",
+    "fileName": "align-vertical-center-01.svg",
+    "path": "icons/Editor/align-vertical-center-01.svg"
+  },
+  {
+    "name": "align-vertical-center-02",
+    "title": "Align Vertical Center 02",
+    "category": "Editor",
+    "fileName": "align-vertical-center-02.svg",
+    "path": "icons/Editor/align-vertical-center-02.svg"
+  },
+  {
+    "name": "align-vertical-center-03",
+    "title": "Align Vertical Center 03",
+    "category": "Editor",
+    "fileName": "align-vertical-center-03.svg",
+    "path": "icons/Editor/align-vertical-center-03.svg"
+  },
+  {
+    "name": "attatchment-01",
+    "title": "Attatchment 01",
+    "category": "Editor",
+    "fileName": "attatchment-01.svg",
+    "path": "icons/Editor/attatchment-01.svg"
+  },
+  {
+    "name": "attatchment-02",
+    "title": "Attatchment 02",
+    "category": "Editor",
+    "fileName": "attatchment-02.svg",
+    "path": "icons/Editor/attatchment-02.svg"
+  },
+  {
+    "name": "bezier-01",
+    "title": "Bezier 01",
+    "category": "Editor",
+    "fileName": "bezier-01.svg",
+    "path": "icons/Editor/bezier-01.svg"
+  },
+  {
+    "name": "bezier-02",
+    "title": "Bezier 02",
+    "category": "Editor",
+    "fileName": "bezier-02.svg",
+    "path": "icons/Editor/bezier-02.svg"
+  },
+  {
+    "name": "bold-01",
+    "title": "Bold 01",
+    "category": "Editor",
+    "fileName": "bold-01.svg",
+    "path": "icons/Editor/bold-01.svg"
+  },
+  {
+    "name": "bold-02",
+    "title": "Bold 02",
+    "category": "Editor",
+    "fileName": "bold-02.svg",
+    "path": "icons/Editor/bold-02.svg"
+  },
+  {
+    "name": "center",
+    "title": "Center",
+    "category": "Editor",
+    "fileName": "center.svg",
+    "path": "icons/Editor/center.svg"
+  },
+  {
+    "name": "color-picker",
+    "title": "Color Picker",
+    "category": "Editor",
+    "fileName": "color-picker.svg",
+    "path": "icons/Editor/color-picker.svg"
+  },
+  {
+    "name": "color-swatch-01",
+    "title": "Color Swatch 01",
+    "category": "Editor",
+    "fileName": "color-swatch-01.svg",
+    "path": "icons/Editor/color-swatch-01.svg"
+  },
+  {
+    "name": "color-swatch-02",
+    "title": "Color Swatch 02",
+    "category": "Editor",
+    "fileName": "color-swatch-02.svg",
+    "path": "icons/Editor/color-swatch-02.svg"
+  },
+  {
+    "name": "column-horizontal-01",
+    "title": "Column Horizontal 01",
+    "category": "Editor",
+    "fileName": "column-horizontal-01.svg",
+    "path": "icons/Editor/column-horizontal-01.svg"
+  },
+  {
+    "name": "column-horizontal-02",
+    "title": "Column Horizontal 02",
+    "category": "Editor",
+    "fileName": "column-horizontal-02.svg",
+    "path": "icons/Editor/column-horizontal-02.svg"
+  },
+  {
+    "name": "column-horizontal-03",
+    "title": "Column Horizontal 03",
+    "category": "Editor",
+    "fileName": "column-horizontal-03.svg",
+    "path": "icons/Editor/column-horizontal-03.svg"
+  },
+  {
+    "name": "column-vertical-01",
+    "title": "Column Vertical 01",
+    "category": "Editor",
+    "fileName": "column-vertical-01.svg",
+    "path": "icons/Editor/column-vertical-01.svg"
+  },
+  {
+    "name": "column-vertical-02",
+    "title": "Column Vertical 02",
+    "category": "Editor",
+    "fileName": "column-vertical-02.svg",
+    "path": "icons/Editor/column-vertical-02.svg"
+  },
+  {
+    "name": "column-vertical-03",
+    "title": "Column Vertical 03",
+    "category": "Editor",
+    "fileName": "column-vertical-03.svg",
+    "path": "icons/Editor/column-vertical-03.svg"
+  },
+  {
+    "name": "contrast",
+    "title": "Contrast",
+    "category": "Editor",
+    "fileName": "contrast.svg",
+    "path": "icons/Editor/contrast.svg"
+  },
+  {
+    "name": "crop-01",
+    "title": "Crop 01",
+    "category": "Editor",
+    "fileName": "crop-01.svg",
+    "path": "icons/Editor/crop-01.svg"
+  },
+  {
+    "name": "crop-02",
+    "title": "Crop 02",
+    "category": "Editor",
+    "fileName": "crop-02.svg",
+    "path": "icons/Editor/crop-02.svg"
+  },
+  {
+    "name": "cursor-01",
+    "title": "Cursor 01",
+    "category": "Editor",
+    "fileName": "cursor-01.svg",
+    "path": "icons/Editor/cursor-01.svg"
+  },
+  {
+    "name": "cursor-02",
+    "title": "Cursor 02",
+    "category": "Editor",
+    "fileName": "cursor-02.svg",
+    "path": "icons/Editor/cursor-02.svg"
+  },
+  {
+    "name": "cursor-03",
+    "title": "Cursor 03",
+    "category": "Editor",
+    "fileName": "cursor-03.svg",
+    "path": "icons/Editor/cursor-03.svg"
+  },
+  {
+    "name": "cursor-04",
+    "title": "Cursor 04",
+    "category": "Editor",
+    "fileName": "cursor-04.svg",
+    "path": "icons/Editor/cursor-04.svg"
+  },
+  {
+    "name": "cursor-05",
+    "title": "Cursor 05",
+    "category": "Editor",
+    "fileName": "cursor-05.svg",
+    "path": "icons/Editor/cursor-05.svg"
+  },
+  {
+    "name": "cursor-06",
+    "title": "Cursor 06",
+    "category": "Editor",
+    "fileName": "cursor-06.svg",
+    "path": "icons/Editor/cursor-06.svg"
+  },
+  {
+    "name": "delete",
+    "title": "Delete",
+    "category": "Editor",
+    "fileName": "delete.svg",
+    "path": "icons/Editor/delete.svg"
+  },
+  {
+    "name": "divider",
+    "title": "Divider",
+    "category": "Editor",
+    "fileName": "divider.svg",
+    "path": "icons/Editor/divider.svg"
+  },
+  {
+    "name": "eraser-01",
+    "title": "Eraser 01",
+    "category": "Editor",
+    "fileName": "eraser-01.svg",
+    "path": "icons/Editor/eraser-01.svg"
+  },
+  {
+    "name": "eraser-02",
+    "title": "Eraser 02",
+    "category": "Editor",
+    "fileName": "eraser-02.svg",
+    "path": "icons/Editor/eraser-02.svg"
+  },
+  {
+    "name": "feather-01",
+    "title": "Feather 01",
+    "category": "Editor",
+    "fileName": "feather-01.svg",
+    "path": "icons/Editor/feather-01.svg"
+  },
+  {
+    "name": "feather-02",
+    "title": "Feather 02",
+    "category": "Editor",
+    "fileName": "feather-02.svg",
+    "path": "icons/Editor/feather-02.svg"
+  },
+  {
+    "name": "flex-align-bottom-01",
+    "title": "Flex Align Bottom 01",
+    "category": "Editor",
+    "fileName": "flex-align-bottom-01.svg",
+    "path": "icons/Editor/flex-align-bottom-01.svg"
+  },
+  {
+    "name": "flex-align-center-01",
+    "title": "Flex Align Center 01",
+    "category": "Editor",
+    "fileName": "flex-align-center-01.svg",
+    "path": "icons/Editor/flex-align-center-01.svg"
+  },
+  {
+    "name": "flex-align-left-01",
+    "title": "Flex Align Left 01",
+    "category": "Editor",
+    "fileName": "flex-align-left-01.svg",
+    "path": "icons/Editor/flex-align-left-01.svg"
+  },
+  {
+    "name": "flex-align-right-01",
+    "title": "Flex Align Right 01",
+    "category": "Editor",
+    "fileName": "flex-align-right-01.svg",
+    "path": "icons/Editor/flex-align-right-01.svg"
+  },
+  {
+    "name": "flex-align-spaced-01",
+    "title": "Flex Align Spaced 01",
+    "category": "Editor",
+    "fileName": "flex-align-spaced-01.svg",
+    "path": "icons/Editor/flex-align-spaced-01.svg"
+  },
+  {
+    "name": "flex-align-top-01",
+    "title": "Flex Align Top 01",
+    "category": "Editor",
+    "fileName": "flex-align-top-01.svg",
+    "path": "icons/Editor/flex-align-top-01.svg"
+  },
+  {
+    "name": "flex-columns",
+    "title": "Flex Columns",
+    "category": "Editor",
+    "fileName": "flex-columns.svg",
+    "path": "icons/Editor/flex-columns.svg"
+  },
+  {
+    "name": "flex-rows",
+    "title": "Flex Rows",
+    "category": "Editor",
+    "fileName": "flex-rows.svg",
+    "path": "icons/Editor/flex-rows.svg"
+  },
+  {
+    "name": "flip-01",
+    "title": "Flip 01",
+    "category": "Editor",
+    "fileName": "flip-01.svg",
+    "path": "icons/Editor/flip-01.svg"
+  },
+  {
+    "name": "flip-02",
+    "title": "Flip 02",
+    "category": "Editor",
+    "fileName": "flip-02.svg",
+    "path": "icons/Editor/flip-02.svg"
+  },
+  {
+    "name": "grid-01",
+    "title": "Grid 01",
+    "category": "Editor",
+    "fileName": "grid-01.svg",
+    "path": "icons/Editor/grid-01.svg"
+  },
+  {
+    "name": "grid-02",
+    "title": "Grid 02",
+    "category": "Editor",
+    "fileName": "grid-02.svg",
+    "path": "icons/Editor/grid-02.svg"
+  },
+  {
+    "name": "grid-03",
+    "title": "Grid 03",
+    "category": "Editor",
+    "fileName": "grid-03.svg",
+    "path": "icons/Editor/grid-03.svg"
+  },
+  {
+    "name": "grid-04-filled",
+    "title": "Grid 04 Filled",
+    "category": "Editor",
+    "fileName": "grid-04-filled.svg",
+    "path": "icons/Editor/grid-04-filled.svg"
+  },
+  {
+    "name": "header-01",
+    "title": "Header 01",
+    "category": "Editor",
+    "fileName": "header-01.svg",
+    "path": "icons/Editor/header-01.svg"
+  },
+  {
+    "name": "header-02",
+    "title": "Header 02",
+    "category": "Editor",
+    "fileName": "header-02.svg",
+    "path": "icons/Editor/header-02.svg"
+  },
+  {
+    "name": "image-indent-left",
+    "title": "Image Indent Left",
+    "category": "Editor",
+    "fileName": "image-indent-left.svg",
+    "path": "icons/Editor/image-indent-left.svg"
+  },
+  {
+    "name": "image-indent-right",
+    "title": "Image Indent Right",
+    "category": "Editor",
+    "fileName": "image-indent-right.svg",
+    "path": "icons/Editor/image-indent-right.svg"
+  },
+  {
+    "name": "indent-decrease",
+    "title": "Indent Decrease",
+    "category": "Editor",
+    "fileName": "indent-decrease.svg",
+    "path": "icons/Editor/indent-decrease.svg"
+  },
+  {
+    "name": "indent-increase",
+    "title": "Indent Increase",
+    "category": "Editor",
+    "fileName": "indent-increase.svg",
+    "path": "icons/Editor/indent-increase.svg"
+  },
+  {
+    "name": "indent-left",
+    "title": "Indent Left",
+    "category": "Editor",
+    "fileName": "indent-left.svg",
+    "path": "icons/Editor/indent-left.svg"
+  },
+  {
+    "name": "indent-right",
+    "title": "Indent Right",
+    "category": "Editor",
+    "fileName": "indent-right.svg",
+    "path": "icons/Editor/indent-right.svg"
+  },
+  {
+    "name": "intersect",
+    "title": "Intersect",
+    "category": "Editor",
+    "fileName": "intersect.svg",
+    "path": "icons/Editor/intersect.svg"
+  },
+  {
+    "name": "italics-01",
+    "title": "Italics 01",
+    "category": "Editor",
+    "fileName": "italics-01.svg",
+    "path": "icons/Editor/italics-01.svg"
+  },
+  {
+    "name": "italics-02",
+    "title": "Italics 02",
+    "category": "Editor",
+    "fileName": "italics-02.svg",
+    "path": "icons/Editor/italics-02.svg"
+  },
+  {
+    "name": "layers-01",
+    "title": "Layers 01",
+    "category": "Editor",
+    "fileName": "layers-01.svg",
+    "path": "icons/Editor/layers-01.svg"
+  },
+  {
+    "name": "layers-02",
+    "title": "Layers 02",
+    "category": "Editor",
+    "fileName": "layers-02.svg",
+    "path": "icons/Editor/layers-02.svg"
+  },
+  {
+    "name": "layers-03",
+    "title": "Layers 03",
+    "category": "Editor",
+    "fileName": "layers-03.svg",
+    "path": "icons/Editor/layers-03.svg"
+  },
+  {
+    "name": "layers-04",
+    "title": "Layers 04",
+    "category": "Editor",
+    "fileName": "layers-04.svg",
+    "path": "icons/Editor/layers-04.svg"
+  },
+  {
+    "name": "layers-05",
+    "title": "Layers 05",
+    "category": "Editor",
+    "fileName": "layers-05.svg",
+    "path": "icons/Editor/layers-05.svg"
+  },
+  {
+    "name": "layout-01",
+    "title": "Layout 01",
+    "category": "Editor",
+    "fileName": "layout-01.svg",
+    "path": "icons/Editor/layout-01.svg"
+  },
+  {
+    "name": "layout-02",
+    "title": "Layout 02",
+    "category": "Editor",
+    "fileName": "layout-02.svg",
+    "path": "icons/Editor/layout-02.svg"
+  },
+  {
+    "name": "layout-03",
+    "title": "Layout 03",
+    "category": "Editor",
+    "fileName": "layout-03.svg",
+    "path": "icons/Editor/layout-03.svg"
+  },
+  {
+    "name": "layout-04",
+    "title": "Layout 04",
+    "category": "Editor",
+    "fileName": "layout-04.svg",
+    "path": "icons/Editor/layout-04.svg"
+  },
+  {
+    "name": "layout-bottom",
+    "title": "Layout Bottom",
+    "category": "Editor",
+    "fileName": "layout-bottom.svg",
+    "path": "icons/Editor/layout-bottom.svg"
+  },
+  {
+    "name": "layout-grid-01",
+    "title": "Layout Grid 01",
+    "category": "Editor",
+    "fileName": "layout-grid-01.svg",
+    "path": "icons/Editor/layout-grid-01.svg"
+  },
+  {
+    "name": "layout-left",
+    "title": "Layout Left",
+    "category": "Editor",
+    "fileName": "layout-left.svg",
+    "path": "icons/Editor/layout-left.svg"
+  },
+  {
+    "name": "layout-right",
+    "title": "Layout Right",
+    "category": "Editor",
+    "fileName": "layout-right.svg",
+    "path": "icons/Editor/layout-right.svg"
+  },
+  {
+    "name": "layout-scale",
+    "title": "Layout Scale",
+    "category": "Editor",
+    "fileName": "layout-scale.svg",
+    "path": "icons/Editor/layout-scale.svg"
+  },
+  {
+    "name": "layout-top",
+    "title": "Layout Top",
+    "category": "Editor",
+    "fileName": "layout-top.svg",
+    "path": "icons/Editor/layout-top.svg"
+  },
+  {
+    "name": "letter-spacing-01",
+    "title": "Letter Spacing 01",
+    "category": "Editor",
+    "fileName": "letter-spacing-01.svg",
+    "path": "icons/Editor/letter-spacing-01.svg"
+  },
+  {
+    "name": "letter-spacing-02",
+    "title": "Letter Spacing 02",
+    "category": "Editor",
+    "fileName": "letter-spacing-02.svg",
+    "path": "icons/Editor/letter-spacing-02.svg"
+  },
+  {
+    "name": "letter-spacing-03",
+    "title": "Letter Spacing 03",
+    "category": "Editor",
+    "fileName": "letter-spacing-03.svg",
+    "path": "icons/Editor/letter-spacing-03.svg"
+  },
+  {
+    "name": "line-height",
+    "title": "Line Height",
+    "category": "Editor",
+    "fileName": "line-height.svg",
+    "path": "icons/Editor/line-height.svg"
+  },
+  {
+    "name": "list-numbers",
+    "title": "List Numbers",
+    "category": "Editor",
+    "fileName": "list-numbers.svg",
+    "path": "icons/Editor/list-numbers.svg"
+  },
+  {
+    "name": "list",
+    "title": "List",
+    "category": "Editor",
+    "fileName": "list.svg",
+    "path": "icons/Editor/list.svg"
+  },
+  {
+    "name": "maximise-01",
+    "title": "Maximise 01",
+    "category": "Editor",
+    "fileName": "maximise-01.svg",
+    "path": "icons/Editor/maximise-01.svg"
+  },
+  {
+    "name": "maximise-02",
+    "title": "Maximise 02",
+    "category": "Editor",
+    "fileName": "maximise-02.svg",
+    "path": "icons/Editor/maximise-02.svg"
+  },
+  {
+    "name": "minimise-01",
+    "title": "Minimise 01",
+    "category": "Editor",
+    "fileName": "minimise-01.svg",
+    "path": "icons/Editor/minimise-01.svg"
+  },
+  {
+    "name": "minimise-02",
+    "title": "Minimise 02",
+    "category": "Editor",
+    "fileName": "minimise-02.svg",
+    "path": "icons/Editor/minimise-02.svg"
+  },
+  {
+    "name": "move",
+    "title": "Move",
+    "category": "Editor",
+    "fileName": "move.svg",
+    "path": "icons/Editor/move.svg"
+  },
+  {
+    "name": "overlap",
+    "title": "Overlap",
+    "category": "Editor",
+    "fileName": "overlap.svg",
+    "path": "icons/Editor/overlap.svg"
+  },
+  {
+    "name": "paint-bucket-01",
+    "title": "Paint Bucket 01",
+    "category": "Editor",
+    "fileName": "paint-bucket-01.svg",
+    "path": "icons/Editor/paint-bucket-01.svg"
+  },
+  {
+    "name": "paint-bucket-02",
+    "title": "Paint Bucket 02",
+    "category": "Editor",
+    "fileName": "paint-bucket-02.svg",
+    "path": "icons/Editor/paint-bucket-02.svg"
+  },
+  {
+    "name": "palette",
+    "title": "Palette",
+    "category": "Editor",
+    "fileName": "palette.svg",
+    "path": "icons/Editor/palette.svg"
+  },
+  {
+    "name": "pen-tool-01",
+    "title": "Pen Tool 01",
+    "category": "Editor",
+    "fileName": "pen-tool-01.svg",
+    "path": "icons/Editor/pen-tool-01.svg"
+  },
+  {
+    "name": "pen-tool-02",
+    "title": "Pen Tool 02",
+    "category": "Editor",
+    "fileName": "pen-tool-02.svg",
+    "path": "icons/Editor/pen-tool-02.svg"
+  },
+  {
+    "name": "pen-tool-03",
+    "title": "Pen Tool 03",
+    "category": "Editor",
+    "fileName": "pen-tool-03.svg",
+    "path": "icons/Editor/pen-tool-03.svg"
+  },
+  {
+    "name": "pen-tool-04",
+    "title": "Pen Tool 04",
+    "category": "Editor",
+    "fileName": "pen-tool-04.svg",
+    "path": "icons/Editor/pen-tool-04.svg"
+  },
+  {
+    "name": "pencil-01",
+    "title": "Pencil 01",
+    "category": "Editor",
+    "fileName": "pencil-01.svg",
+    "path": "icons/Editor/pencil-01.svg"
+  },
+  {
+    "name": "pencil-02",
+    "title": "Pencil 02",
+    "category": "Editor",
+    "fileName": "pencil-02.svg",
+    "path": "icons/Editor/pencil-02.svg"
+  },
+  {
+    "name": "pencil-03",
+    "title": "Pencil 03",
+    "category": "Editor",
+    "fileName": "pencil-03.svg",
+    "path": "icons/Editor/pencil-03.svg"
+  },
+  {
+    "name": "perspective",
+    "title": "Perspective",
+    "category": "Editor",
+    "fileName": "perspective.svg",
+    "path": "icons/Editor/perspective.svg"
+  },
+  {
+    "name": "scale-01",
+    "title": "Scale 01",
+    "category": "Editor",
+    "fileName": "scale-01.svg",
+    "path": "icons/Editor/scale-01.svg"
+  },
+  {
+    "name": "scale-02",
+    "title": "Scale 02",
+    "category": "Editor",
+    "fileName": "scale-02.svg",
+    "path": "icons/Editor/scale-02.svg"
+  },
+  {
+    "name": "scale-03",
+    "title": "Scale 03",
+    "category": "Editor",
+    "fileName": "scale-03.svg",
+    "path": "icons/Editor/scale-03.svg"
+  },
+  {
+    "name": "scissors-01",
+    "title": "Scissors 01",
+    "category": "Editor",
+    "fileName": "scissors-01.svg",
+    "path": "icons/Editor/scissors-01.svg"
+  },
+  {
+    "name": "scissors-02",
+    "title": "Scissors 02",
+    "category": "Editor",
+    "fileName": "scissors-02.svg",
+    "path": "icons/Editor/scissors-02.svg"
+  },
+  {
+    "name": "scissors-03",
+    "title": "Scissors 03",
+    "category": "Editor",
+    "fileName": "scissors-03.svg",
+    "path": "icons/Editor/scissors-03.svg"
+  },
+  {
+    "name": "scissors-04",
+    "title": "Scissors 04",
+    "category": "Editor",
+    "fileName": "scissors-04.svg",
+    "path": "icons/Editor/scissors-04.svg"
+  },
+  {
+    "name": "skew",
+    "title": "Skew",
+    "category": "Editor",
+    "fileName": "skew.svg",
+    "path": "icons/Editor/skew.svg"
+  },
+  {
+    "name": "space-height",
+    "title": "Space Height",
+    "category": "Editor",
+    "fileName": "space-height.svg",
+    "path": "icons/Editor/space-height.svg"
+  },
+  {
+    "name": "space-horizontal",
+    "title": "Space Horizontal",
+    "category": "Editor",
+    "fileName": "space-horizontal.svg",
+    "path": "icons/Editor/space-horizontal.svg"
+  },
+  {
+    "name": "space-vertical",
+    "title": "Space Vertical",
+    "category": "Editor",
+    "fileName": "space-vertical.svg",
+    "path": "icons/Editor/space-vertical.svg"
+  },
+  {
+    "name": "space-width",
+    "title": "Space Width",
+    "category": "Editor",
+    "fileName": "space-width.svg",
+    "path": "icons/Editor/space-width.svg"
+  },
+  {
+    "name": "superscript",
+    "title": "Superscript",
+    "category": "Editor",
+    "fileName": "superscript.svg",
+    "path": "icons/Editor/superscript.svg"
+  },
+  {
+    "name": "table",
+    "title": "Table",
+    "category": "Editor",
+    "fileName": "table.svg",
+    "path": "icons/Editor/table.svg"
+  },
+  {
+    "name": "text-input-01",
+    "title": "Text Input 01",
+    "category": "Editor",
+    "fileName": "text-input-01.svg",
+    "path": "icons/Editor/text-input-01.svg"
+  },
+  {
+    "name": "text-input-02",
+    "title": "Text Input 02",
+    "category": "Editor",
+    "fileName": "text-input-02.svg",
+    "path": "icons/Editor/text-input-02.svg"
+  },
+  {
+    "name": "transform",
+    "title": "Transform",
+    "category": "Editor",
+    "fileName": "transform.svg",
+    "path": "icons/Editor/transform.svg"
+  },
+  {
+    "name": "type-01",
+    "title": "Type 01",
+    "category": "Editor",
+    "fileName": "type-01.svg",
+    "path": "icons/Editor/type-01.svg"
+  },
+  {
+    "name": "type-02",
+    "title": "Type 02",
+    "category": "Editor",
+    "fileName": "type-02.svg",
+    "path": "icons/Editor/type-02.svg"
+  },
+  {
+    "name": "type-03",
+    "title": "Type 03",
+    "category": "Editor",
+    "fileName": "type-03.svg",
+    "path": "icons/Editor/type-03.svg"
+  },
+  {
+    "name": "type-strike-01",
+    "title": "Type Strike 01",
+    "category": "Editor",
+    "fileName": "type-strike-01.svg",
+    "path": "icons/Editor/type-strike-01.svg"
+  },
+  {
+    "name": "type-strike-02",
+    "title": "Type Strike 02",
+    "category": "Editor",
+    "fileName": "type-strike-02.svg",
+    "path": "icons/Editor/type-strike-02.svg"
+  },
+  {
+    "name": "underline-01",
+    "title": "Underline 01",
+    "category": "Editor",
+    "fileName": "underline-01.svg",
+    "path": "icons/Editor/underline-01.svg"
+  },
+  {
+    "name": "underline-02",
+    "title": "Underline 02",
+    "category": "Editor",
+    "fileName": "underline-02.svg",
+    "path": "icons/Editor/underline-02.svg"
+  },
+  {
+    "name": "union",
+    "title": "Union",
+    "category": "Editor",
+    "fileName": "union.svg",
+    "path": "icons/Editor/union.svg"
+  },
+  {
+    "name": "zoom-in",
+    "title": "Zoom In",
+    "category": "Editor",
+    "fileName": "zoom-in.svg",
+    "path": "icons/Editor/zoom-in.svg"
+  },
+  {
+    "name": "zoom-out",
+    "title": "Zoom Out",
+    "category": "Editor",
+    "fileName": "zoom-out.svg",
+    "path": "icons/Editor/zoom-out.svg"
+  }
+]

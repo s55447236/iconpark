@@ -1,0 +1,212 @@
+[
+  {
+    "name": "cloud-01",
+    "title": "Cloud 01",
+    "category": "Weather",
+    "fileName": "cloud-01.svg",
+    "path": "icons/Weather/cloud-01.svg"
+  },
+  {
+    "name": "cloud-02",
+    "title": "Cloud 02",
+    "category": "Weather",
+    "fileName": "cloud-02.svg",
+    "path": "icons/Weather/cloud-02.svg"
+  },
+  {
+    "name": "cloud-03",
+    "title": "Cloud 03",
+    "category": "Weather",
+    "fileName": "cloud-03.svg",
+    "path": "icons/Weather/cloud-03.svg"
+  },
+  {
+    "name": "cloud-04",
+    "title": "Cloud 04",
+    "category": "Weather",
+    "fileName": "cloud-04.svg",
+    "path": "icons/Weather/cloud-04.svg"
+  },
+  {
+    "name": "cloud-lightning",
+    "title": "Cloud Lightning",
+    "category": "Weather",
+    "fileName": "cloud-lightning.svg",
+    "path": "icons/Weather/cloud-lightning.svg"
+  },
+  {
+    "name": "cloud-rain",
+    "title": "Cloud Rain",
+    "category": "Weather",
+    "fileName": "cloud-rain.svg",
+    "path": "icons/Weather/cloud-rain.svg"
+  },
+  {
+    "name": "cloud-snow",
+    "title": "Cloud Snow",
+    "category": "Weather",
+    "fileName": "cloud-snow.svg",
+    "path": "icons/Weather/cloud-snow.svg"
+  },
+  {
+    "name": "cloud-sun",
+    "title": "Cloud Sun",
+    "category": "Weather",
+    "fileName": "cloud-sun.svg",
+    "path": "icons/Weather/cloud-sun.svg"
+  },
+  {
+    "name": "drop",
+    "title": "Drop",
+    "category": "Weather",
+    "fileName": "drop.svg",
+    "path": "icons/Weather/drop.svg"
+  },
+  {
+    "name": "flame-01",
+    "title": "Flame 01",
+    "category": "Weather",
+    "fileName": "flame-01.svg",
+    "path": "icons/Weather/flame-01.svg"
+  },
+  {
+    "name": "lightning-01",
+    "title": "Lightning 01",
+    "category": "Weather",
+    "fileName": "lightning-01.svg",
+    "path": "icons/Weather/lightning-01.svg"
+  },
+  {
+    "name": "lightning-02",
+    "title": "Lightning 02",
+    "category": "Weather",
+    "fileName": "lightning-02.svg",
+    "path": "icons/Weather/lightning-02.svg"
+  },
+  {
+    "name": "moon-01",
+    "title": "Moon 01",
+    "category": "Weather",
+    "fileName": "moon-01.svg",
+    "path": "icons/Weather/moon-01.svg"
+  },
+  {
+    "name": "moon-02",
+    "title": "Moon 02",
+    "category": "Weather",
+    "fileName": "moon-02.svg",
+    "path": "icons/Weather/moon-02.svg"
+  },
+  {
+    "name": "snowflake",
+    "title": "Snowflake",
+    "category": "Weather",
+    "fileName": "snowflake.svg",
+    "path": "icons/Weather/snowflake.svg"
+  },
+  {
+    "name": "stars",
+    "title": "Stars",
+    "category": "Weather",
+    "fileName": "stars.svg",
+    "path": "icons/Weather/stars.svg"
+  },
+  {
+    "name": "sun-01",
+    "title": "Sun 01",
+    "category": "Weather",
+    "fileName": "sun-01.svg",
+    "path": "icons/Weather/sun-01.svg"
+  },
+  {
+    "name": "sun-02",
+    "title": "Sun 02",
+    "category": "Weather",
+    "fileName": "sun-02.svg",
+    "path": "icons/Weather/sun-02.svg"
+  },
+  {
+    "name": "sun-03",
+    "title": "Sun 03",
+    "category": "Weather",
+    "fileName": "sun-03.svg",
+    "path": "icons/Weather/sun-03.svg"
+  },
+  {
+    "name": "sun-down",
+    "title": "Sun Down",
+    "category": "Weather",
+    "fileName": "sun-down.svg",
+    "path": "icons/Weather/sun-down.svg"
+  },
+  {
+    "name": "sun-up",
+    "title": "Sun Up",
+    "category": "Weather",
+    "fileName": "sun-up.svg",
+    "path": "icons/Weather/sun-up.svg"
+  },
+  {
+    "name": "temperature-01",
+    "title": "Temperature 01",
+    "category": "Weather",
+    "fileName": "temperature-01.svg",
+    "path": "icons/Weather/temperature-01.svg"
+  },
+  {
+    "name": "temperature-02",
+    "title": "Temperature 02",
+    "category": "Weather",
+    "fileName": "temperature-02.svg",
+    "path": "icons/Weather/temperature-02.svg"
+  },
+  {
+    "name": "temperature-03",
+    "title": "Temperature 03",
+    "category": "Weather",
+    "fileName": "temperature-03.svg",
+    "path": "icons/Weather/temperature-03.svg"
+  },
+  {
+    "name": "temperature-04",
+    "title": "Temperature 04",
+    "category": "Weather",
+    "fileName": "temperature-04.svg",
+    "path": "icons/Weather/temperature-04.svg"
+  },
+  {
+    "name": "umbrella-01",
+    "title": "Umbrella 01",
+    "category": "Weather",
+    "fileName": "umbrella-01.svg",
+    "path": "icons/Weather/umbrella-01.svg"
+  },
+  {
+    "name": "umbrella-02",
+    "title": "Umbrella 02",
+    "category": "Weather",
+    "fileName": "umbrella-02.svg",
+    "path": "icons/Weather/umbrella-02.svg"
+  },
+  {
+    "name": "wind-01",
+    "title": "Wind 01",
+    "category": "Weather",
+    "fileName": "wind-01.svg",
+    "path": "icons/Weather/wind-01.svg"
+  },
+  {
+    "name": "wind-02",
+    "title": "Wind 02",
+    "category": "Weather",
+    "fileName": "wind-02.svg",
+    "path": "icons/Weather/wind-02.svg"
+  },
+  {
+    "name": "wind-03",
+    "title": "Wind 03",
+    "category": "Weather",
+    "fileName": "wind-03.svg",
+    "path": "icons/Weather/wind-03.svg"
+  }
+]
