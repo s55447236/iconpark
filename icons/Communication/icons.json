@@ -1,1 +1,178 @@
- 
+[
+    {
+        "name": "annotation-alert",
+        "path": "icons/Communication/annotation-alert.svg"
+    },
+    {
+        "name": "annotation-check",
+        "path": "icons/Communication/annotation-check.svg"
+    },
+    {
+        "name": "annotation-information",
+        "path": "icons/Communication/annotation-information.svg"
+    },
+    {
+        "name": "annotation-plus",
+        "path": "icons/Communication/annotation-plus.svg"
+    },
+    {
+        "name": "annotation-typing",
+        "path": "icons/Communication/annotation-typing.svg"
+    },
+    {
+        "name": "annotation-x",
+        "path": "icons/Communication/annotation-x.svg"
+    },
+    {
+        "name": "annotation",
+        "path": "icons/Communication/annotation.svg"
+    },
+    {
+        "name": "inbox-01",
+        "path": "icons/Communication/inbox-01.svg"
+    },
+    {
+        "name": "inbox-02",
+        "path": "icons/Communication/inbox-02.svg"
+    },
+    {
+        "name": "mail-01",
+        "path": "icons/Communication/mail-01.svg"
+    },
+    {
+        "name": "mail-02",
+        "path": "icons/Communication/mail-02.svg"
+    },
+    {
+        "name": "mail-03",
+        "path": "icons/Communication/mail-03.svg"
+    },
+    {
+        "name": "mail-04",
+        "path": "icons/Communication/mail-04.svg"
+    },
+    {
+        "name": "mail-05",
+        "path": "icons/Communication/mail-05.svg"
+    },
+    {
+        "name": "message-alert-circle",
+        "path": "icons/Communication/message-alert-circle.svg"
+    },
+    {
+        "name": "message-alert-plus",
+        "path": "icons/Communication/message-alert-plus.svg"
+    },
+    {
+        "name": "message-chat-01",
+        "path": "icons/Communication/message-chat-01.svg"
+    },
+    {
+        "name": "message-circle",
+        "path": "icons/Communication/message-circle.svg"
+    },
+    {
+        "name": "message-notify-circle",
+        "path": "icons/Communication/message-notify-circle.svg"
+    },
+    {
+        "name": "message-notify-square",
+        "path": "icons/Communication/message-notify-square.svg"
+    },
+    {
+        "name": "message-square-alert",
+        "path": "icons/Communication/message-square-alert.svg"
+    },
+    {
+        "name": "message-square-information",
+        "path": "icons/Communication/message-square-information.svg"
+    },
+    {
+        "name": "message-square-plus",
+        "path": "icons/Communication/message-square-plus.svg"
+    },
+    {
+        "name": "message-square-typing",
+        "path": "icons/Communication/message-square-typing.svg"
+    },
+    {
+        "name": "message-square-x",
+        "path": "icons/Communication/message-square-x.svg"
+    },
+    {
+        "name": "message-square",
+        "path": "icons/Communication/message-square.svg"
+    },
+    {
+        "name": "message-text-01",
+        "path": "icons/Communication/message-text-01.svg"
+    },
+    {
+        "name": "message-text-02",
+        "path": "icons/Communication/message-text-02.svg"
+    },
+    {
+        "name": "message-typing",
+        "path": "icons/Communication/message-typing.svg"
+    },
+    {
+        "name": "message-x",
+        "path": "icons/Communication/message-x.svg"
+    },
+    {
+        "name": "phone-call-01",
+        "path": "icons/Communication/phone-call-01.svg"
+    },
+    {
+        "name": "phone-call-02",
+        "path": "icons/Communication/phone-call-02.svg"
+    },
+    {
+        "name": "phone-down",
+        "path": "icons/Communication/phone-down.svg"
+    },
+    {
+        "name": "phone-incoming-01",
+        "path": "icons/Communication/phone-incoming-01.svg"
+    },
+    {
+        "name": "phone-incoming-02",
+        "path": "icons/Communication/phone-incoming-02.svg"
+    },
+    {
+        "name": "phone-off",
+        "path": "icons/Communication/phone-off.svg"
+    },
+    {
+        "name": "phone-outgoing-01",
+        "path": "icons/Communication/phone-outgoing-01.svg"
+    },
+    {
+        "name": "phone-outgoing-02",
+        "path": "icons/Communication/phone-outgoing-02.svg"
+    },
+    {
+        "name": "phone-up",
+        "path": "icons/Communication/phone-up.svg"
+    },
+    {
+        "name": "phone-x",
+        "path": "icons/Communication/phone-x.svg"
+    },
+    {
+        "name": "phone",
+        "path": "icons/Communication/phone.svg"
+    },
+    {
+        "name": "send-01",
+        "path": "icons/Communication/send-01.svg"
+    },
+    {
+        "name": "send-02",
+        "path": "icons/Communication/send-02.svg"
+    },
+    {
+        "name": "send-03",
+        "path": "icons/Communication/send-03.svg"
+    }
+] 

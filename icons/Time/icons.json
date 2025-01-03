@@ -1,1 +1,142 @@
- 
+[
+    {
+        "name": "alarm-01",
+        "path": "icons/Time/alarm-01.svg"
+    },
+    {
+        "name": "alarm-02",
+        "path": "icons/Time/alarm-02.svg"
+    },
+    {
+        "name": "alarm-03",
+        "path": "icons/Time/alarm-03.svg"
+    },
+    {
+        "name": "alarm-04",
+        "path": "icons/Time/alarm-04.svg"
+    },
+    {
+        "name": "alarm-05",
+        "path": "icons/Time/alarm-05.svg"
+    },
+    {
+        "name": "alarm-06",
+        "path": "icons/Time/alarm-06.svg"
+    },
+    {
+        "name": "alarm-check",
+        "path": "icons/Time/alarm-check.svg"
+    },
+    {
+        "name": "alarm-minus",
+        "path": "icons/Time/alarm-minus.svg"
+    },
+    {
+        "name": "alarm-off",
+        "path": "icons/Time/alarm-off.svg"
+    },
+    {
+        "name": "alarm-plus",
+        "path": "icons/Time/alarm-plus.svg"
+    },
+    {
+        "name": "calendar-01",
+        "path": "icons/Time/calendar-01.svg"
+    },
+    {
+        "name": "calendar-02",
+        "path": "icons/Time/calendar-02.svg"
+    },
+    {
+        "name": "calendar-03",
+        "path": "icons/Time/calendar-03.svg"
+    },
+    {
+        "name": "calendar-04",
+        "path": "icons/Time/calendar-04.svg"
+    },
+    {
+        "name": "calendar-check",
+        "path": "icons/Time/calendar-check.svg"
+    },
+    {
+        "name": "calendar-minus",
+        "path": "icons/Time/calendar-minus.svg"
+    },
+    {
+        "name": "calendar-number",
+        "path": "icons/Time/calendar-number.svg"
+    },
+    {
+        "name": "calendar-plus",
+        "path": "icons/Time/calendar-plus.svg"
+    },
+    {
+        "name": "clock-01",
+        "path": "icons/Time/clock-01.svg"
+    },
+    {
+        "name": "clock-backward",
+        "path": "icons/Time/clock-backward.svg"
+    },
+    {
+        "name": "clock-check",
+        "path": "icons/Time/clock-check.svg"
+    },
+    {
+        "name": "clock-forward",
+        "path": "icons/Time/clock-forward.svg"
+    },
+    {
+        "name": "clock-plus",
+        "path": "icons/Time/clock-plus.svg"
+    },
+    {
+        "name": "hourglass-01",
+        "path": "icons/Time/hourglass-01.svg"
+    },
+    {
+        "name": "hourglass-02",
+        "path": "icons/Time/hourglass-02.svg"
+    },
+    {
+        "name": "hourglass-03",
+        "path": "icons/Time/hourglass-03.svg"
+    },
+    {
+        "name": "stopwatch-01",
+        "path": "icons/Time/stopwatch-01.svg"
+    },
+    {
+        "name": "stopwatch-02",
+        "path": "icons/Time/stopwatch-02.svg"
+    },
+    {
+        "name": "stopwatch-03",
+        "path": "icons/Time/stopwatch-03.svg"
+    },
+    {
+        "name": "stopwatch-04",
+        "path": "icons/Time/stopwatch-04.svg"
+    },
+    {
+        "name": "stopwatch-05",
+        "path": "icons/Time/stopwatch-05.svg"
+    },
+    {
+        "name": "stopwatch-off",
+        "path": "icons/Time/stopwatch-off.svg"
+    },
+    {
+        "name": "stopwatch-snooze",
+        "path": "icons/Time/stopwatch-snooze.svg"
+    },
+    {
+        "name": "watch-01",
+        "path": "icons/Time/watch-01.svg"
+    },
+    {
+        "name": "watch-02",
+        "path": "icons/Time/watch-02.svg"
+    }
+] 
