@@ -1,3 +1,31 @@
+/**
+ * 版本历史：
+ * 
+ * v2.5.0 (2024-01-02)
+ * [ADD]
+ * - 新增 122 个图标：copyleft、reply-all、collage、ink-bottle、dashboard-2、
+ *   dashboard-3、usb、draft、delete-column、delete-row、flow-chart、h-1 到 h-6、
+ *   insert-column-left、insert-column-right、insert-row-bottom、insert-row-top、
+ *   merge-cells-horizontal、merge-cells-vertical、mind-map、node-tree、
+ *   organization-chart、question-mark
+ * [UPDATE]
+ * - 根据最新的 logo 样式，重新设计了 discord 和 gitlab 图标
+ * [FIX]
+ * - 修改了 iconfont 的基线，现在图标应该与文字垂直对齐
+ * 
+ * v1.0.0 (2024-01-01)
+ * [ADD]
+ * - 初始版本发布
+ * - 支持箭头图标组
+ * - 支持通用图标组
+ * - 支持形状图标组
+ * - 支持文件图标组
+ * - 支持图标搜索功能
+ * - 支持图标收藏功能
+ * - 支持 SVG 和 PNG 格式下载
+ * - 支持图标颜色和尺寸调整
+ */
+
 const fs = require('fs');
 const path = require('path');
 
