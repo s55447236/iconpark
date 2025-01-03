@@ -1,4 +1,5 @@
-[
+{
+  "icons": [
     {
         "name": "arrow-up",
         "path": "/icons/Arrow/arrow-up.svg"
@@ -267,4 +268,5 @@
         "name": "arrow-switch-horizontal",
         "path": "/icons/Arrow/arrow-switch-horizontal.svg"
     }
-] 
+  ]
+} 

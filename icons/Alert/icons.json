@@ -1,0 +1,72 @@
+{
+  "icons": [
+    {
+      "name": "alert-circle",
+      "path": "/icons/Alert/alert-circle.svg"
+    },
+    {
+      "name": "alert-square",
+      "path": "/icons/Alert/alert-square.svg"
+    },
+    {
+      "name": "alert-triangle",
+      "path": "/icons/Alert/alert-triangle.svg"
+    },
+    {
+      "name": "bell-01",
+      "path": "/icons/Alert/bell-01.svg"
+    },
+    {
+      "name": "bell-02",
+      "path": "/icons/Alert/bell-02.svg"
+    },
+    {
+      "name": "bell-03",
+      "path": "/icons/Alert/bell-03.svg"
+    },
+    {
+      "name": "bell-04",
+      "path": "/icons/Alert/bell-04.svg"
+    },
+    {
+      "name": "bell-off-01",
+      "path": "/icons/Alert/bell-off-01.svg"
+    },
+    {
+      "name": "bell-off-02",
+      "path": "/icons/Alert/bell-off-02.svg"
+    },
+    {
+      "name": "bell-ringing-01",
+      "path": "/icons/Alert/bell-ringing-01.svg"
+    },
+    {
+      "name": "bell-ringing-02",
+      "path": "/icons/Alert/bell-ringing-02.svg"
+    },
+    {
+      "name": "bell-ringing-03",
+      "path": "/icons/Alert/bell-ringing-03.svg"
+    },
+    {
+      "name": "bell-ringing-04",
+      "path": "/icons/Alert/bell-ringing-04.svg"
+    },
+    {
+      "name": "notification-box",
+      "path": "/icons/Alert/notification-box.svg"
+    },
+    {
+      "name": "notification-bubble",
+      "path": "/icons/Alert/notification-bubble.svg"
+    },
+    {
+      "name": "notification-square-01",
+      "path": "/icons/Alert/notification-square-01.svg"
+    },
+    {
+      "name": "notification-square-02",
+      "path": "/icons/Alert/notification-square-02.svg"
+    }
+  ]
+} 

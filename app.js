@@ -104,10 +104,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // 分类数据
     const categories = [
         { id: 'all', name: 'All' },
+        { id: 'alert', name: 'Alert', path: 'icons/Alert' },
         { id: 'arrow', name: 'Arrow', path: 'icons/Arrow' },
+        { id: 'files', name: 'Files', path: 'icons/Files' },
+        { id: 'finance', name: 'Finance', path: 'icons/Finance' },
         { id: 'general', name: 'General', path: 'icons/General' },
-        { id: 'shapes', name: 'Shapes', path: 'icons/Shapes' },
-        { id: 'files', name: 'Files', path: 'icons/Files' }
+        { id: 'media', name: 'Media', path: 'icons/Media' },
+        { id: 'security', name: 'Security', path: 'icons/Security' },
+        { id: 'shapes', name: 'Shapes', path: 'icons/Shapes' }
     ];
 
     // 创建分类选择器
@@ -244,11 +248,20 @@ document.addEventListener('DOMContentLoaded', () => {
             // 加载所有分类的图标
             for (const cat of categories) {
                 if (cat.id !== 'all' && cat.path) {
-                    const categoryIcons = await fetch(`${cat.path}/icons.json`)
-                        .then(response => response.json())
-                        .catch(() => []);
-                    if (categoryIcons.length > 0) {
-                        iconsByCategory[cat.name] = categoryIcons;
+                    try {
+                        const response = await fetch(`${cat.path}/icons.json`);
+                        if (!response.ok) {
+                            console.error(`Failed to load icons for ${cat.name}: ${response.statusText}`);
+                            continue;
+                        }
+                        const data = await response.json();
+                        // 处理两种可能的数据格式
+                        const icons = Array.isArray(data) ? data : (data.icons || []);
+                        if (icons.length > 0) {
+                            iconsByCategory[cat.name] = icons;
+                        }
+                    } catch (error) {
+                        console.error(`Error loading icons for ${cat.name}:`, error);
                     }
                 }
             }
@@ -256,11 +269,20 @@ document.addEventListener('DOMContentLoaded', () => {
             // 加载特定分类的图标
             const selectedCategory = categories.find(c => c.id === category);
             if (selectedCategory && selectedCategory.path) {
-                const categoryIcons = await fetch(`${selectedCategory.path}/icons.json`)
-                    .then(response => response.json())
-                    .catch(() => []);
-                if (categoryIcons.length > 0) {
-                    iconsByCategory[selectedCategory.name] = categoryIcons;
+                try {
+                    const response = await fetch(`${selectedCategory.path}/icons.json`);
+                    if (!response.ok) {
+                        console.error(`Failed to load icons for ${selectedCategory.name}: ${response.statusText}`);
+                        return iconsByCategory;
+                    }
+                    const data = await response.json();
+                    // 处理两种可能的数据格式
+                    const icons = Array.isArray(data) ? data : (data.icons || []);
+                    if (icons.length > 0) {
+                        iconsByCategory[selectedCategory.name] = icons;
+                    }
+                } catch (error) {
+                    console.error(`Error loading icons for ${selectedCategory.name}:`, error);
                 }
             }
         }

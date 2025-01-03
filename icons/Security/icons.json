@@ -1,0 +1,116 @@
+{
+  "icons": [
+    {
+      "name": "face-id-01",
+      "path": "/icons/Security/face-id-01.svg"
+    },
+    {
+      "name": "face-id-02",
+      "path": "/icons/Security/face-id-02.svg"
+    },
+    {
+      "name": "file-lock-01",
+      "path": "/icons/Security/file-lock-01.svg"
+    },
+    {
+      "name": "file-lock-02",
+      "path": "/icons/Security/file-lock-02.svg"
+    },
+    {
+      "name": "file-lock-03",
+      "path": "/icons/Security/file-lock-03.svg"
+    },
+    {
+      "name": "file-shield-01",
+      "path": "/icons/Security/file-shield-01.svg"
+    },
+    {
+      "name": "file-shield-02",
+      "path": "/icons/Security/file-shield-02.svg"
+    },
+    {
+      "name": "file-shield-03",
+      "path": "/icons/Security/file-shield-03.svg"
+    },
+    {
+      "name": "fingerpint-01",
+      "path": "/icons/Security/fingerpint-01.svg"
+    },
+    {
+      "name": "fingerpint-02",
+      "path": "/icons/Security/fingerpint-02.svg"
+    },
+    {
+      "name": "folder-shield",
+      "path": "/icons/Security/folder-shield.svg"
+    },
+    {
+      "name": "key-01",
+      "path": "/icons/Security/key-01.svg"
+    },
+    {
+      "name": "key-02",
+      "path": "/icons/Security/key-02.svg"
+    },
+    {
+      "name": "lock-01",
+      "path": "/icons/Security/lock-01.svg"
+    },
+    {
+      "name": "lock-02",
+      "path": "/icons/Security/lock-02.svg"
+    },
+    {
+      "name": "lock-03",
+      "path": "/icons/Security/lock-03.svg"
+    },
+    {
+      "name": "lock-04",
+      "path": "/icons/Security/lock-04.svg"
+    },
+    {
+      "name": "lock-open-01",
+      "path": "/icons/Security/lock-open-01.svg"
+    },
+    {
+      "name": "lock-open-02",
+      "path": "/icons/Security/lock-open-02.svg"
+    },
+    {
+      "name": "lock-open-03",
+      "path": "/icons/Security/lock-open-03.svg"
+    },
+    {
+      "name": "lock-open-04",
+      "path": "/icons/Security/lock-open-04.svg"
+    },
+    {
+      "name": "password-01",
+      "path": "/icons/Security/password-01.svg"
+    },
+    {
+      "name": "password-02",
+      "path": "/icons/Security/password-02.svg"
+    },
+    {
+      "name": "scan",
+      "path": "/icons/Security/scan.svg"
+    },
+    {
+      "name": "shield-01",
+      "path": "/icons/Security/shield-01.svg"
+    },
+    {
+      "name": "shield-02",
+      "path": "/icons/Security/shield-02.svg"
+    },
+    {
+      "name": "shield-check",
+      "path": "/icons/Security/shield-check.svg"
+    },
+    {
+      "name": "shield-plus",
+      "path": "/icons/Security/shield-plus.svg"
+    }
+  ]
+} 

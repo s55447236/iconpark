@@ -1,0 +1,260 @@
+{
+  "icons": [
+    {
+      "name": "bag-01",
+      "path": "/icons/Finance/bag-01.svg"
+    },
+    {
+      "name": "bag-02",
+      "path": "/icons/Finance/bag-02.svg"
+    },
+    {
+      "name": "bag-03",
+      "path": "/icons/Finance/bag-03.svg"
+    },
+    {
+      "name": "bag-04",
+      "path": "/icons/Finance/bag-04.svg"
+    },
+    {
+      "name": "bag-05",
+      "path": "/icons/Finance/bag-05.svg"
+    },
+    {
+      "name": "bank",
+      "path": "/icons/Finance/bank.svg"
+    },
+    {
+      "name": "bank-note-01",
+      "path": "/icons/Finance/bank-note-01.svg"
+    },
+    {
+      "name": "bank-note-02",
+      "path": "/icons/Finance/bank-note-02.svg"
+    },
+    {
+      "name": "bank-note-03",
+      "path": "/icons/Finance/bank-note-03.svg"
+    },
+    {
+      "name": "bank-note-04",
+      "path": "/icons/Finance/bank-note-04.svg"
+    },
+    {
+      "name": "bank-note-05",
+      "path": "/icons/Finance/bank-note-05.svg"
+    },
+    {
+      "name": "bank-note-06",
+      "path": "/icons/Finance/bank-note-06.svg"
+    },
+    {
+      "name": "card-01",
+      "path": "/icons/Finance/card-01.svg"
+    },
+    {
+      "name": "card-02",
+      "path": "/icons/Finance/card-02.svg"
+    },
+    {
+      "name": "card-add",
+      "path": "/icons/Finance/card-add.svg"
+    },
+    {
+      "name": "card-check",
+      "path": "/icons/Finance/card-check.svg"
+    },
+    {
+      "name": "card-down",
+      "path": "/icons/Finance/card-down.svg"
+    },
+    {
+      "name": "card-edit",
+      "path": "/icons/Finance/card-edit.svg"
+    },
+    {
+      "name": "card-lock",
+      "path": "/icons/Finance/card-lock.svg"
+    },
+    {
+      "name": "card-minus",
+      "path": "/icons/Finance/card-minus.svg"
+    },
+    {
+      "name": "card-number",
+      "path": "/icons/Finance/card-number.svg"
+    },
+    {
+      "name": "card-shield",
+      "path": "/icons/Finance/card-shield.svg"
+    },
+    {
+      "name": "card-up",
+      "path": "/icons/Finance/card-up.svg"
+    },
+    {
+      "name": "card-x",
+      "path": "/icons/Finance/card-x.svg"
+    },
+    {
+      "name": "cart",
+      "path": "/icons/Finance/cart.svg"
+    },
+    {
+      "name": "coin-broken",
+      "path": "/icons/Finance/coin-broken.svg"
+    },
+    {
+      "name": "coin-hand",
+      "path": "/icons/Finance/coin-hand.svg"
+    },
+    {
+      "name": "coin-number",
+      "path": "/icons/Finance/coin-number.svg"
+    },
+    {
+      "name": "coin-unbroken",
+      "path": "/icons/Finance/coin-unbroken.svg"
+    },
+    {
+      "name": "coins",
+      "path": "/icons/Finance/coins.svg"
+    },
+    {
+      "name": "coins-rotate",
+      "path": "/icons/Finance/coins-rotate.svg"
+    },
+    {
+      "name": "currency-bath",
+      "path": "/icons/Finance/currency-bath.svg"
+    },
+    {
+      "name": "currency-bitcoin",
+      "path": "/icons/Finance/currency-bitcoin.svg"
+    },
+    {
+      "name": "currency-cent",
+      "path": "/icons/Finance/currency-cent.svg"
+    },
+    {
+      "name": "currency-coin-bath",
+      "path": "/icons/Finance/currency-coin-bath.svg"
+    },
+    {
+      "name": "currency-coin-bitcoin",
+      "path": "/icons/Finance/currency-coin-bitcoin.svg"
+    },
+    {
+      "name": "currency-coin-cent",
+      "path": "/icons/Finance/currency-coin-cent.svg"
+    },
+    {
+      "name": "currency-coin-dollar",
+      "path": "/icons/Finance/currency-coin-dollar.svg"
+    },
+    {
+      "name": "currency-coin-euro",
+      "path": "/icons/Finance/currency-coin-euro.svg"
+    },
+    {
+      "name": "currency-coin-pound",
+      "path": "/icons/Finance/currency-coin-pound.svg"
+    },
+    {
+      "name": "currency-coin-rubel",
+      "path": "/icons/Finance/currency-coin-rubel.svg"
+    },
+    {
+      "name": "currency-coin-rupee",
+      "path": "/icons/Finance/currency-coin-rupee.svg"
+    },
+    {
+      "name": "currency-coin-yen",
+      "path": "/icons/Finance/currency-coin-yen.svg"
+    },
+    {
+      "name": "currency-dollar",
+      "path": "/icons/Finance/currency-dollar.svg"
+    },
+    {
+      "name": "currency-euro",
+      "path": "/icons/Finance/currency-euro.svg"
+    },
+    {
+      "name": "currency-pound",
+      "path": "/icons/Finance/currency-pound.svg"
+    },
+    {
+      "name": "currency-rubel",
+      "path": "/icons/Finance/currency-rubel.svg"
+    },
+    {
+      "name": "currency-rupee",
+      "path": "/icons/Finance/currency-rupee.svg"
+    },
+    {
+      "name": "currency-yen",
+      "path": "/icons/Finance/currency-yen.svg"
+    },
+    {
+      "name": "diamond",
+      "path": "/icons/Finance/diamond.svg"
+    },
+    {
+      "name": "discount-circle",
+      "path": "/icons/Finance/discount-circle.svg"
+    },
+    {
+      "name": "discount-square",
+      "path": "/icons/Finance/discount-square.svg"
+    },
+    {
+      "name": "discount-star-01",
+      "path": "/icons/Finance/discount-star-01.svg"
+    },
+    {
+      "name": "discount-star-02",
+      "path": "/icons/Finance/discount-star-02.svg"
+    },
+    {
+      "name": "discount-star-03",
+      "path": "/icons/Finance/discount-star-03.svg"
+    },
+    {
+      "name": "gift-01",
+      "path": "/icons/Finance/gift-01.svg"
+    },
+    {
+      "name": "gift-02",
+      "path": "/icons/Finance/gift-02.svg"
+    },
+    {
+      "name": "receipt",
+      "path": "/icons/Finance/receipt.svg"
+    },
+    {
+      "name": "receipt-lines",
+      "path": "/icons/Finance/receipt-lines.svg"
+    },
+    {
+      "name": "tag",
+      "path": "/icons/Finance/tag.svg"
+    },
+    {
+      "name": "wallet-01",
+      "path": "/icons/Finance/wallet-01.svg"
+    },
+    {
+      "name": "wallet-02",
+      "path": "/icons/Finance/wallet-02.svg"
+    },
+    {
+      "name": "wallet-03",
+      "path": "/icons/Finance/wallet-03.svg"
+    },
+    {
+      "name": "wallert-04",
+      "path": "/icons/Finance/wallert-04.svg"
+    }
+  ]
+} 

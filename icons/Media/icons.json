@@ -1,0 +1,276 @@
+{
+  "icons": [
+    {
+      "name": "audio-settings-01",
+      "path": "/icons/Media/audio-settings-01.svg"
+    },
+    {
+      "name": "audio-settings-02",
+      "path": "/icons/Media/audio-settings-02.svg"
+    },
+    {
+      "name": "battery-01",
+      "path": "/icons/Media/battery-01.svg"
+    },
+    {
+      "name": "battery-02",
+      "path": "/icons/Media/battery-02.svg"
+    },
+    {
+      "name": "battery-03",
+      "path": "/icons/Media/battery-03.svg"
+    },
+    {
+      "name": "battery-04",
+      "path": "/icons/Media/battery-04.svg"
+    },
+    {
+      "name": "battery-empty",
+      "path": "/icons/Media/battery-empty.svg"
+    },
+    {
+      "name": "battery-fill-01",
+      "path": "/icons/Media/battery-fill-01.svg"
+    },
+    {
+      "name": "battery-fill-02",
+      "path": "/icons/Media/battery-fill-02.svg"
+    },
+    {
+      "name": "battery-fill-04",
+      "path": "/icons/Media/battery-fill-04.svg"
+    },
+    {
+      "name": "bluetooth-01",
+      "path": "/icons/Media/bluetooth-01.svg"
+    },
+    {
+      "name": "bluetooth-02",
+      "path": "/icons/Media/bluetooth-02.svg"
+    },
+    {
+      "name": "chromecast",
+      "path": "/icons/Media/chromecast.svg"
+    },
+    {
+      "name": "component",
+      "path": "/icons/Media/Component.svg"
+    },
+    {
+      "name": "computer",
+      "path": "/icons/Media/computer.svg"
+    },
+    {
+      "name": "disc",
+      "path": "/icons/Media/disc.svg"
+    },
+    {
+      "name": "fast-backward",
+      "path": "/icons/Media/fast-backward.svg"
+    },
+    {
+      "name": "fast-forward",
+      "path": "/icons/Media/fast-forward.svg"
+    },
+    {
+      "name": "headphones",
+      "path": "/icons/Media/headphones.svg"
+    },
+    {
+      "name": "iphone-02",
+      "path": "/icons/Media/iphone-02.svg"
+    },
+    {
+      "name": "keyboard",
+      "path": "/icons/Media/keyboard.svg"
+    },
+    {
+      "name": "laptop-01",
+      "path": "/icons/Media/laptop-01.svg"
+    },
+    {
+      "name": "laptop-02",
+      "path": "/icons/Media/laptop-02.svg"
+    },
+    {
+      "name": "lightbulb-01",
+      "path": "/icons/Media/lightbulb-01.svg"
+    },
+    {
+      "name": "lightbulb-02",
+      "path": "/icons/Media/lightbulb-02.svg"
+    },
+    {
+      "name": "lightbulb-03",
+      "path": "/icons/Media/lightbulb-03.svg"
+    },
+    {
+      "name": "media-strip-01",
+      "path": "/icons/Media/media-strip-01.svg"
+    },
+    {
+      "name": "media-strip-02",
+      "path": "/icons/Media/media-strip-02.svg"
+    },
+    {
+      "name": "microphone-01",
+      "path": "/icons/Media/microphone-01.svg"
+    },
+    {
+      "name": "microphone-02",
+      "path": "/icons/Media/microphone-02.svg"
+    },
+    {
+      "name": "microphone-off-01",
+      "path": "/icons/Media/microphone-off-01.svg"
+    },
+    {
+      "name": "microphone-off-02",
+      "path": "/icons/Media/microphone-off-02.svg"
+    },
+    {
+      "name": "mouse",
+      "path": "/icons/Media/mouse.svg"
+    },
+    {
+      "name": "note-01",
+      "path": "/icons/Media/note-01.svg"
+    },
+    {
+      "name": "note-02",
+      "path": "/icons/Media/note-02.svg"
+    },
+    {
+      "name": "pause-01",
+      "path": "/icons/Media/pause-01.svg"
+    },
+    {
+      "name": "pause-02",
+      "path": "/icons/Media/pause-02.svg"
+    },
+    {
+      "name": "pause-03",
+      "path": "/icons/Media/pause-03.svg"
+    },
+    {
+      "name": "play-01",
+      "path": "/icons/Media/play-01.svg"
+    },
+    {
+      "name": "play-02",
+      "path": "/icons/Media/play-02.svg"
+    },
+    {
+      "name": "play-03",
+      "path": "/icons/Media/play-03.svg"
+    },
+    {
+      "name": "power",
+      "path": "/icons/Media/power.svg"
+    },
+    {
+      "name": "refresh-01",
+      "path": "/icons/Media/refresh-01.svg"
+    },
+    {
+      "name": "refresh-01-1",
+      "path": "/icons/Media/refresh-01-1.svg"
+    },
+    {
+      "name": "rss",
+      "path": "/icons/Media/rss.svg"
+    },
+    {
+      "name": "shuffle",
+      "path": "/icons/Media/shuffle.svg"
+    },
+    {
+      "name": "signal",
+      "path": "/icons/Media/signal.svg"
+    },
+    {
+      "name": "skip-back",
+      "path": "/icons/Media/skip-back.svg"
+    },
+    {
+      "name": "skip-forward",
+      "path": "/icons/Media/skip-forward.svg"
+    },
+    {
+      "name": "speaker",
+      "path": "/icons/Media/speaker.svg"
+    },
+    {
+      "name": "stop-circle-contained",
+      "path": "/icons/Media/Stop circle contained.svg"
+    },
+    {
+      "name": "stop-01",
+      "path": "/icons/Media/stop-01.svg"
+    },
+    {
+      "name": "stop-02",
+      "path": "/icons/Media/stop-02.svg"
+    },
+    {
+      "name": "tv",
+      "path": "/icons/Media/tv.svg"
+    },
+    {
+      "name": "video-off",
+      "path": "/icons/Media/video-off.svg"
+    },
+    {
+      "name": "video-on",
+      "path": "/icons/Media/video-on.svg"
+    },
+    {
+      "name": "volume-01",
+      "path": "/icons/Media/volume-01.svg"
+    },
+    {
+      "name": "volume-02",
+      "path": "/icons/Media/volume-02.svg"
+    },
+    {
+      "name": "volume-03",
+      "path": "/icons/Media/volume-03.svg"
+    },
+    {
+      "name": "volume-04",
+      "path": "/icons/Media/volume-04.svg"
+    },
+    {
+      "name": "volume-05",
+      "path": "/icons/Media/volume-05.svg"
+    },
+    {
+      "name": "volume-06",
+      "path": "/icons/Media/volume-06.svg"
+    },
+    {
+      "name": "volume-07",
+      "path": "/icons/Media/volume-07.svg"
+    },
+    {
+      "name": "waveform",
+      "path": "/icons/Media/waveform.svg"
+    },
+    {
+      "name": "webcam",
+      "path": "/icons/Media/webcam.svg"
+    },
+    {
+      "name": "wifi-off",
+      "path": "/icons/Media/wifi-off.svg"
+    },
+    {
+      "name": "wifi-on",
+      "path": "/icons/Media/wifi-on.svg"
+    },
+    {
+      "name": "youtube",
+      "path": "/icons/Media/youtube.svg"
+    }
+  ]
+} 
