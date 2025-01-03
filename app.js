@@ -1,7 +1,30 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+    // 获取DOM元素
     const iconGrid = document.getElementById('iconGrid');
-    const searchInput = document.getElementById('searchInput');
-    const searchButton = document.getElementById('searchButton');
+    const searchContainer = document.querySelector('.search-container');
+    
+    // 分类数据
+    const categories = [
+        { id: 'all', name: 'All' },
+        { id: 'alert', name: 'Alert', path: 'icons/Alert' },
+        { id: 'arrow', name: 'Arrow', path: 'icons/Arrow' },
+        { id: 'files', name: 'Files', path: 'icons/Files' },
+        { id: 'finance', name: 'Finance', path: 'icons/Finance' },
+        { id: 'general', name: 'General', path: 'icons/General' },
+        { id: 'media', name: 'Media', path: 'icons/Media' },
+        { id: 'security', name: 'Security', path: 'icons/Security' },
+        { id: 'shapes', name: 'Shapes', path: 'icons/Shapes' }
+    ];
+
+    // 获取版本号
+    let version = 'v1.0.0';
+    try {
+        const response = await fetch('package.json');
+        const packageData = await response.json();
+        version = `v${packageData.version}`;
+    } catch (error) {
+        console.error('Error loading version:', error);
+    }
 
     // 添加导航栏
     const navbar = document.createElement('nav');
@@ -10,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="navbar-left">
             <div class="brand">
                 <h1>iiiiicon</h1>
-                <button class="version-btn">v1.0.0</button>
+                <button class="version-btn">${version}</button>
             </div>
         </div>
         <div class="navbar-right">
@@ -36,6 +59,88 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
     `;
     document.body.insertBefore(navbar, document.body.firstChild);
+
+    // 优化搜索框样式
+    searchContainer.innerHTML = `
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="搜索图标..." />
+            <button id="searchButton">
+                <svg viewBox="0 0 24 24" width="20" height="20">
+                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <div class="category-select">
+            <button class="category-btn">All</button>
+            <div class="category-dropdown">
+                ${categories.map(category => `
+                    <div class="category-option ${category.id === 'all' ? 'selected' : ''}" data-id="${category.id}">
+                        ${category.name}
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    `;
+
+    // 获取搜索相关元素
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+    const categorySelect = searchContainer.querySelector('.category-select');
+    const categoryBtn = categorySelect.querySelector('.category-btn');
+    const categoryDropdown = categorySelect.querySelector('.category-dropdown');
+    const categoryOptions = categorySelect.querySelectorAll('.category-option');
+
+    // 优化搜索功能
+    function handleSearch(iconsByCategory) {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        const results = {};
+        
+        Object.entries(iconsByCategory).forEach(([category, icons]) => {
+            const filteredIcons = icons.filter(icon => {
+                const name = icon.name.toLowerCase();
+                // 模糊搜索：检查搜索词的每个部分是否都包含在图标名称中
+                const searchTerms = searchTerm.split(/\s+/);
+                return searchTerms.every(term => 
+                    name.includes(term) || 
+                    // 支持连字符和下划线的模糊匹配
+                    name.replace(/-/g, '').includes(term) ||
+                    name.replace(/_/g, '').includes(term) ||
+                    // 支持首字母匹配
+                    term.split('').every(char => name.includes(char))
+                );
+            });
+            
+            if (filteredIcons.length > 0) {
+                results[category] = filteredIcons;
+            }
+        });
+        
+        renderIcons(results);
+    }
+
+    // 添加搜索事件监听
+    searchInput.addEventListener('input', debounce(() => {
+        const currentCategory = document.querySelector('.category-option.selected').dataset.id;
+        loadIcons(currentCategory).then(handleSearch);
+    }, 300));
+
+    searchButton.addEventListener('click', () => {
+        const currentCategory = document.querySelector('.category-option.selected').dataset.id;
+        loadIcons(currentCategory).then(handleSearch);
+    });
+
+    // 防抖函数
+    function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
 
     // 创建版本历史弹窗
     const versionModal = document.createElement('div');
@@ -100,53 +205,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
     const favoritesCount = navbar.querySelector('.favorites-count');
     favoritesCount.textContent = favorites.length;
-
-    // 分类数据
-    const categories = [
-        { id: 'all', name: 'All' },
-        { id: 'alert', name: 'Alert', path: 'icons/Alert' },
-        { id: 'arrow', name: 'Arrow', path: 'icons/Arrow' },
-        { id: 'files', name: 'Files', path: 'icons/Files' },
-        { id: 'finance', name: 'Finance', path: 'icons/Finance' },
-        { id: 'general', name: 'General', path: 'icons/General' },
-        { id: 'media', name: 'Media', path: 'icons/Media' },
-        { id: 'security', name: 'Security', path: 'icons/Security' },
-        { id: 'shapes', name: 'Shapes', path: 'icons/Shapes' }
-    ];
-
-    // 创建分类选择器
-    const searchContainer = document.querySelector('.search-container');
-    const categorySelect = document.createElement('div');
-    categorySelect.className = 'category-select';
-    categorySelect.innerHTML = `
-        <button class="category-btn">All</button>
-        <div class="category-dropdown">
-            ${categories.map(category => `
-                <div class="category-option ${category.id === 'all' ? 'selected' : ''}" data-id="${category.id}">
-                    ${category.name}
-                </div>
-            `).join('')}
-        </div>
-    `;
-
-    // 替换原有的All按钮
-    const oldCategoryBtn = searchContainer.querySelector('.category-btn');
-    searchContainer.replaceChild(categorySelect, oldCategoryBtn);
-
-    // 分类选择器交互
-    const categoryBtn = categorySelect.querySelector('.category-btn');
-    const categoryDropdown = categorySelect.querySelector('.category-dropdown');
-    const categoryOptions = categorySelect.querySelectorAll('.category-option');
-
-    categoryBtn.addEventListener('click', () => {
-        categorySelect.classList.toggle('active');
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!categorySelect.contains(e.target)) {
-            categorySelect.classList.remove('active');
-        }
-    });
 
     // 创建模态框
     const modalOverlay = document.createElement('div');
