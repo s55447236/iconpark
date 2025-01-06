@@ -273,14 +273,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // 创建版本历史弹窗
     const versionModal = document.createElement('div');
-    versionModal.className = 'version-modal';
+    versionModal.className = 'modal';
     versionModal.innerHTML = `
-        <div class="version-modal-content">
-            <div class="version-modal-header">
+        <div class="modal-content">
+            <div class="modal-header">
                 <h2>版本历史</h2>
-                <button class="version-modal-close">&times;</button>
+                <button class="modal-close">&times;</button>
             </div>
-            <div class="version-modal-body">
+            <div class="modal-body">
                 ${versionHistory}
             </div>
         </div>
@@ -289,19 +289,32 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // 版本号点击事件
     const versionBtn = navbar.querySelector('.version-btn');
-    const versionModalClose = versionModal.querySelector('.version-modal-close');
+    const versionModalClose = versionModal.querySelector('.modal-close');
+
+    // 禁止背景滚动
+    function disableScroll() {
+        document.body.style.overflow = 'hidden';
+    }
+
+    // 恢复背景滚动
+    function enableScroll() {
+        document.body.style.overflow = '';
+    }
 
     versionBtn.addEventListener('click', () => {
-        versionModal.classList.add('active');
+        versionModal.classList.add('show');
+        disableScroll();
     });
 
     versionModalClose.addEventListener('click', () => {
-        versionModal.classList.remove('active');
+        versionModal.classList.remove('show');
+        enableScroll();
     });
 
     versionModal.addEventListener('click', (e) => {
         if (e.target === versionModal) {
-            versionModal.classList.remove('active');
+            versionModal.classList.remove('show');
+            enableScroll();
         }
     });
 
@@ -330,26 +343,31 @@ document.addEventListener('DOMContentLoaded', async () => {
                             <input type="color" id="iconColor" value="#000000" class="color-picker" />
                         </div>
                         <div class="control-item">
-                            <select id="iconSize" class="size-select">
-                                <option value="16">16px</option>
-                                <option value="20">20px</option>
-                                <option value="24" selected>24px</option>
-                                <option value="48">48px</option>
-                                <option value="60">60px</option>
-                                <option value="120">120px</option>
-                                <option value="200">200px</option>
-                            </select>
+                            <div class="category-select">
+                                <button class="category-btn">
+                                    <span>24px</span>
+                                    ${arrowIcon}
+                                </button>
+                                <div class="category-dropdown">
+                                    <div class="category-option" data-size="16">16px</div>
+                                    <div class="category-option" data-size="20">20px</div>
+                                    <div class="category-option selected" data-size="24">24px</div>
+                                    <div class="category-option" data-size="32">32px</div>
+                                    <div class="category-option" data-size="48">48px</div>
+                                    <div class="category-option" data-size="64">64px</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="download-buttons">
                         <button class="modal-btn primary" data-action="svg">
-                            <svg viewBox="0 0 24 24" width="16" height="16" style="margin-right: 4px;">
+                            <svg viewBox="0 0 24 24" width="16" height="16">
                                 <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" fill="currentColor"/>
                             </svg>
-                            SVG
+                            下载选中图标
                         </button>
                         <button class="modal-btn secondary" data-action="png">
-                            <svg viewBox="0 0 24 24" width="16" height="16" style="margin-right: 4px;">
+                            <svg viewBox="0 0 24 24" width="16" height="16">
                                 <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" fill="currentColor"/>
                             </svg>
                             PNG
@@ -430,17 +448,53 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
     // 尺寸选择功能
+    const sizeSelects = document.querySelectorAll('.control-item .category-select');
+    sizeSelects.forEach(sizeSelect => {
+        const sizeBtn = sizeSelect.querySelector('.category-btn');
+        const sizeDropdown = sizeSelect.querySelector('.category-dropdown');
+        const sizeOptions = sizeSelect.querySelectorAll('.category-option');
+
+        // 点击按钮显示/隐藏下拉框
+        sizeBtn.addEventListener('click', () => {
+            sizeSelect.classList.toggle('active');
+        });
+
+        // 选择尺寸
+        sizeOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                const size = option.dataset.size;
+                
+                // 更新选中状态
+                sizeOptions.forEach(opt => opt.classList.remove('selected'));
+                option.classList.add('selected');
+                
+                // 更新按钮文本
+                sizeBtn.querySelector('span').textContent = `${size}px`;
+                
+                // 关闭下拉框
+                sizeSelect.classList.remove('active');
+                
+                // 更新预览尺寸
+                updatePreviewSize(size);
+            });
+        });
+
+        // 点击外部关闭下拉框
+        document.addEventListener('click', (e) => {
+            if (!sizeSelect.contains(e.target)) {
+                sizeSelect.classList.remove('active');
+            }
+        });
+    });
+
+    // 更新预览尺寸函数
     const updatePreviewSize = (size) => {
-        const previewSvg = modalOverlay.querySelector('.modal-preview svg');
+        const previewSvg = document.querySelector('.modal-preview svg');
         if (previewSvg) {
             previewSvg.style.width = `${size}px`;
             previewSvg.style.height = `${size}px`;
         }
     };
-
-    modalOverlay.querySelector('#iconSize').addEventListener('change', (e) => {
-        updatePreviewSize(e.target.value);
-    });
 
     // 颜色选择功能
     const updatePreviewColor = (color) => {
@@ -576,8 +630,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                                 ${svgContent}
                             </div>
                             <div class="icon-name">${icon.name}</div>
-                            <button class="favorite-btn ${favorites.includes(icon.name) ? 'active' : ''}" 
-                                    title="${favorites.includes(icon.name) ? '已收藏' : '加入收藏'}">
+                            <button class="favorite-btn" title="${favorites.includes(icon.name) ? '已收藏' : '加入收藏'}">
                                 ${favorites.includes(icon.name) ? starIcon : plusIcon}
                             </button>
                         `;
@@ -645,24 +698,30 @@ document.addEventListener('DOMContentLoaded', async () => {
                                                     <input type="color" id="iconColor" value="#000000" class="color-picker" />
                                                 </div>
                                                 <div class="control-item">
-                                                    <select id="iconSize" class="size-select">
-                                                        <option value="16">16px</option>
-                                                        <option value="20">20px</option>
-                                                        <option value="24" selected>24px</option>
-                                                        <option value="32">32px</option>
-                                                        <option value="48">48px</option>
-                                                        <option value="64">64px</option>
-                                                    </select>
+                                                    <div class="category-select">
+                                                        <button class="category-btn">
+                                                            <span>24px</span>
+                                                            ${arrowIcon}
+                                                        </button>
+                                                        <div class="category-dropdown">
+                                                            <div class="category-option" data-size="16">16px</div>
+                                                            <div class="category-option" data-size="20">20px</div>
+                                                            <div class="category-option selected" data-size="24">24px</div>
+                                                            <div class="category-option" data-size="32">32px</div>
+                                                            <div class="category-option" data-size="48">48px</div>
+                                                            <div class="category-option" data-size="64">64px</div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="download-buttons">
-                                                <button class="btn btn-primary" data-action="svg">
+                                                <button class="modal-btn primary" data-action="svg">
                                                     <svg viewBox="0 0 24 24" width="16" height="16">
                                                         <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" fill="currentColor"/>
                                                     </svg>
-                                                    SVG
+                                                    下载选中图标
                                                 </button>
-                                                <button class="btn btn-secondary" data-action="png">
+                                                <button class="modal-btn secondary" data-action="png">
                                                     <svg viewBox="0 0 24 24" width="16" height="16">
                                                         <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" fill="currentColor"/>
                                                     </svg>
@@ -681,12 +740,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                             // 显示模态框
                             setTimeout(() => {
                                 previewModal.classList.add('show');
+                                disableScroll();
                             }, 0);
 
                             // 关闭模态框时销毁颜色选择器
                             const closeModal = () => {
                                 pickr.destroyAndRemove();
                                 previewModal.classList.remove('show');
+                                enableScroll();
                                 setTimeout(() => {
                                     document.body.removeChild(previewModal);
                                 }, 300);
@@ -1127,7 +1188,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <div id="favoritesGrid" class="favorites-grid"></div>
             </div>
             <div class="modal-footer">
-                <button class="download-all-btn">
+                <button class="modal-btn primary" id="downloadAllBtn">
                     <svg viewBox="0 0 24 24" width="16" height="16">
                         <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" fill="currentColor"/>
                     </svg>
@@ -1276,22 +1337,25 @@ document.addEventListener('DOMContentLoaded', async () => {
     navFavoritesBtn.addEventListener('click', () => {
         renderFavorites();
         favoritesModal.classList.add('show');
+        disableScroll();
     });
 
     // 关闭收藏夹弹窗
     const closeFavoritesModal = favoritesModal.querySelector('.modal-close');
     closeFavoritesModal.addEventListener('click', () => {
         favoritesModal.classList.remove('show');
+        enableScroll();
     });
 
     // 点击弹窗外部关闭
     favoritesModal.addEventListener('click', (e) => {
         if (e.target === favoritesModal) {
             favoritesModal.classList.remove('show');
+            enableScroll();
         }
     });
 
     // 下载全部按钮点击事件
-    const downloadAllBtn = favoritesModal.querySelector('.download-all-btn');
+    const downloadAllBtn = favoritesModal.querySelector('#downloadAllBtn');
     downloadAllBtn.addEventListener('click', downloadAllFavorites);
 }); 

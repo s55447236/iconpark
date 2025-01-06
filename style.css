@@ -167,15 +167,15 @@ h1 {
     color: #d1d5db;
 }
 
+/* 分类选择和尺寸选择的共同样式 */
 .category-select {
     position: relative;
     min-width: 140px;
-    z-index: 100;
 }
 
 .category-btn {
     width: 100%;
-    height: 42px;
+    height: 100%;
     padding: 0 0.75rem;
     background: #f3f4f6;
     border: 1px solid transparent;
@@ -223,8 +223,7 @@ h1 {
     visibility: hidden;
     transform: translateY(-10px);
     transition: all 0.2s ease;
-    max-height: 300px;
-    overflow-y: auto;
+    z-index: 1000;
 }
 
 .category-select.active .category-dropdown {
@@ -253,6 +252,7 @@ h1 {
     color: #1a73e8;
     font-weight: 500;
 }
+
 
 /* 自定义滚动条样式 */
 .category-dropdown::-webkit-scrollbar {
@@ -360,10 +360,10 @@ h1 {
 /* 收藏按钮样式 */
 .favorite-btn {
     position: absolute;
-    top: 0.2rem;
-    right: 0.2rem;
-    width: 24px;
-    height: 24px;
+    top: 8px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
     border: none;
     border-radius: 6px;
     background: #f5f5f5;
@@ -374,18 +374,16 @@ h1 {
     justify-content: center;
     transition: all 0.2s ease;
     opacity: 0;
+    visibility: hidden;
 }
 
 .icon-item:hover .favorite-btn {
     opacity: 1;
+    visibility: visible;
 }
 
 .favorite-btn:hover {
-    background-color: #e8f0fe;
-}
-
-.favorite-btn.active {
-    color: #1a73e8;
+    background: #e8f0fe;
 }
 
 .favorite-btn svg {
@@ -393,67 +391,91 @@ h1 {
     height: 16px;
 }
 
+/* 已收藏状态的图标颜色 */
+.icon-item.favorited .icon-preview svg {
+    color: #1a73e8;
+}
+
 /* Modal Base Styles */
-.modal {
-    display: none;
+.modal-base,
+.modal,
+.favorites-modal,
+.version-modal,
+.preview-modal {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
     backdrop-filter: blur(2px);
 }
 
-.modal.show {
+.modal-base.show,
+.modal.show,
+.favorites-modal.show,
+.version-modal.show,
+.preview-modal.show {
     display: flex;
+    opacity: 1;
 }
 
-.modal .modal-content {
-    background: white;
+.modal-content {
+    background: #fff;
     border-radius: 12px;
     width: 90%;
-    max-width: 480px;
-    position: relative;
+    max-width: 640px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
     transform: scale(0.95);
     opacity: 0;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    margin: 0 auto;
 }
 
-.modal.show .modal-content {
+.modal-base.show .modal-content,
+.modal.show .modal-content,
+.favorites-modal.show .modal-content,
+.version-modal.show .modal-content,
+.preview-modal.show .modal-content {
     transform: scale(1);
     opacity: 1;
 }
 
-.modal .modal-header {
-    padding: 16px;
+.modal-header {
+    padding: 16px 24px;
     border-bottom: 1px solid #eee;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.modal .modal-title {
-    font-size: 16px;
-    font-weight: 600;
-    color: #1a1a1a;
+.modal-header h2,
+.modal-header .icon-title {
     margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
 }
 
-.modal .modal-close {
-    width: 24px;
-    height: 24px;
+.modal-close,
+.close-btn {
     background: none;
     border: none;
-    padding: 0;
-    font-size: 20px;
-    line-height: 1;
+    font-size: 24px;
     color: #666;
     cursor: pointer;
+    padding: 4px;
+    width: 32px;
+    height: 32px;
     border-radius: 4px;
     display: flex;
     align-items: center;
@@ -461,243 +483,26 @@ h1 {
     transition: all 0.2s;
 }
 
-.modal .modal-close:hover {
-    background-color: #f5f5f5;
+.modal-close:hover,
+.close-btn:hover {
+    background: #f5f5f5;
     color: #333;
 }
 
-.modal .modal-body {
+.modal-body {
     padding: 24px;
-    max-height: 70vh;
     overflow-y: auto;
+    flex: 1;
+    max-height: calc(80vh - 130px);
 }
 
-.modal .modal-footer {
-    padding: 16px;
+.modal-footer {
+    padding: 16px 24px;
     border-top: 1px solid #eee;
     display: flex;
     justify-content: flex-end;
-    background: #fafafa;
+    background: #ffffff;
     border-radius: 0 0 12px 12px;
-}
-
-/* Preview Modal Specific Styles */
-.preview-section {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 24px;
-    margin-bottom: 24px;
-}
-
-.modal-preview {
-    width: 120px;
-    height: 120px;
-    background: #f8f9fa;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
-    flex-shrink: 0;
-}
-
-.preview-name {
-    font-size: 16px;
-    font-weight: 600;
-    color: #1a1a1a;
-    text-align: left;
-}
-
-.modal-actions {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    padding: 16px 0;
-}
-
-.control-group {
-    display: flex;
-    gap: 12px;
-    flex: 1;
-}
-
-.control-item {
-    flex: 0 0 auto;
-}
-
-.control-item:first-child {
-    width: 36px;
-}
-
-.control-item:last-child {
-    flex: 1;
-    max-width: 120px;
-}
-
-.color-picker {
-    width: 36px;
-    height: 36px;
-    padding: 2px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    cursor: pointer;
-    background: white;
-    transition: all 0.2s;
-    position: relative;
-}
-
-.color-picker::-webkit-color-swatch-wrapper {
-    padding: 0;
-    border-radius: 4px;
-}
-
-.color-picker::-webkit-color-swatch {
-    border: none;
-    border-radius: 4px;
-}
-
-.color-picker::-moz-color-swatch {
-    border: none;
-    border-radius: 4px;
-}
-
-/* 自定义颜色选择器弹出框样式 */
-input[type="color"] {
-    -webkit-appearance: none;
-    appearance: none;
-    background: none;
-}
-
-input[type="color"]::-webkit-color-swatch-wrapper {
-    padding: 0;
-}
-
-input[type="color"]::-webkit-color-swatch {
-    border: none;
-    border-radius: 4px;
-}
-
-/* Chrome, Safari, Edge */
-::-webkit-color-picker {
-    border: none;
-    border-radius: 8px;
-    padding: 0;
-    width: 300px;
-    height: 300px;
-}
-
-::-webkit-color-picker-controls {
-    padding: 16px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-::-webkit-color-picker-grid {
-    border-radius: 4px;
-}
-
-::-webkit-color-picker-slider {
-    margin: 12px 0;
-}
-
-::-webkit-color-picker-text {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-size: 14px;
-    color: #333;
-}
-
-.color-picker:hover {
-    border-color: #1a73e8;
-}
-
-.size-select {
-    width: 100%;
-    height: 36px;
-    padding: 0 12px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    background: white;
-    color: #333;
-    font-size: 14px;
-    cursor: pointer;
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 8px center;
-    background-size: 16px;
-    transition: all 0.2s;
-}
-
-.size-select:hover {
-    border-color: #1a73e8;
-}
-
-.download-buttons {
-    display: flex;
-    gap: 8px;
-    flex-shrink: 0;
-}
-
-/* Button Styles */
-.btn {
-    height: 36px;
-    padding: 0 16px;
-    border: none;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    transition: all 0.2s;
-}
-
-.btn-primary {
-    background: #1a73e8;
-    color: white;
-}
-
-.btn-primary:hover {
-    background: #1557b0;
-}
-
-.btn-secondary {
-    background: #f3f4f6;
-    color: #333;
-}
-
-.btn-secondary:hover {
-    background: #e5e7eb;
-}
-
-.btn svg {
-    width: 16px;
-    height: 16px;
-}
-
-/* Custom Scrollbar */
-.modal-body::-webkit-scrollbar {
-    width: 8px;
-}
-
-.modal-body::-webkit-scrollbar-track {
-    background: #f5f5f5;
-    border-radius: 4px;
-}
-
-.modal-body::-webkit-scrollbar-thumb {
-    background: #ddd;
-    border-radius: 4px;
-}
-
-.modal-body::-webkit-scrollbar-thumb:hover {
-    background: #ccc;
 }
 
 /* 导航栏样式 */
@@ -748,21 +553,14 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 .nav-btn {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 0.75rem;
-    border: none;
-    border-radius: 6px;
-    background: none;
+    composes: btn-base;
+    padding: 8px 16px;
     color: #1a1a1a;
-    font-size: 0.875rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
+    background: none;
 }
 
 .nav-btn:hover {
-    background: #f3f4f6;
+    background: rgba(0, 0, 0, 0.05);
 }
 
 .nav-btn svg {
@@ -824,20 +622,18 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 .download-btn {
-    padding: 0.25rem 0.75rem;
-    border: none;
-    border-radius: 6px;
-    background: white;
-    color: #1a1a1a;
-    font-size: 0.75rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    composes: btn-base;
+    background: #1a73e8;
+    color: white;
 }
 
 .download-btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: #1557b0;
+}
+
+.download-btn svg {
+    width: 16px;
+    height: 16px;
 }
 
 /* 导航栏收藏按钮样式更新 */
@@ -851,14 +647,11 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 .version-btn {
+    composes: btn-base;
     background: none;
-    border: none;
     color: #666;
-    font-size: 14px;
-    cursor: pointer;
-    padding: 2px 8px;
-    border-radius: 4px;
-    transition: all 0.2s;
+    padding: 4px 12px;
+    height: 28px;
 }
 
 .version-btn:hover {
@@ -1059,358 +852,6 @@ input[type="color"]::-webkit-color-swatch {
     width: auto;
 }
 
-/* Download Button */
-.download-btn {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s;
-}
-
-.download-btn:hover {
-    background-color: #45a049;
-}
-
-/* Modal */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-}
-
-.modal-content {
-    position: relative;
-    background-color: #fff;
-    margin: 10% auto;
-    padding: 0;
-    width: 90%;
-    max-width: 600px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.modal-header {
-    padding: 20px;
-    border-bottom: 1px solid #eee;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.modal-header h2 {
-    margin: 0;
-    font-size: 20px;
-}
-
-.close-btn {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #666;
-}
-
-.modal-body {
-    padding: 20px;
-    max-height: 400px;
-    overflow-y: auto;
-}
-
-.modal-footer {
-    padding: 20px;
-    border-top: 1px solid #eee;
-    text-align: right;
-}
-
-/* Category Tree */
-.category-tree {
-    font-size: 14px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-
-
-.tree-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    border: none;
-}
-
-.tree-item {
-    margin: 0;
-    border: none;
-}
-
-.tree-item label {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-    padding: 6px 8px;
-    border-radius: 4px;
-    transition: background-color 0.2s;
-    border: none;
-}
-
-.tree-item label:hover {
-    background-color: #f5f5f5;
-}
-
-/* Checkbox Styling */
-.category-tree input[type="checkbox"] {
-    width: 14px;
-    height: 14px;
-    margin: 0;
-    border: 1.5px solid #999;
-    border-radius: 3px;
-    cursor: pointer;
-    appearance: none;
-    -webkit-appearance: none;
-    position: relative;
-    background: white;
-    transition: all 0.2s;
-}
-
-.category-tree input[type="checkbox"]:checked {
-    background: #1a73e8;
-    border-color: #1a73e8;
-}
-
-.category-tree input[type="checkbox"]:checked::after {
-    content: '';
-    position: absolute;
-    left: 4px;
-    top: 1px;
-    width: 4px;
-    height: 8px;
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-}
-
-.tree-item span {
-    font-size: 13px;
-    color: #333;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-/* Icon Preview Modal */
-.preview-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(2px);
-}
-
-.preview-modal.show {
-    display: flex;
-}
-
-.preview-modal .modal-content {
-    background: white;
-    border-radius: 12px;
-    width: 90%;
-    max-width: 420px;
-    position: relative;
-    transform: scale(0.95);
-    opacity: 0;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-}
-
-.preview-modal.show .modal-content {
-    transform: scale(1);
-    opacity: 1;
-}
-
-.preview-modal .modal-header {
-    padding: 16px;
-    border-bottom: 1px solid #eee;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.preview-modal .icon-title {
-    font-size: 16px;
-    font-weight: 600;
-    color: #1a1a1a;
-}
-
-.preview-modal .modal-close {
-    width: 24px;
-    height: 24px;
-    background: none;
-    border: none;
-    padding: 0;
-    font-size: 20px;
-    line-height: 1;
-    color: #666;
-    cursor: pointer;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s;
-}
-
-.preview-modal .modal-close:hover {
-    background-color: #f5f5f5;
-    color: #333;
-}
-
-.preview-modal .modal-body {
-    padding: 24px;
-}
-
-.preview-section {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 24px;
-    margin-bottom: 24px;
-}
-
-.modal-preview {
-    width: 120px;
-    height: 120px;
-    background: #f8f9fa;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
-    flex-shrink: 0;
-}
-
-.preview-name {
-    font-size: 16px;
-    font-weight: 600;
-    color: #1a1a1a;
-    text-align: left;
-}
-
-.modal-actions {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    padding: 16px 0;
-}
-
-.control-group {
-    display: flex;
-    gap: 12px;
-    flex: 1;
-}
-
-.control-item {
-    flex: 0 0 auto;
-}
-
-.control-item:first-child {
-    width: 36px;
-}
-
-.control-item:last-child {
-    flex: 1;
-    max-width: 120px;
-}
-
-
-
-.size-select {
-    width: 100%;
-    height: 36px;
-    padding: 0 12px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    background: white;
-    color: #333;
-    font-size: 14px;
-    cursor: pointer;
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 8px center;
-    background-size: 16px;
-    transition: all 0.2s;
-}
-
-.size-select:hover {
-    border-color: #1a73e8;
-}
-
-.download-buttons {
-    display: flex;
-    gap: 8px;
-    flex-shrink: 0;
-}
-
-.modal-btn {
-    height: 36px;
-    padding: 0 16px;
-    border: none;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    transition: all 0.2s;
-    white-space: nowrap;
-}
-
-.modal-btn.primary {
-    background: #1a73e8;
-    color: white;
-}
-
-.modal-btn.primary:hover {
-    background: #1557b0;
-}
-
-.modal-btn.secondary {
-    background: #f3f4f6;
-    color: #333;
-}
-
-.modal-btn.secondary:hover {
-    background: #e5e7eb;
-}
-
-.modal-btn svg {
-    width: 16px;
-    height: 16px;
-}
-
 /* RGB 输入框样式 */
 ::-webkit-color-picker-text {
     display: flex;
@@ -1450,6 +891,7 @@ input[type="color"]::-webkit-color-swatch {
     position: relative;
     width: 36px;
     height: 36px;
+    border-radius: 6px !important;
 }
 
 .pickr button {
@@ -1458,6 +900,17 @@ input[type="color"]::-webkit-color-swatch {
     border: 1px solid #ddd !important;
     border-radius: 6px !important;
     transition: all 0.2s !important;
+}
+
+.pickr .pcr-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--pcr-color);
+    border-radius: 6px;
 }
 
 .pickr button:hover,
@@ -1469,7 +922,7 @@ input[type="color"]::-webkit-color-swatch {
 
 .pcr-app {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
-    border-radius: 8px !important;
+    border-radius: 6px !important;
     padding: 12px !important;
 }
 
@@ -1479,13 +932,13 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 .pcr-app .pcr-swatch {
-    border-radius: 4px !important;
+    border-radius: 6px !important;
     width: 24px !important;
     height: 24px !important;
 }
 
 .pcr-app .pcr-result {
-    border-radius: 4px !important;
+    border-radius: 6px !important;
     font-size: 14px !important;
     color: #333 !important;
     background: #f8f9fa !important;
@@ -1508,7 +961,7 @@ input[type="color"]::-webkit-color-swatch {
 .pcr-app .pcr-save {
     background: #1a73e8 !important;
     color: white !important;
-    border-radius: 4px !important;
+    border-radius: 6px !important;
     transition: all 0.2s !important;
 }
 
@@ -1520,7 +973,7 @@ input[type="color"]::-webkit-color-swatch {
 .pcr-app .pcr-clear {
     background: #f3f4f6 !important;
     color: #333 !important;
-    border-radius: 4px !important;
+    border-radius: 6px !important;
     transition: all 0.2s !important;
 }
 
@@ -1675,10 +1128,7 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 .download-all-btn {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 16px;
+    composes: btn-base;
     background: #1a73e8;
     color: #fff;
     border: none;
@@ -1695,4 +1145,260 @@ input[type="color"]::-webkit-color-swatch {
 .download-all-btn svg {
     width: 16px;
     height: 16px;
-} 
+}
+
+.tree-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    border: none;
+}
+
+/* 按钮基础样式 */
+.btn-base,
+.nav-btn,
+.modal-btn,
+.download-btn,
+.download-all-btn {
+    height: 36px;
+    padding: 0 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.2s;
+}
+
+/* 导航栏按钮 */
+.nav-btn {
+    padding: 8px 16px;
+    color: #1a1a1a;
+    background: none;
+}
+
+.nav-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.nav-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* 主要按钮 */
+.modal-btn.primary,
+.download-btn,
+.download-all-btn {
+    background: #1a73e8;
+    color: white;
+}
+
+.modal-btn.primary:hover,
+.download-btn:hover,
+.download-all-btn:hover {
+    background: #1557b0;
+}
+
+/* 次要按钮 */
+.modal-btn.secondary {
+    background: #f3f4f6;
+    color: #333;
+}
+
+.modal-btn.secondary:hover {
+    background: #e5e7eb;
+}
+
+/* 版本按钮 */
+.version-btn {
+    height: 28px;
+    padding: 4px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    color: #666;
+    transition: all 0.2s;
+}
+
+.version-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: #333;
+}
+
+/* 收藏按钮 */
+.favorite-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 6px;
+    background: #f5f5f5;
+    color: #1a73e8;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.icon-item:hover .favorite-btn {
+    opacity: 1;
+    visibility: visible;
+}
+
+.favorite-btn:hover {
+    background: #e8f0fe;
+}
+
+.favorite-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* 移除收藏按钮 */
+.remove-favorite {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 6px;
+    background: none;
+    color: #999;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    opacity: 0;
+}
+
+.favorite-item:hover .remove-favorite {
+    opacity: 1;
+}
+
+.remove-favorite:hover {
+    background: #f5f5f5;
+    color: #ff4d4f;
+}
+
+/* 按钮图标 */
+.modal-btn svg,
+.download-btn svg,
+.download-all-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* 模态框操作区域样式 */
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+.download-buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+/* 控制项样式 */
+.control-item {
+    position: relative;
+}
+
+.control-item .category-select {
+    min-width: 100px;
+    height: 36px;
+}
+
+/* 按钮样式 */
+.modal-btn {
+    height: 36px;
+    padding: 0 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.2s;
+}
+
+.modal-btn.primary {
+    background: #1a73e8;
+    color: white;
+}
+
+.modal-btn.primary:hover {
+    background: #1557b0;
+}
+
+.modal-btn.secondary {
+    background: #f3f4f6;
+    color: #333;
+}
+
+.modal-btn.secondary:hover {
+    background: #e5e7eb;
+}
+
+/* 预览区域样式 */
+.preview-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-preview {
+    width: 80px;
+    height: 80px;
+    background: #f3f4f6;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-preview svg {
+    width: 32px;
+    height: 32px;
+}
+
+.preview-name {
+    font-size: 20px;
+    color: #333;
+}
+
+/* 控制组样式 */
+.control-group {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+
+
