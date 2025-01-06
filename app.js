@@ -186,6 +186,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     // 添加下拉框交互
     categoryBtn.addEventListener('click', () => {
         categorySelect.classList.toggle('active');
+        const dropdown = categorySelect.querySelector('.category-dropdown');
+        if (categorySelect.classList.contains('active')) {
+            const btnRect = categoryBtn.getBoundingClientRect();
+            dropdown.style.position = 'fixed';
+            dropdown.style.top = `${btnRect.bottom + 4}px`;
+            dropdown.style.left = `${btnRect.left}px`;
+            dropdown.style.width = `${btnRect.width}px`;
+            dropdown.style.zIndex = '1100';
+            dropdown.classList.add('show');
+        } else {
+            dropdown.classList.remove('show');
+        }
     });
 
     // 添加分类选择事件
@@ -199,10 +211,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             option.classList.add('selected');
             
             // 更新按钮文本
-            categoryBtn.textContent = selectedName;
+            categoryBtn.querySelector('span').textContent = selectedName;
             
             // 关闭下拉框
             categorySelect.classList.remove('active');
+            categorySelect.querySelector('.category-dropdown').classList.remove('show');
             
             // 触发搜索
             handleSearch();
@@ -212,6 +225,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.addEventListener('click', (e) => {
         if (!categorySelect.contains(e.target)) {
             categorySelect.classList.remove('active');
+            const dropdown = categorySelect.querySelector('.category-dropdown');
+            if (dropdown) {
+                dropdown.classList.remove('show');
+            }
         }
     });
 
@@ -348,14 +365,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                                     <span>24px</span>
                                     ${arrowIcon}
                                 </button>
-                                <div class="category-dropdown">
-                                    <div class="category-option" data-size="16">16px</div>
-                                    <div class="category-option" data-size="20">20px</div>
-                                    <div class="category-option selected" data-size="24">24px</div>
-                                    <div class="category-option" data-size="32">32px</div>
-                                    <div class="category-option" data-size="48">48px</div>
-                                    <div class="category-option" data-size="64">64px</div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -457,6 +466,21 @@ document.addEventListener('DOMContentLoaded', async () => {
         // 点击按钮显示/隐藏下拉框
         sizeBtn.addEventListener('click', () => {
             sizeSelect.classList.toggle('active');
+            if (sizeSelect.classList.contains('active')) {
+                const btnRect = sizeBtn.getBoundingClientRect();
+                const dropdown = sizeSelect.querySelector('.category-dropdown');
+                const modalRect = previewModal.querySelector('.modal-content').getBoundingClientRect();
+                
+                // 计算相对于模态框的位置
+                const top = btnRect.bottom - modalRect.top;
+                const left = btnRect.left - modalRect.left;
+                
+                dropdown.style.position = 'fixed';
+                dropdown.style.top = `${btnRect.bottom + 4}px`;
+                dropdown.style.left = `${btnRect.left}px`;
+                dropdown.style.width = `${btnRect.width}px`;
+                dropdown.style.zIndex = '1100';
+            }
         });
 
         // 选择尺寸
@@ -703,14 +727,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                                                             <span>24px</span>
                                                             ${arrowIcon}
                                                         </button>
-                                                        <div class="category-dropdown">
-                                                            <div class="category-option" data-size="16">16px</div>
-                                                            <div class="category-option" data-size="20">20px</div>
-                                                            <div class="category-option selected" data-size="24">24px</div>
-                                                            <div class="category-option" data-size="32">32px</div>
-                                                            <div class="category-option" data-size="48">48px</div>
-                                                            <div class="category-option" data-size="64">64px</div>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -734,6 +750,19 @@ document.addEventListener('DOMContentLoaded', async () => {
                             `;
                             document.body.appendChild(previewModal);
 
+                            // 创建尺寸下拉框
+                            const sizeDropdown = document.createElement('div');
+                            sizeDropdown.className = 'category-dropdown size-dropdown';
+                            sizeDropdown.innerHTML = `
+                                <div class="category-option" data-size="16">16px</div>
+                                <div class="category-option" data-size="20">20px</div>
+                                <div class="category-option selected" data-size="24">24px</div>
+                                <div class="category-option" data-size="32">32px</div>
+                                <div class="category-option" data-size="48">48px</div>
+                                <div class="category-option" data-size="64">64px</div>
+                            `;
+                            document.body.appendChild(sizeDropdown);
+
                             // 初始化颜色选择器
                             const pickr = initColorPicker(previewModal);
                             
@@ -743,11 +772,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                                 disableScroll();
                             }, 0);
 
-                            // 关闭模态框时销毁颜色选择器
+                            // 关闭模态框时销毁颜色选择器和下拉框
                             const closeModal = () => {
                                 pickr.destroyAndRemove();
                                 previewModal.classList.remove('show');
                                 enableScroll();
+                                if (sizeDropdown && document.body.contains(sizeDropdown)) {
+                                    document.body.removeChild(sizeDropdown);
+                                }
                                 setTimeout(() => {
                                     document.body.removeChild(previewModal);
                                 }, 300);
@@ -766,27 +798,68 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                             // 设置预览图标的尺寸和颜色
                             const modalPreview = previewModal.querySelector('.modal-preview svg');
-                            const iconSize = previewModal.querySelector('#iconSize');
-
-                            // 更新预览尺寸
-                            function updatePreviewSize(size) {
-                                if (modalPreview) {
-                                    modalPreview.style.width = `${size}px`;
-                                    modalPreview.style.height = `${size}px`;
+                            
+                            // 尺寸选择功能
+                            const sizeSelect = previewModal.querySelector('.category-select');
+                            const sizeBtn = sizeSelect.querySelector('.category-btn');
+                            const sizeOptions = sizeDropdown.querySelectorAll('.category-option');
+                            
+                            // 点击按钮显示/隐藏下拉框
+                            sizeBtn.addEventListener('click', (e) => {
+                                e.stopPropagation();
+                                const isActive = sizeSelect.classList.contains('active');
+                                sizeSelect.classList.toggle('active');
+                                
+                                if (!isActive) {
+                                    const btnRect = sizeBtn.getBoundingClientRect();
+                                    sizeDropdown.style.position = 'fixed';
+                                    sizeDropdown.style.top = `${btnRect.bottom + 4}px`;
+                                    sizeDropdown.style.left = `${btnRect.left}px`;
+                                    sizeDropdown.style.width = `${btnRect.width}px`;
+                                    sizeDropdown.style.zIndex = '1100';
+                                    sizeDropdown.classList.add('show');
+                                } else {
+                                    sizeDropdown.classList.remove('show');
                                 }
-                            }
+                            });
+                            
+                            // 选择尺寸
+                            sizeOptions.forEach(option => {
+                                option.addEventListener('click', () => {
+                                    const size = option.dataset.size;
+                                    
+                                    // 更新选中状态
+                                    sizeOptions.forEach(opt => opt.classList.remove('selected'));
+                                    option.classList.add('selected');
+                                    
+                                    // 更新按钮文本
+                                    sizeBtn.querySelector('span').textContent = `${size}px`;
+                                    
+                                    // 关闭下拉框
+                                    sizeSelect.classList.remove('active');
+                                    sizeDropdown.classList.remove('show');
+                                    
+                                    // 更新预览尺寸
+                                    updatePreviewSize(size);
+                                });
+                            });
+                            
+                            // 点击外部关闭下拉框
+                            document.addEventListener('click', (e) => {
+                                if (!sizeSelect.contains(e.target) && !sizeDropdown.contains(e.target)) {
+                                    sizeSelect.classList.remove('active');
+                                    sizeDropdown.classList.remove('show');
+                                }
+                            });
 
                             // 设置初始值
                             updatePreviewSize(24);
 
-                            // 尺寸选择事件
-                            iconSize.addEventListener('change', (e) => updatePreviewSize(e.target.value));
-
                             // 下载按钮事件
-                            previewModal.querySelectorAll('.btn').forEach(btn => {
+                            previewModal.querySelectorAll('.modal-btn').forEach(btn => {
                                 btn.addEventListener('click', () => {
                                     const action = btn.dataset.action;
-                                    const size = iconSize.value;
+                                    const size = sizeBtn.querySelector('span').textContent.replace('px', '');
                                     const color = pickr.getColor().toHEXA().toString();
                                     if (action === 'svg') {
                                         downloadSVG(svgContent, icon.name, size, color);
