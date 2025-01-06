@@ -545,7 +545,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         // 收藏按钮点击事件
                         const favoriteBtn = iconItem.querySelector('.favorite-btn');
                         favoriteBtn.addEventListener('click', (e) => {
-                            e.stopPropagation();
+                            e.stopPropagation(); // 阻止事件冒泡到图标项
                             const index = favorites.indexOf(icon.name);
                             if (index === -1) {
                                 favorites.push(icon.name);
@@ -566,34 +566,128 @@ document.addEventListener('DOMContentLoaded', async () => {
                             favoritesCount.textContent = favorites.length;
                         });
 
-                        // 图标点击事件 - 打开下载模态框
+                        // 图标点击事件 - 打开预览模态框
                         iconItem.addEventListener('click', () => {
-                            modalOverlay.classList.add('active');
-                            const modalPreview = modalOverlay.querySelector('.modal-preview');
-                            modalPreview.innerHTML = svgContent;
-                            
-                            // 设置图标名称
-                            const previewName = modalOverlay.querySelector('.preview-name');
-                            previewName.textContent = icon.name;
-                            
-                            // 设置初始预览尺寸和颜色
-                            const initialSize = modalOverlay.querySelector('#iconSize').value;
-                            const initialColor = modalOverlay.querySelector('#iconColor').value;
-                            updatePreviewSize(initialSize);
-                            updatePreviewColor(initialColor);
+                            const previewModal = document.createElement('div');
+                            previewModal.className = 'modal';
+                            previewModal.innerHTML = `
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h2 class="modal-title">图标预览</h2>
+                                        <button class="modal-close">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="preview-section">
+                                            <div class="modal-preview">
+                                                ${svgContent}
+                                            </div>
+                                            <div class="preview-name">${icon.name}</div>
+                                        </div>
+                                        <div class="modal-actions">
+                                            <div class="control-group">
+                                                <div class="control-item">
+                                                    <input type="color" id="iconColor" value="#000000" class="color-picker" />
+                                                </div>
+                                                <div class="control-item">
+                                                    <select id="iconSize" class="size-select">
+                                                        <option value="16">16px</option>
+                                                        <option value="20">20px</option>
+                                                        <option value="24" selected>24px</option>
+                                                        <option value="32">32px</option>
+                                                        <option value="48">48px</option>
+                                                        <option value="64">64px</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="download-buttons">
+                                                <button class="btn btn-primary" data-action="svg">
+                                                    <svg viewBox="0 0 24 24" width="16" height="16">
+                                                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" fill="currentColor"/>
+                                                    </svg>
+                                                    SVG
+                                                </button>
+                                                <button class="btn btn-secondary" data-action="png">
+                                                    <svg viewBox="0 0 24 24" width="16" height="16">
+                                                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" fill="currentColor"/>
+                                                    </svg>
+                                                    PNG
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+                            document.body.appendChild(previewModal);
 
-                            // 设置下载按钮事件
-                            modalOverlay.querySelectorAll('.modal-btn').forEach(btn => {
-                                btn.onclick = () => {
+                            // 显示模态框
+                            setTimeout(() => {
+                                previewModal.classList.add('show');
+                            }, 0);
+
+                            // 设置预览图标的尺寸和颜色
+                            const modalPreview = previewModal.querySelector('.modal-preview svg');
+                            const iconColor = previewModal.querySelector('#iconColor');
+                            const iconSize = previewModal.querySelector('#iconSize');
+
+                            // 更新预览尺寸
+                            function updatePreviewSize(size) {
+                                if (modalPreview) {
+                                    modalPreview.style.width = `${size}px`;
+                                    modalPreview.style.height = `${size}px`;
+                                }
+                            }
+
+                            // 更新预览颜色
+                            function updatePreviewColor(color) {
+                                if (modalPreview) {
+                                    modalPreview.querySelectorAll('path').forEach(path => {
+                                        path.setAttribute('stroke', color);
+                                        path.setAttribute('fill', 'none');
+                                        path.style.stroke = color;
+                                        path.style.fill = 'none';
+                                    });
+                                }
+                            }
+
+                            // 添加事件监听
+                            iconColor.addEventListener('input', (e) => updatePreviewColor(e.target.value));
+                            iconSize.addEventListener('change', (e) => updatePreviewSize(e.target.value));
+
+                            // 设置初始值
+                            updatePreviewSize(24);
+                            updatePreviewColor('#000000');
+
+                            // 下载按钮事件
+                            previewModal.querySelectorAll('.modal-btn').forEach(btn => {
+                                btn.addEventListener('click', () => {
                                     const action = btn.dataset.action;
-                                    const size = modalOverlay.querySelector('#iconSize').value;
-                                    const color = modalOverlay.querySelector('#iconColor').value;
+                                    const size = iconSize.value;
+                                    const color = iconColor.value;
                                     if (action === 'svg') {
                                         downloadSVG(svgContent, icon.name, size, color);
                                     } else if (action === 'png') {
                                         downloadPNG(svgContent, icon.name, size, color);
                                     }
-                                };
+                                });
+                            });
+
+                            // 关闭按钮事件
+                            const closeButton = previewModal.querySelector('.modal-close');
+                            closeButton.addEventListener('click', () => {
+                                previewModal.classList.remove('show');
+                                setTimeout(() => {
+                                    document.body.removeChild(previewModal);
+                                }, 300);
+                            });
+
+                            // 点击模态框外部关闭
+                            previewModal.addEventListener('click', (e) => {
+                                if (e.target === previewModal) {
+                                    previewModal.classList.remove('show');
+                                    setTimeout(() => {
+                                        document.body.removeChild(previewModal);
+                                    }, 300);
+                                }
                             });
                         });
                     })
@@ -801,7 +895,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const navDownloadBtn = document.querySelector('.nav-btn.download');
     const downloadButton = document.getElementById('downloadButton');
     const downloadModal = document.getElementById('downloadModal');
-    const closeBtn = document.querySelector('.close-btn');
+    const closeBtn = document.querySelector('.modal-close');
     const selectAllCheckbox = document.getElementById('selectAll');
     const categoryTree = document.getElementById('categoryTree');
     const confirmDownloadBtn = document.getElementById('confirmDownload');
