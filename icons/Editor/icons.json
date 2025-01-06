@@ -728,248 +728,31 @@
     "path": "icons/Editor/palette.svg"
   },
   {
-    "name": "pen-tool-01",
-    "title": "Pen Tool 01",
+    "name": "paint-brush",
+    "title": "Paint Brush",
     "category": "Editor",
-    "fileName": "pen-tool-01.svg",
-    "path": "icons/Editor/pen-tool-01.svg"
+    "fileName": "paint-brush.svg",
+    "path": "icons/Editor/paint-brush.svg"
   },
   {
-    "name": "pen-tool-02",
-    "title": "Pen Tool 02",
+    "name": "paint-roller",
+    "title": "Paint Roller",
     "category": "Editor",
-    "fileName": "pen-tool-02.svg",
-    "path": "icons/Editor/pen-tool-02.svg"
+    "fileName": "paint-roller.svg",
+    "path": "icons/Editor/paint-roller.svg"
   },
   {
-    "name": "pen-tool-03",
-    "title": "Pen Tool 03",
+    "name": "paragraph-spacing",
+    "title": "Paragraph Spacing",
     "category": "Editor",
-    "fileName": "pen-tool-03.svg",
-    "path": "icons/Editor/pen-tool-03.svg"
+    "fileName": "paragraph-spacing.svg",
+    "path": "icons/Editor/paragraph-spacing.svg"
   },
   {
-    "name": "pen-tool-04",
-    "title": "Pen Tool 04",
+    "name": "paragraph",
+    "title": "Paragraph",
     "category": "Editor",
-    "fileName": "pen-tool-04.svg",
-    "path": "icons/Editor/pen-tool-04.svg"
-  },
-  {
-    "name": "pencil-01",
-    "title": "Pencil 01",
-    "category": "Editor",
-    "fileName": "pencil-01.svg",
-    "path": "icons/Editor/pencil-01.svg"
-  },
-  {
-    "name": "pencil-02",
-    "title": "Pencil 02",
-    "category": "Editor",
-    "fileName": "pencil-02.svg",
-    "path": "icons/Editor/pencil-02.svg"
-  },
-  {
-    "name": "pencil-03",
-    "title": "Pencil 03",
-    "category": "Editor",
-    "fileName": "pencil-03.svg",
-    "path": "icons/Editor/pencil-03.svg"
-  },
-  {
-    "name": "perspective",
-    "title": "Perspective",
-    "category": "Editor",
-    "fileName": "perspective.svg",
-    "path": "icons/Editor/perspective.svg"
-  },
-  {
-    "name": "scale-01",
-    "title": "Scale 01",
-    "category": "Editor",
-    "fileName": "scale-01.svg",
-    "path": "icons/Editor/scale-01.svg"
-  },
-  {
-    "name": "scale-02",
-    "title": "Scale 02",
-    "category": "Editor",
-    "fileName": "scale-02.svg",
-    "path": "icons/Editor/scale-02.svg"
-  },
-  {
-    "name": "scale-03",
-    "title": "Scale 03",
-    "category": "Editor",
-    "fileName": "scale-03.svg",
-    "path": "icons/Editor/scale-03.svg"
-  },
-  {
-    "name": "scissors-01",
-    "title": "Scissors 01",
-    "category": "Editor",
-    "fileName": "scissors-01.svg",
-    "path": "icons/Editor/scissors-01.svg"
-  },
-  {
-    "name": "scissors-02",
-    "title": "Scissors 02",
-    "category": "Editor",
-    "fileName": "scissors-02.svg",
-    "path": "icons/Editor/scissors-02.svg"
-  },
-  {
-    "name": "scissors-03",
-    "title": "Scissors 03",
-    "category": "Editor",
-    "fileName": "scissors-03.svg",
-    "path": "icons/Editor/scissors-03.svg"
-  },
-  {
-    "name": "scissors-04",
-    "title": "Scissors 04",
-    "category": "Editor",
-    "fileName": "scissors-04.svg",
-    "path": "icons/Editor/scissors-04.svg"
-  },
-  {
-    "name": "skew",
-    "title": "Skew",
-    "category": "Editor",
-    "fileName": "skew.svg",
-    "path": "icons/Editor/skew.svg"
-  },
-  {
-    "name": "space-height",
-    "title": "Space Height",
-    "category": "Editor",
-    "fileName": "space-height.svg",
-    "path": "icons/Editor/space-height.svg"
-  },
-  {
-    "name": "space-horizontal",
-    "title": "Space Horizontal",
-    "category": "Editor",
-    "fileName": "space-horizontal.svg",
-    "path": "icons/Editor/space-horizontal.svg"
-  },
-  {
-    "name": "space-vertical",
-    "title": "Space Vertical",
-    "category": "Editor",
-    "fileName": "space-vertical.svg",
-    "path": "icons/Editor/space-vertical.svg"
-  },
-  {
-    "name": "space-width",
-    "title": "Space Width",
-    "category": "Editor",
-    "fileName": "space-width.svg",
-    "path": "icons/Editor/space-width.svg"
-  },
-  {
-    "name": "superscript",
-    "title": "Superscript",
-    "category": "Editor",
-    "fileName": "superscript.svg",
-    "path": "icons/Editor/superscript.svg"
-  },
-  {
-    "name": "table",
-    "title": "Table",
-    "category": "Editor",
-    "fileName": "table.svg",
-    "path": "icons/Editor/table.svg"
-  },
-  {
-    "name": "text-input-01",
-    "title": "Text Input 01",
-    "category": "Editor",
-    "fileName": "text-input-01.svg",
-    "path": "icons/Editor/text-input-01.svg"
-  },
-  {
-    "name": "text-input-02",
-    "title": "Text Input 02",
-    "category": "Editor",
-    "fileName": "text-input-02.svg",
-    "path": "icons/Editor/text-input-02.svg"
-  },
-  {
-    "name": "transform",
-    "title": "Transform",
-    "category": "Editor",
-    "fileName": "transform.svg",
-    "path": "icons/Editor/transform.svg"
-  },
-  {
-    "name": "type-01",
-    "title": "Type 01",
-    "category": "Editor",
-    "fileName": "type-01.svg",
-    "path": "icons/Editor/type-01.svg"
-  },
-  {
-    "name": "type-02",
-    "title": "Type 02",
-    "category": "Editor",
-    "fileName": "type-02.svg",
-    "path": "icons/Editor/type-02.svg"
-  },
-  {
-    "name": "type-03",
-    "title": "Type 03",
-    "category": "Editor",
-    "fileName": "type-03.svg",
-    "path": "icons/Editor/type-03.svg"
-  },
-  {
-    "name": "type-strike-01",
-    "title": "Type Strike 01",
-    "category": "Editor",
-    "fileName": "type-strike-01.svg",
-    "path": "icons/Editor/type-strike-01.svg"
-  },
-  {
-    "name": "type-strike-02",
-    "title": "Type Strike 02",
-    "category": "Editor",
-    "fileName": "type-strike-02.svg",
-    "path": "icons/Editor/type-strike-02.svg"
-  },
-  {
-    "name": "underline-01",
-    "title": "Underline 01",
-    "category": "Editor",
-    "fileName": "underline-01.svg",
-    "path": "icons/Editor/underline-01.svg"
-  },
-  {
-    "name": "underline-02",
-    "title": "Underline 02",
-    "category": "Editor",
-    "fileName": "underline-02.svg",
-    "path": "icons/Editor/underline-02.svg"
-  },
-  {
-    "name": "union",
-    "title": "Union",
-    "category": "Editor",
-    "fileName": "union.svg",
-    "path": "icons/Editor/union.svg"
-  },
-  {
-    "name": "zoom-in",
-    "title": "Zoom In",
-    "category": "Editor",
-    "fileName": "zoom-in.svg",
-    "path": "icons/Editor/zoom-in.svg"
-  },
-  {
-    "name": "zoom-out",
-    "title": "Zoom Out",
-    "category": "Editor",
-    "fileName": "zoom-out.svg",
-    "path": "icons/Editor/zoom-out.svg"
+    "fileName": "paragraph.svg",
+    "path": "icons/Editor/paragraph.svg"
   }
 ]
