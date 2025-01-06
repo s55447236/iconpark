@@ -361,6 +361,62 @@ document.addEventListener('DOMContentLoaded', async () => {
     `;
     document.body.appendChild(modalOverlay);
 
+    // 初始化颜色选择器
+    function initColorPicker(modalElement) {
+        const colorPickerContainer = modalElement.querySelector('.control-item:first-child');
+        // 移除旧的 input
+        const oldInput = colorPickerContainer.querySelector('input[type="color"]');
+        if (oldInput) {
+            oldInput.remove();
+        }
+        
+        // 创建新的颜色选择器容器
+        const pickrEl = document.createElement('div');
+        colorPickerContainer.appendChild(pickrEl);
+
+        // 初始化 Pickr
+        const pickr = Pickr.create({
+            el: pickrEl,
+            theme: 'classic',
+            default: '#000000',
+            swatches: [
+                '#000000',
+                '#1a73e8',
+                '#4285f4',
+                '#34a853',
+                '#fbbc04',
+                '#ea4335',
+                '#5f6368',
+            ],
+            components: {
+                preview: true,
+                opacity: false,
+                hue: true,
+                interaction: {
+                    hex: true,
+                    rgba: true,
+                    input: true,
+                    save: true
+                }
+            }
+        });
+
+        // 颜色变化时更新预览
+        pickr.on('change', (color) => {
+            const previewSvg = modalElement.querySelector('.modal-preview svg');
+            if (previewSvg) {
+                previewSvg.querySelectorAll('path').forEach(path => {
+                    path.setAttribute('stroke', color.toHEXA().toString());
+                    path.setAttribute('fill', 'none');
+                    path.style.stroke = color.toHEXA().toString();
+                    path.style.fill = 'none';
+                });
+            }
+        });
+
+        return pickr;
+    }
+
     // 模态框关闭功能
     const closeModal = () => {
         modalOverlay.classList.remove('active');
@@ -569,7 +625,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         // 图标点击事件 - 打开预览模态框
                         iconItem.addEventListener('click', () => {
                             const previewModal = document.createElement('div');
-                            previewModal.className = 'modal';
+                            previewModal.className = 'preview-modal';
                             previewModal.innerHTML = `
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -619,14 +675,36 @@ document.addEventListener('DOMContentLoaded', async () => {
                             `;
                             document.body.appendChild(previewModal);
 
+                            // 初始化颜色选择器
+                            const pickr = initColorPicker(previewModal);
+                            
                             // 显示模态框
                             setTimeout(() => {
                                 previewModal.classList.add('show');
                             }, 0);
 
+                            // 关闭模态框时销毁颜色选择器
+                            const closeModal = () => {
+                                pickr.destroyAndRemove();
+                                previewModal.classList.remove('show');
+                                setTimeout(() => {
+                                    document.body.removeChild(previewModal);
+                                }, 300);
+                            };
+
+                            // 关闭按钮事件
+                            const closeButton = previewModal.querySelector('.modal-close');
+                            closeButton.addEventListener('click', closeModal);
+
+                            // 点击模态框外部关闭
+                            previewModal.addEventListener('click', (e) => {
+                                if (e.target === previewModal) {
+                                    closeModal();
+                                }
+                            });
+
                             // 设置预览图标的尺寸和颜色
                             const modalPreview = previewModal.querySelector('.modal-preview svg');
-                            const iconColor = previewModal.querySelector('#iconColor');
                             const iconSize = previewModal.querySelector('#iconSize');
 
                             // 更新预览尺寸
@@ -637,57 +715,24 @@ document.addEventListener('DOMContentLoaded', async () => {
                                 }
                             }
 
-                            // 更新预览颜色
-                            function updatePreviewColor(color) {
-                                if (modalPreview) {
-                                    modalPreview.querySelectorAll('path').forEach(path => {
-                                        path.setAttribute('stroke', color);
-                                        path.setAttribute('fill', 'none');
-                                        path.style.stroke = color;
-                                        path.style.fill = 'none';
-                                    });
-                                }
-                            }
-
-                            // 添加事件监听
-                            iconColor.addEventListener('input', (e) => updatePreviewColor(e.target.value));
-                            iconSize.addEventListener('change', (e) => updatePreviewSize(e.target.value));
-
                             // 设置初始值
                             updatePreviewSize(24);
-                            updatePreviewColor('#000000');
+
+                            // 尺寸选择事件
+                            iconSize.addEventListener('change', (e) => updatePreviewSize(e.target.value));
 
                             // 下载按钮事件
-                            previewModal.querySelectorAll('.modal-btn').forEach(btn => {
+                            previewModal.querySelectorAll('.btn').forEach(btn => {
                                 btn.addEventListener('click', () => {
                                     const action = btn.dataset.action;
                                     const size = iconSize.value;
-                                    const color = iconColor.value;
+                                    const color = pickr.getColor().toHEXA().toString();
                                     if (action === 'svg') {
                                         downloadSVG(svgContent, icon.name, size, color);
                                     } else if (action === 'png') {
                                         downloadPNG(svgContent, icon.name, size, color);
                                     }
                                 });
-                            });
-
-                            // 关闭按钮事件
-                            const closeButton = previewModal.querySelector('.modal-close');
-                            closeButton.addEventListener('click', () => {
-                                previewModal.classList.remove('show');
-                                setTimeout(() => {
-                                    document.body.removeChild(previewModal);
-                                }, 300);
-                            });
-
-                            // 点击模态框外部关闭
-                            previewModal.addEventListener('click', (e) => {
-                                if (e.target === previewModal) {
-                                    previewModal.classList.remove('show');
-                                    setTimeout(() => {
-                                        document.body.removeChild(previewModal);
-                                    }, 300);
-                                }
                             });
                         });
                     })
@@ -804,8 +849,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         // 创建一个 JSZip 实例
         const zip = new JSZip();
         
-        // 创建根目录 ILOVEICON
-        const rootFolder = zip.folder("ILOVEICON");
+        // 创建根目录 PixIcons
+        const rootFolder = zip.folder("PixIcons");
         
         // 遍历所有分类
         for (const category of categories) {
@@ -876,7 +921,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             // 创建下载链接并触发下载
             const link = document.createElement('a');
             link.href = URL.createObjectURL(content);
-            link.download = "ILOVEICON.zip";
+            link.download = "PixIcons.zip";
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
@@ -1007,7 +1052,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             showToast('正在打包图标...');
             const zip = new JSZip();
-            const rootFolder = zip.folder("IconPark");
+            const rootFolder = zip.folder("PixIcons");
             
             try {
                 // 添加选中分类的图标到 zip
@@ -1054,7 +1099,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 
                 const link = document.createElement('a');
                 link.href = URL.createObjectURL(content);
-                link.download = 'iconpark-icons.zip';
+                link.download = 'pixicons-icons.zip';
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
