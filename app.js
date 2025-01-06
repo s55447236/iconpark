@@ -1113,4 +1113,185 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         });
     }
+
+    // 创建收藏夹弹窗
+    const favoritesModal = document.createElement('div');
+    favoritesModal.className = 'favorites-modal';
+    favoritesModal.innerHTML = `
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>收藏夹</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="favoritesGrid" class="favorites-grid"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="download-all-btn">
+                    <svg viewBox="0 0 24 24" width="16" height="16">
+                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" fill="currentColor"/>
+                    </svg>
+                    下载全部
+                </button>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(favoritesModal);
+
+    // 渲染收藏夹图标
+    function renderFavorites() {
+        const favoritesGrid = favoritesModal.querySelector('#favoritesGrid');
+        favoritesGrid.innerHTML = '';
+
+        if (favorites.length === 0) {
+            favoritesGrid.innerHTML = '<div class="empty-favorites">暂无收藏图标</div>';
+            return;
+        }
+
+        // 遍历所有分类查找收藏的图标
+        categories.forEach(async category => {
+            if (!category.path) return;
+
+            try {
+                const response = await fetch(`${category.path}/icons.json`);
+                if (!response.ok) return;
+
+                const data = await response.json();
+                const icons = Array.isArray(data) ? data : (data.icons || []);
+                
+                icons.forEach(icon => {
+                    if (favorites.includes(icon.name)) {
+                        fetch(icon.path)
+                            .then(response => response.text())
+                            .then(svgContent => {
+                                const iconItem = document.createElement('div');
+                                iconItem.className = 'favorite-item';
+                                iconItem.innerHTML = `
+                                    <div class="icon-preview">
+                                        ${svgContent}
+                                    </div>
+                                    <div class="icon-name">${icon.name}</div>
+                                    <button class="remove-favorite" title="移除收藏">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 6l12 12m0-12L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                    </button>
+                                `;
+
+                                // 设置图标为描边样式
+                                const iconSvg = iconItem.querySelector('.icon-preview svg');
+                                iconSvg.querySelectorAll('path').forEach(path => {
+                                    path.setAttribute('stroke', 'currentColor');
+                                    path.setAttribute('fill', 'none');
+                                    path.style.stroke = 'currentColor';
+                                    path.style.fill = 'none';
+                                });
+
+                                // 移除收藏按钮点击事件
+                                const removeBtn = iconItem.querySelector('.remove-favorite');
+                                removeBtn.addEventListener('click', () => {
+                                    const index = favorites.indexOf(icon.name);
+                                    if (index !== -1) {
+                                        favorites.splice(index, 1);
+                                        localStorage.setItem('favorites', JSON.stringify(favorites));
+                                        favoritesCount.textContent = favorites.length;
+                                        renderFavorites();
+                                        showToast('已从收藏夹移除');
+                                    }
+                                });
+
+                                favoritesGrid.appendChild(iconItem);
+                            });
+                    }
+                });
+            } catch (error) {
+                console.error(`Error loading icons for ${category.name}:`, error);
+            }
+        });
+    }
+
+    // 下载所有收藏图标
+    async function downloadAllFavorites() {
+        if (favorites.length === 0) {
+            showToast('暂无收藏图标');
+            return;
+        }
+
+        showToast('正在打包收藏图标...');
+        const zip = new JSZip();
+        const rootFolder = zip.folder("收藏图标");
+        
+        try {
+            // 遍历所有分类查找收藏的图标
+            for (const category of categories) {
+                if (!category.path) continue;
+
+                try {
+                    const response = await fetch(`${category.path}/icons.json`);
+                    if (!response.ok) continue;
+
+                    const data = await response.json();
+                    const icons = Array.isArray(data) ? data : (data.icons || []);
+                    
+                    for (const icon of icons) {
+                        if (favorites.includes(icon.name)) {
+                            const svgResponse = await fetch(icon.path);
+                            if (!svgResponse.ok) continue;
+                            
+                            const svgContent = await svgResponse.text();
+                            rootFolder.file(`${icon.name}.svg`, svgContent);
+                        }
+                    }
+                } catch (error) {
+                    console.error(`Error loading icons for ${category.name}:`, error);
+                }
+            }
+
+            // 生成并下载 zip 文件
+            const content = await zip.generateAsync({
+                type: 'blob',
+                compression: "DEFLATE",
+                compressionOptions: {
+                    level: 9
+                }
+            });
+            
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(content);
+            link.download = 'favorite-icons.zip';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(link.href);
+            
+            showToast('下载完成');
+        } catch (error) {
+            console.error('Error generating zip:', error);
+            showToast('下载失败，请重试');
+        }
+    }
+
+    // 收藏按钮点击事件
+    const navFavoritesBtn = navbar.querySelector('.nav-btn.favorites');
+    navFavoritesBtn.addEventListener('click', () => {
+        renderFavorites();
+        favoritesModal.classList.add('show');
+    });
+
+    // 关闭收藏夹弹窗
+    const closeFavoritesModal = favoritesModal.querySelector('.modal-close');
+    closeFavoritesModal.addEventListener('click', () => {
+        favoritesModal.classList.remove('show');
+    });
+
+    // 点击弹窗外部关闭
+    favoritesModal.addEventListener('click', (e) => {
+        if (e.target === favoritesModal) {
+            favoritesModal.classList.remove('show');
+        }
+    });
+
+    // 下载全部按钮点击事件
+    const downloadAllBtn = favoritesModal.querySelector('.download-all-btn');
+    downloadAllBtn.addEventListener('click', downloadAllFavorites);
 }); 
