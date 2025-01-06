@@ -668,9 +668,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                         const iconSvg = iconItem.querySelector('.icon-preview svg');
                         if (iconSvg) {
                             iconSvg.querySelectorAll('path').forEach(path => {
-                                path.setAttribute('stroke', 'currentColor');
+                                path.setAttribute('stroke', favorites.includes(icon.name) ? '#1a73e8' : 'currentColor');
                                 path.setAttribute('fill', 'none');
-                                path.style.stroke = 'currentColor';
+                                path.style.stroke = favorites.includes(icon.name) ? '#1a73e8' : 'currentColor';
                                 path.style.fill = 'none';
                             });
                         }
@@ -686,6 +686,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                                 iconItem.classList.add('favorited');
                                 favoriteBtn.title = '已收藏';
                                 favoriteBtn.innerHTML = starIcon;
+                                // 更新图标颜色为蓝色
+                                iconSvg.querySelectorAll('path').forEach(path => {
+                                    path.setAttribute('stroke', '#1a73e8');
+                                    path.style.stroke = '#1a73e8';
+                                });
                                 showToast('已添加到收藏夹');
                             } else {
                                 favorites.splice(index, 1);
@@ -693,6 +698,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                                 iconItem.classList.remove('favorited');
                                 favoriteBtn.title = '加入收藏';
                                 favoriteBtn.innerHTML = plusIcon;
+                                // 更新图标颜色为默认色
+                                iconSvg.querySelectorAll('path').forEach(path => {
+                                    path.setAttribute('stroke', 'currentColor');
+                                    path.style.stroke = 'currentColor';
+                                });
                                 showToast('已从收藏夹移除');
                             }
                             localStorage.setItem('favorites', JSON.stringify(favorites));

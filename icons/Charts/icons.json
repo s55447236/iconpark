@@ -133,20 +133,6 @@
     "path": "icons/Charts/compass.svg"
   },
   {
-    "name": "glasses-01",
-    "title": "Glasses 01",
-    "category": "Charts",
-    "fileName": "glasses-01.svg",
-    "path": "icons/Charts/glasses-01.svg"
-  },
-  {
-    "name": "glasses-02",
-    "title": "Glasses 02",
-    "category": "Charts",
-    "fileName": "glasses-02.svg",
-    "path": "icons/Charts/glasses-02.svg"
-  },
-  {
     "name": "horizontal-chart-01",
     "title": "Horizontal Chart 01",
     "category": "Charts",
