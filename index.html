@@ -63,6 +63,36 @@
                         </svg>
                     </button>
                 </div>
+                <button type="button" id="downloadButton" class="download-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Download
+                </button>
+            </div>
+        </div>
+
+        <!-- Download Modal -->
+        <div id="downloadModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>选择要下载的图标分类</h2>
+                    <button class="close-btn" aria-label="关闭">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="category-tree">
+                        <div class="tree-item">
+                            <label>
+                                <input type="checkbox" id="selectAll">
+                                <span>全部分类</span>
+                            </label>
+                        </div>
+                        <div id="categoryTree" class="tree-content"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="confirmDownload" class="primary-btn">下载选中图标</button>
+                </div>
             </div>
         </div>
 

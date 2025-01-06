@@ -394,208 +394,194 @@ h1 {
 }
 
 /* Modal styles */
-.modal-overlay {
+.modal {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
+    backdrop-filter: blur(2px);
 }
 
-.modal-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.modal {
-    background: white;
-    border-radius: 12px;
-    width: 90%;
-    max-width: 500px;
-    position: relative;
-    transform: translateY(20px);
-    transition: transform 0.3s ease;
-}
-
-.modal-header {
-    padding: 1rem 1.5rem;
-    border-bottom: 1px solid #eee;
+.modal.show {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.icon-title {
-    font-size: 1.25rem;
-    font-weight: 500;
-    color: #1a1a1a;
-}
-
-.modal-close {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #666;
-    padding: 0.5rem;
-    line-height: 1;
 }
 
 .modal-content {
-    padding: 2rem;
-}
-
-.preview-section {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
-.preview-name {
-    font-size: 1rem;
-    color: #1a1a1a;
-    font-weight: 500;
-    min-width: 120px;
-    flex: 1;
-    padding-left: 1rem;
-}
-
-.modal-preview {
-    background: #f8f9fa;
+    background: white;
     border-radius: 12px;
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    height: 200px;
-    flex-shrink: 0;
-}
-
-.modal-preview svg {
-    width: 24px;
-    height: 24px;
+    width: 90%;
+    max-width: 480px;
+    position: relative;
+    transform: scale(0.95);
+    opacity: 0;
     transition: all 0.3s ease;
 }
 
-.modal-preview svg path {
-    stroke: currentColor;
-    fill: none;
-    stroke-width: 1.5;
+.modal.show .modal-content {
+    transform: scale(1);
+    opacity: 1;
 }
 
-.modal-actions {
+.modal-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid #eee;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 1.5rem;
-    padding: 0 1rem;
 }
 
-.control-group {
-    display: flex;
-    gap: 1rem;
-    flex: 2;
-}
-
-.control-item {
-    flex: 1;
-}
-
-.color-picker {
-    width: 100%;
-    height: 36px;
-    padding: 2px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    cursor: pointer;
-    background: white;
-}
-
-.color-picker:hover {
-    border-color: #1a73e8;
-}
-
-.size-select {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 0.875rem;
-    cursor: pointer;
-    outline: none;
-    background: white;
-    height: 36px;
+.modal-header h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
     color: #1a1a1a;
-    -webkit-appearance: none;
-    appearance: none;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right 8px center;
-    background-size: 16px;
-    padding-right: 32px;
 }
 
-.size-select:hover {
-    border-color: #1a73e8;
-}
-
-.size-select:focus {
-    border-color: #1a73e8;
-    box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.1);
-}
-
-.download-buttons {
-    display: flex;
-    gap: 0.75rem;
-    flex: 1;
-}
-
-.modal-btn {
-    flex: 1;
-    padding: 0 1rem;
+.close-btn {
+    background: none;
     border: none;
-    border-radius: 6px;
+    padding: 4px;
+    font-size: 24px;
+    line-height: 1;
+    color: #666;
     cursor: pointer;
-    font-weight: 500;
-    font-size: 0.875rem;
-    transition: all 0.2s ease;
+    border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 36px;
-    min-width: 100px;
+    transition: all 0.2s;
 }
 
-.modal-btn.primary {
-    background: #1a73e8;
-    color: white;
+.close-btn:hover {
+    background-color: #f5f5f5;
+    color: #333;
 }
 
-.modal-btn.primary:hover {
-    background: #1557b0;
+.modal-body {
+    padding: 24px;
+    max-height: 60vh;
+    overflow-y: auto;
 }
 
-.modal-btn.secondary {
-    background: #f0f0f0;
+/* Category Tree Styles */
+.category-tree {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+}
+
+/* 全选项样式 */
+.tree-item:first-child {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.tree-item:first-child label {
+    font-weight: 500;
     color: #1a1a1a;
+    background: transparent;
 }
 
-.modal-btn.secondary:hover {
-    background: #e0e0e0;
+.tree-item:first-child label:hover {
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
-.modal-btn:hover {
+/* 分类列表样式 */
+.tree-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    background: #fff8e6;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.tree-item label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 13px;
+}
+
+.tree-item label:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.tree-item input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+    margin: 0;
+    border: 1.5px solid #999;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.tree-item span {
+    font-size: 13px;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.modal-footer {
+    padding: 16px 24px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.primary-btn {
+    padding: 10px 24px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.primary-btn:hover {
+    background-color: #45a049;
     transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.primary-btn:active {
+    transform: translateY(0);
+}
+
+/* Custom scrollbar for modal body */
+.modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background: #ccc;
 }
 
 /* 导航栏样式 */
@@ -955,4 +941,120 @@ h1 {
 .logo {
     height: 24px;
     width: auto;
+}
+
+/* Download Button */
+.download-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #45a049;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 0;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.modal-body {
+    padding: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.modal-footer {
+    padding: 20px;
+    border-top: 1px solid #eee;
+    text-align: right;
+}
+
+/* Category Tree */
+.category-tree {
+    font-size: 14px;
+}
+
+.tree-item {
+    margin: 8px 0;
+}
+
+.tree-item label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.tree-content {
+    margin-left: 24px;
+}
+
+.primary-btn {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.primary-btn:hover {
+    background-color: #45a049;
+}
+
+/* Checkbox Styling */
+.category-tree input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin: 0;
 } 

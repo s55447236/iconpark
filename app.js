@@ -705,6 +705,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // 添加下载所有图标的函数
     async function downloadAllIcons() {
+        console.log('Starting download process...');
+        
         // 创建一个 JSZip 实例
         const zip = new JSZip();
         
@@ -713,33 +715,48 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         // 遍历所有分类
         for (const category of categories) {
-            // 为每个分类创建文件夹
-            const categoryFolder = rootFolder.folder(category.name);
+            console.log(`Processing category: ${category.name}`);
             
             try {
                 // 获取该分类下的所有图标
-                const response = await fetch(`icons/${category.path}/manifest.json`);
-                if (!response.ok) {
-                    console.error(`Failed to fetch manifest for ${category.name}`);
+                const icons = await loadIconsForCategory(category);
+                if (!icons || icons.length === 0) {
+                    console.error(`No icons found for ${category.name}`);
                     continue;
                 }
-                const icons = await response.json();
+                
+                console.log(`Found ${icons.length} icons in ${category.name}`);
+                
+                // 为每个分类创建文件夹
+                const categoryFolder = rootFolder.folder(category.name);
                 
                 // 遍历分类下的所有图标
                 for (const icon of icons) {
                     try {
-                        // 获取 SVG 内容
-                        const svgResponse = await fetch(`icons/${category.path}/${icon.name}.svg`);
+                        // 直接从 icons 目录获取 SVG 文件
+                        const svgUrl = `icons/${category.path}/${icon.name}.svg`;
+                        console.log(`Fetching SVG from: ${svgUrl}`);
+                        
+                        const svgResponse = await fetch(svgUrl);
                         if (!svgResponse.ok) {
-                            console.error(`Failed to fetch SVG for ${icon.name}`);
+                            console.error(`Failed to fetch SVG for ${icon.name}:`, svgResponse.statusText);
                             continue;
                         }
-                        const svgContent = await svgResponse.text();
                         
-                        // 将 SVG 添加到对应分类文件夹中
+                        const svgContent = await svgResponse.text();
+                        console.log(`SVG content length for ${icon.name}: ${svgContent.length}`);
+                        
+                        if (!svgContent || svgContent.length === 0) {
+                            console.error(`Empty SVG content for ${icon.name}`);
+                            continue;
+                        }
+                        
+                        // 保持原始 SVG 内容不变，直接添加到对应分类文件夹中
                         categoryFolder.file(`${icon.name}.svg`, svgContent);
+                        console.log(`Added ${icon.name}.svg to ${category.name} folder`);
+                        
                     } catch (error) {
-                        console.error(`Error adding icon ${icon.name}:`, error);
+                        console.error(`Error processing icon ${icon.name}:`, error);
                     }
                 }
             } catch (error) {
@@ -748,11 +765,19 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
         
         try {
-            // 显示下载中提示
             showToast("Packaging icons...");
+            console.log('Generating ZIP file...');
             
-            // 生成 zip 文件
-            const content = await zip.generateAsync({type: "blob"});
+            // 生成 zip 文件，保持文件结构
+            const content = await zip.generateAsync({
+                type: "blob",
+                compression: "DEFLATE",
+                compressionOptions: {
+                    level: 9
+                }
+            });
+            
+            console.log('ZIP file generated, size:', content.size);
             
             // 创建下载链接并触发下载
             const link = document.createElement('a');
@@ -761,9 +786,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
+            URL.revokeObjectURL(link.href);
             
-            // 显示下载成功提示
             showToast("Download completed");
+            console.log('Download process completed');
+            
         } catch (error) {
             console.error("Error generating zip:", error);
             showToast("Download failed, please try again");
@@ -771,5 +798,180 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // 更新导航栏下载按钮的点击事件
-    document.querySelector('.nav-btn.download').addEventListener('click', downloadAllIcons);
+    const navDownloadBtn = document.querySelector('.nav-btn.download');
+    const downloadButton = document.getElementById('downloadButton');
+    const downloadModal = document.getElementById('downloadModal');
+    const closeBtn = document.querySelector('.close-btn');
+    const selectAllCheckbox = document.getElementById('selectAll');
+    const categoryTree = document.getElementById('categoryTree');
+    const confirmDownloadBtn = document.getElementById('confirmDownload');
+
+    // 显示模态框函数
+    function showDownloadModal() {
+        if (!downloadModal) {
+            console.error('Download modal not found');
+            return;
+        }
+        downloadModal.style.display = 'flex';
+        // 触发重排以启动动画
+        downloadModal.offsetHeight;
+        downloadModal.classList.add('show');
+        renderCategoryTree();
+    }
+
+    // 关闭模态框函数
+    function hideDownloadModal() {
+        if (!downloadModal) return;
+        downloadModal.classList.remove('show');
+        // 等待动画完成后隐藏模态框
+        setTimeout(() => {
+            downloadModal.style.display = 'none';
+        }, 300);
+    }
+
+    // 导航栏下载按钮点击事件
+    if (navDownloadBtn) {
+        navDownloadBtn.addEventListener('click', showDownloadModal);
+    }
+
+    // 工具栏下载按钮点击事件
+    if (downloadButton) {
+        downloadButton.addEventListener('click', showDownloadModal);
+    }
+
+    // 关闭模态框
+    if (closeBtn) {
+        closeBtn.addEventListener('click', hideDownloadModal);
+    }
+
+    // 点击模态框外部关闭
+    window.addEventListener('click', (e) => {
+        if (e.target === downloadModal) {
+            hideDownloadModal();
+        }
+    });
+
+    // 渲染分类树
+    function renderCategoryTree() {
+        if (!categoryTree) {
+            console.error('Category tree element not found');
+            return;
+        }
+
+        categoryTree.innerHTML = '';
+        categories
+            .filter(category => category.id !== 'all')
+            .forEach(category => {
+                const div = document.createElement('div');
+                div.className = 'tree-item';
+                div.innerHTML = `
+                    <label>
+                        <input type="checkbox" name="category" value="${category.id}">
+                        <span>${category.name}</span>
+                    </label>
+                `;
+                categoryTree.appendChild(div);
+            });
+
+        // 添加复选框事件监听
+        const categoryCheckboxes = document.querySelectorAll('input[name="category"]');
+        categoryCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', updateSelectAllState);
+        });
+    }
+
+    // 全选/取消全选
+    if (selectAllCheckbox) {
+        selectAllCheckbox.addEventListener('change', (e) => {
+            const categoryCheckboxes = document.querySelectorAll('input[name="category"]');
+            categoryCheckboxes.forEach(checkbox => {
+                checkbox.checked = e.target.checked;
+            });
+        });
+    }
+
+    // 更新全选状态
+    function updateSelectAllState() {
+        if (!selectAllCheckbox) return;
+        
+        const categoryCheckboxes = document.querySelectorAll('input[name="category"]');
+        const checkedCount = Array.from(categoryCheckboxes).filter(cb => cb.checked).length;
+        selectAllCheckbox.checked = checkedCount === categoryCheckboxes.length;
+        selectAllCheckbox.indeterminate = checkedCount > 0 && checkedCount < categoryCheckboxes.length;
+    }
+
+    // 下载选中的图标
+    if (confirmDownloadBtn) {
+        confirmDownloadBtn.addEventListener('click', async () => {
+            const selectedCategories = Array.from(document.querySelectorAll('input[name="category"]:checked'))
+                .map(cb => cb.value);
+            
+            if (selectedCategories.length === 0) {
+                showToast('请至少选择一个分类');
+                return;
+            }
+
+            showToast('正在打包图标...');
+            const zip = new JSZip();
+            const rootFolder = zip.folder("IconPark");
+            
+            try {
+                // 添加选中分类的图标到 zip
+                for (const categoryId of selectedCategories) {
+                    const category = categories.find(c => c.id === categoryId);
+                    if (!category || !category.path) continue;
+
+                    const categoryFolder = rootFolder.folder(category.name);
+                    
+                    try {
+                        const response = await fetch(`${category.path}/icons.json`);
+                        if (!response.ok) {
+                            throw new Error(`Failed to fetch icons.json for ${category.name}`);
+                        }
+                        const data = await response.json();
+                        const icons = Array.isArray(data) ? data : (data.icons || []);
+                        
+                        for (const icon of icons) {
+                            try {
+                                const svgResponse = await fetch(icon.path);
+                                if (!svgResponse.ok) {
+                                    throw new Error(`Failed to fetch SVG for ${icon.name}`);
+                                }
+                                const svgContent = await svgResponse.text();
+                                categoryFolder.file(`${icon.name}.svg`, svgContent);
+                            } catch (error) {
+                                console.error(`Error adding ${icon.name}: ${error}`);
+                            }
+                        }
+                    } catch (error) {
+                        console.error(`Error loading icons for ${category.name}: ${error}`);
+                        showToast(`加载 ${category.name} 分类失败`);
+                    }
+                }
+
+                // 生成并下载 zip 文件
+                const content = await zip.generateAsync({ 
+                    type: 'blob',
+                    compression: "DEFLATE",
+                    compressionOptions: {
+                        level: 9
+                    }
+                });
+                
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(content);
+                link.download = 'iconpark-icons.zip';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(link.href);
+                
+                downloadModal.style.display = 'none';
+                showToast('下载完成');
+            } catch (error) {
+                console.error('Error generating zip:', error);
+                showToast('下载失败，请重试');
+            }
+        });
+    }
 }); 
