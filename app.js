@@ -817,9 +817,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                                     sizeDropdown.style.left = `${btnRect.left}px`;
                                     sizeDropdown.style.width = `${btnRect.width}px`;
                                     sizeDropdown.style.zIndex = '1100';
-                                    sizeDropdown.classList.add('show');
+                                    sizeDropdown.style.opacity = '1';
+                                    sizeDropdown.style.visibility = 'visible';
                                 } else {
-                                    sizeDropdown.classList.remove('show');
+                                    sizeDropdown.style.opacity = '0';
+                                    sizeDropdown.style.visibility = 'hidden';
                                 }
                             });
                             
@@ -837,7 +839,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                                     
                                     // 关闭下拉框
                                     sizeSelect.classList.remove('active');
-                                    sizeDropdown.classList.remove('show');
+                                    sizeDropdown.style.opacity = '0';
+                                    sizeDropdown.style.visibility = 'hidden';
                                     
                                     // 更新预览尺寸
                                     updatePreviewSize(size);
@@ -848,7 +851,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                             document.addEventListener('click', (e) => {
                                 if (!sizeSelect.contains(e.target) && !sizeDropdown.contains(e.target)) {
                                     sizeSelect.classList.remove('active');
-                                    sizeDropdown.classList.remove('show');
+                                    sizeDropdown.style.opacity = '0';
+                                    sizeDropdown.style.visibility = 'hidden';
                                 }
                             });
 
