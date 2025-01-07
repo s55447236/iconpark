@@ -1,6 +1,6 @@
 {
   "name": "iconpark",
-  "version": "2.5.1",
+  "version": "2.5.2",
   "description": "IconPark - 开源图标库",
   "main": "app.js",
   "scripts": {
