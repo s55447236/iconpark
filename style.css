@@ -562,6 +562,9 @@ h1 {
     padding: 8px 16px;
     color: #1a1a1a;
     background: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .nav-btn:hover {
@@ -571,11 +574,13 @@ h1 {
 .nav-btn svg {
     width: 20px;
     height: 20px;
+    color: #1a1a1a;
 }
 
-.nav-btn.download svg,
-.nav-btn.donate svg {
-    color: #1a1a1a;
+.nav-btn path {
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
 }
 
 .nav-btn.favorites {
@@ -630,6 +635,10 @@ h1 {
     composes: btn-base;
     background: #1a73e8;
     color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
 }
 
 .download-btn:hover {
@@ -639,6 +648,13 @@ h1 {
 .download-btn svg {
     width: 16px;
     height: 16px;
+    stroke: currentColor;
+    stroke-width: 2;
+}
+
+.download-btn path {
+    stroke: currentColor;
+    stroke-width: 2;
 }
 
 /* 导航栏收藏按钮样式更新 */
@@ -657,6 +673,15 @@ h1 {
     color: #666;
     padding: 4px 12px;
     height: 28px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
 }
 
 .version-btn:hover {
@@ -1155,7 +1180,6 @@ h1 {
 .tree-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
     border: none;
 }
 
@@ -1184,6 +1208,9 @@ h1 {
     padding: 8px 16px;
     color: #1a1a1a;
     background: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .nav-btn:hover {
@@ -1193,6 +1220,53 @@ h1 {
 .nav-btn svg {
     width: 20px;
     height: 20px;
+    color: #1a1a1a;
+}
+
+.nav-btn path {
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
+}
+
+.nav-btn.favorites {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background: none;
+    border: none;
+    color: #1a1a1a;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.nav-btn.favorites:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.nav-btn svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
+}
+
+.nav-btn.download svg,
+.nav-btn.favorites svg,
+.nav-btn.donate svg {
+    color: #1a1a1a;
+}
+
+.nav-btn.download path,
+.nav-btn.favorites path,
+.nav-btn.donate path {
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
 }
 
 /* 主要按钮 */
@@ -1217,28 +1291,6 @@ h1 {
 
 .modal-btn.secondary:hover {
     background: #e5e7eb;
-}
-
-/* 版本按钮 */
-.version-btn {
-    height: 28px;
-    padding: 4px 12px;
-    border: none;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: none;
-    color: #666;
-    transition: all 0.2s;
-}
-
-.version-btn:hover {
-    background: rgba(0, 0, 0, 0.05);
-    color: #333;
 }
 
 /* 收藏按钮 */
@@ -1486,6 +1538,97 @@ h1 {
 /* 当下拉框显示时禁用背景滚动 */
 body.dropdown-open {
     overflow: hidden;
+}
+
+.tree-item {
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.tree-item label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: #333;
+    font-size: 14px;
+    margin: 0;
+    line-height: 1;
+}
+
+.tree-item input[type="checkbox"] {
+    margin: 0;
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    background: white;
+}
+
+.tree-item input[type="checkbox"]:checked {
+    background: #1a73e8;
+    border-color: #1a73e8;
+}
+
+.tree-item input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 0px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.tree-item:hover {
+    background: #f5f5f5;
+}
+
+.tree-item input[type="checkbox"]:hover {
+    border-color: #1a73e8;
+}
+
+.tree-item input[type="checkbox"]:indeterminate {
+    background: #1a73e8;
+    border-color: #1a73e8;
+}
+
+.tree-item input[type="checkbox"]:indeterminate::after {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 5px;
+    width: 8px;
+    height: 2px;
+    background: white;
+}
+
+.nav-btn.download {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+}
+
+.nav-btn.download svg {
+    width: 16px;
+    height: 16px;
+}
+
+.nav-btn.download path {
+    fill: currentColor;
 }
 
 

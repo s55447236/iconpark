@@ -108,21 +108,22 @@ document.addEventListener('DOMContentLoaded', async () => {
             </div>
             <div class="nav-right">
                 <button class="nav-btn favorites">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 20px; height: 20px;">
+                        <path d="M11.5667 3.76159C11.7388 3.4128 12.2362 3.4128 12.4083 3.76159L14.6366 8.2767C14.705 8.4152 14.8371 8.5112 14.99 8.53341L19.9727 9.25744C20.3576 9.31337 20.5113 9.78639 20.2328 10.0579L16.6272 13.5724C16.5166 13.6802 16.4662 13.8355 16.4923 13.9878L17.3434 18.9504C17.4092 19.3337 17.0068 19.626 16.6625 19.4451L12.2059 17.102C12.0692 17.0302 11.9058 17.0302 11.7691 17.102L7.31244 19.4451C6.96817 19.626 6.56579 19.3337 6.63154 18.9504L7.48269 13.9878C7.5088 13.8355 7.45833 13.6802 7.34773 13.5724L3.7422 10.0579C3.46368 9.78639 3.61737 9.31337 4.00228 9.25744L8.985 8.53341C9.13785 8.5112 9.26998 8.4152 9.33833 8.2767L11.5667 3.76159Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
                     </svg>
                     <span>收藏</span>
                     <span class="favorites-count">0</span>
                 </button>
                 <button class="nav-btn download">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 20px; height: 20px;">
+                        <path d="M5.52588 20H18.474" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" style="fill: none;"/>
+                        <path d="M9 5C9 4.44772 9.44772 4 10 4H14C14.5523 4 15 4.44772 15 5V10C15 10.5523 15.4477 11 16 11H18L12.7071 16.2929C12.3166 16.6834 11.6834 16.6834 11.2929 16.2929L6 11H8C8.55228 11 9 10.5523 9 10V5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none" style="fill: none;"/>
                     </svg>
                     下载
                 </button>
                 <button class="nav-btn donate">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17 9V7C17 6.46957 16.7893 5.96086 16.4142 5.58579C16.0391 5.21071 15.5304 5 15 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V13C3 13.5304 3.21071 14.0391 3.58579 14.4142C3.96086 14.7893 4.46957 15 5 15H7M9 9H19C20.1046 9 21 9.89543 21 11V17C21 18.1046 20.1046 19 19 19H9C7.89543 19 7 18.1046 7 17V11C7 9.89543 7.89543 9 9 9ZM16 14C16 15.1046 15.1046 16 14 16C12.8954 16 12 15.1046 12 14C12 12.8954 12.8954 12 14 12C15.1046 12 16 12.8954 16 14Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                     打赏
                 </button>
