@@ -1287,7 +1287,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.body.appendChild(favoritesModal);
 
     // 渲染收藏夹图标
-    function renderFavorites() {
+    async function renderFavorites() {
         const favoritesGrid = favoritesModal.querySelector('#favoritesGrid');
         favoritesGrid.innerHTML = '';
 
@@ -1296,66 +1296,110 @@ document.addEventListener('DOMContentLoaded', async () => {
             return;
         }
 
-        // 遍历所有分类查找收藏的图标
-        categories.forEach(async category => {
-            if (!category.path) return;
+        // 显示加载状态
+        favoritesGrid.innerHTML = '<div class="loading-favorites">正在加载收藏图标...</div>';
 
-            try {
-                const response = await fetch(`${category.path}/icons.json`);
-                if (!response.ok) return;
+        try {
+            // 创建所有分类的加载 Promise
+            const categoryPromises = categories
+                .filter(category => category.path)
+                .map(async category => {
+                    try {
+                        const response = await fetch(`${category.path}/icons.json`);
+                        if (!response.ok) {
+                            throw new Error(`Failed to load icons for ${category.name}`);
+                        }
 
-                const data = await response.json();
-                const icons = Array.isArray(data) ? data : (data.icons || []);
-                
-                icons.forEach(icon => {
-                    if (favorites.includes(icon.name)) {
-                        fetch(icon.path)
-                            .then(response => response.text())
-                            .then(svgContent => {
-                                const iconItem = document.createElement('div');
-                                iconItem.className = 'favorite-item';
-                                iconItem.innerHTML = `
-                                    <div class="icon-preview">
-                                        ${svgContent}
-                                    </div>
-                                    <div class="icon-name">${icon.name}</div>
-                                    <button class="remove-favorite" title="移除收藏">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M6 6l12 12m0-12L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                        </svg>
-                                    </button>
-                                `;
-
-                                // 设置图标为描边样式
-                                const iconSvg = iconItem.querySelector('.icon-preview svg');
-                                iconSvg.querySelectorAll('path').forEach(path => {
-                                    path.setAttribute('stroke', 'currentColor');
-                                    path.setAttribute('fill', 'none');
-                                    path.style.stroke = 'currentColor';
-                                    path.style.fill = 'none';
-                                });
-
-                                // 移除收藏按钮点击事件
-                                const removeBtn = iconItem.querySelector('.remove-favorite');
-                                removeBtn.addEventListener('click', () => {
-                                    const index = favorites.indexOf(icon.name);
-                                    if (index !== -1) {
-                                        favorites.splice(index, 1);
-                                        localStorage.setItem('favorites', JSON.stringify(favorites));
-                                        favoritesCount.textContent = favorites.length;
-                                        renderFavorites();
-                                        showToast('已从收藏夹移除');
-                                    }
-                                });
-
-                                favoritesGrid.appendChild(iconItem);
-                            });
+                        const data = await response.json();
+                        const icons = Array.isArray(data) ? data : (data.icons || []);
+                        return icons.filter(icon => favorites.includes(icon.name));
+                    } catch (error) {
+                        console.error(`Error loading icons for ${category.name}:`, error);
+                        return [];
                     }
                 });
-            } catch (error) {
-                console.error(`Error loading icons for ${category.name}:`, error);
+
+            // 等待所有分类加载完成
+            const allCategoryIcons = await Promise.all(categoryPromises);
+            const favoriteIcons = allCategoryIcons.flat();
+
+            // 如果没有找到任何收藏的图标
+            if (favoriteIcons.length === 0) {
+                favoritesGrid.innerHTML = '<div class="empty-favorites">无法加载收藏图标，请检查网络连接后重试</div>';
+                return;
             }
-        });
+
+            // 清空加载状态
+            favoritesGrid.innerHTML = '';
+
+            // 创建所有图标的加载 Promise
+            const iconPromises = favoriteIcons.map(async icon => {
+                try {
+                    const response = await fetch(icon.path);
+                    if (!response.ok) {
+                        throw new Error(`Failed to load icon: ${icon.name}`);
+                    }
+
+                    const svgContent = await response.text();
+                    const iconItem = document.createElement('div');
+                    iconItem.className = 'favorite-item';
+                    iconItem.innerHTML = `
+                        <div class="icon-preview">
+                            ${svgContent}
+                        </div>
+                        <div class="icon-name">${icon.name}</div>
+                        <button class="remove-favorite" title="移除收藏">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 6l12 12m0-12L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                    `;
+
+                    // 设置图标为描边样式
+                    const iconSvg = iconItem.querySelector('.icon-preview svg');
+                    iconSvg.querySelectorAll('path').forEach(path => {
+                        path.setAttribute('stroke', 'currentColor');
+                        path.setAttribute('fill', 'none');
+                        path.style.stroke = 'currentColor';
+                        path.style.fill = 'none';
+                    });
+
+                    // 移除收藏按钮点击事件
+                    const removeBtn = iconItem.querySelector('.remove-favorite');
+                    removeBtn.addEventListener('click', () => {
+                        const index = favorites.indexOf(icon.name);
+                        if (index !== -1) {
+                            favorites.splice(index, 1);
+                            localStorage.setItem('favorites', JSON.stringify(favorites));
+                            favoritesCount.textContent = favorites.length;
+                            renderFavorites();
+                            showToast('已从收藏夹移除');
+                        }
+                    });
+
+                    return iconItem;
+                } catch (error) {
+                    console.error(`Error loading icon ${icon.name}:`, error);
+                    return null;
+                }
+            });
+
+            // 等待所有图标加载完成
+            const iconElements = await Promise.all(iconPromises);
+
+            // 过滤掉加载失败的图标并添加到网格中
+            iconElements
+                .filter(element => element !== null)
+                .forEach(element => favoritesGrid.appendChild(element));
+
+            // 如果所有图标都加载失败
+            if (favoritesGrid.children.length === 0) {
+                favoritesGrid.innerHTML = '<div class="empty-favorites">加载收藏图标失败，请检查网络连接后重试</div>';
+            }
+        } catch (error) {
+            console.error('Error rendering favorites:', error);
+            favoritesGrid.innerHTML = '<div class="empty-favorites">加载收藏图标时发生错误，请稍后重试</div>';
+        }
     }
 
     // 下载所有收藏图标
