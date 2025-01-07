@@ -401,7 +401,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                             <svg viewBox="0 0 24 24" width="16" height="16">
                                 <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" fill="currentColor"/>
                             </svg>
-                            下载选中图标
+                            SVG
                         </button>
                         <button class="modal-btn secondary" data-action="png">
                             <svg viewBox="0 0 24 24" width="16" height="16">
@@ -712,26 +712,26 @@ document.addEventListener('DOMContentLoaded', async () => {
                                 favorites.push(icon.name);
                                 favoriteBtn.classList.add('active');
                                 iconItem.classList.add('favorited');
-                                favoriteBtn.title = '已收藏';
+                                favoriteBtn.title = 'Added to favorites';
                                 favoriteBtn.innerHTML = starIcon;
                                 // 更新图标颜色为蓝色
                                 iconSvg.querySelectorAll('path').forEach(path => {
                                     path.setAttribute('stroke', '#1a73e8');
                                     path.style.stroke = '#1a73e8';
                                 });
-                                showToast('已添加到收藏夹');
+                                showToast('Added to favorites');
                             } else {
                                 favorites.splice(index, 1);
                                 favoriteBtn.classList.remove('active');
                                 iconItem.classList.remove('favorited');
-                                favoriteBtn.title = '加入收藏';
+                                favoriteBtn.title = 'Add to favorites';
                                 favoriteBtn.innerHTML = plusIcon;
                                 // 更新图标颜色为默认色
                                 iconSvg.querySelectorAll('path').forEach(path => {
                                     path.setAttribute('stroke', 'currentColor');
                                     path.style.stroke = 'currentColor';
                                 });
-                                showToast('已从收藏夹移除');
+                                showToast('Removed from favorites');
                             }
                             localStorage.setItem('favorites', JSON.stringify(favorites));
                             favoritesCount.textContent = favorites.length;
@@ -744,7 +744,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                             previewModal.innerHTML = `
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h2 class="modal-title">图标预览</h2>
+                                        <h2 class="modal-title">Icon Preview</h2>
                                         <button class="modal-close">&times;</button>
                                     </div>
                                     <div class="modal-body">
@@ -773,7 +773,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                                                     <svg viewBox="0 0 24 24" width="16" height="16">
                                                         <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" fill="currentColor"/>
                                                     </svg>
-                                                    下载选中图标
+                                                    SVG
                                                 </button>
                                                 <button class="modal-btn secondary" data-action="png">
                                                     <svg viewBox="0 0 24 24" width="16" height="16">
@@ -1222,11 +1222,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                 .map(cb => cb.value);
             
             if (selectedCategories.length === 0) {
-                showToast('请至少选择一个分类');
+                showToast('Please select at least one category');
                 return;
             }
 
-            showToast('正在打包图标...');
+            showToast('Packaging icons...');
             const zip = new JSZip();
             const rootFolder = zip.folder("PixIcons");
             
@@ -1260,7 +1260,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         }
                     } catch (error) {
                         console.error(`Error loading icons for ${category.name}: ${error}`);
-                        showToast(`加载 ${category.name} 分类失败`);
+                        showToast(`Failed to load ${category.name} category`);
                     }
                 }
 
@@ -1282,10 +1282,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                 URL.revokeObjectURL(link.href);
                 
                 downloadModal.style.display = 'none';
-                showToast('下载完成');
+                showToast('Download completed');
             } catch (error) {
                 console.error('Error generating zip:', error);
-                showToast('下载失败，请重试');
+                showToast('Download failed, please try again');
             }
         });
     }
@@ -1296,7 +1296,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     favoritesModal.innerHTML = `
         <div class="modal-content">
             <div class="modal-header">
-                <h2>收藏夹</h2>
+                <h2>Favorites</h2>
                 <button class="modal-close">&times;</button>
             </div>
             <div class="modal-body">
@@ -1307,7 +1307,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     <svg viewBox="0 0 24 24" width="16" height="16">
                         <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" fill="currentColor"/>
                     </svg>
-                    下载全部
+                    Download All
                 </button>
             </div>
         </div>
@@ -1320,12 +1320,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         favoritesGrid.innerHTML = '';
 
         if (favorites.length === 0) {
-            favoritesGrid.innerHTML = '<div class="empty-favorites">暂无收藏图标</div>';
+            favoritesGrid.innerHTML = '<div class="empty-favorites">No favorite icons</div>';
             return;
         }
 
         // 显示加载状态
-        favoritesGrid.innerHTML = '<div class="loading-favorites">正在加载收藏图标...</div>';
+        favoritesGrid.innerHTML = '<div class="loading-favorites">Loading favorite icons...</div>';
 
         try {
             // 创建所有分类的加载 Promise
@@ -1353,7 +1353,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             // 如果没有找到任何收藏的图标
             if (favoriteIcons.length === 0) {
-                favoritesGrid.innerHTML = '<div class="empty-favorites">无法加载收藏图标，请检查网络连接后重试</div>';
+                favoritesGrid.innerHTML = '<div class="empty-favorites">Unable to load favorite icons, please check your network connection and try again</div>';
                 return;
             }
 
@@ -1401,7 +1401,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                             localStorage.setItem('favorites', JSON.stringify(favorites));
                             favoritesCount.textContent = favorites.length;
                             renderFavorites();
-                            showToast('已从收藏夹移除');
+                            showToast('Removed from favorites');
                         }
                     });
 
@@ -1433,13 +1433,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     // 下载所有收藏图标
     async function downloadAllFavorites() {
         if (favorites.length === 0) {
-            showToast('暂无收藏图标');
+            showToast('No favorite icons');
             return;
         }
 
-        showToast('正在打包收藏图标...');
+        showToast('Packaging favorite icons...');
         const zip = new JSZip();
-        const rootFolder = zip.folder("收藏图标");
+        const rootFolder = zip.folder("Favorite Icons");
         
         try {
             // 遍历所有分类查找收藏的图标
@@ -1484,10 +1484,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             document.body.removeChild(link);
             URL.revokeObjectURL(link.href);
             
-            showToast('下载完成');
+            showToast('Download completed');
         } catch (error) {
             console.error('Error generating zip:', error);
-            showToast('下载失败，请重试');
+            showToast('Download failed, please try again');
         }
     }
 
