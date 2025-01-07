@@ -398,14 +398,16 @@ document.addEventListener('DOMContentLoaded', async () => {
                     </div>
                     <div class="download-buttons">
                         <button class="modal-btn primary" data-action="svg">
-                            <svg viewBox="0 0 24 24" width="16" height="16">
-                                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" fill="currentColor"/>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.52588 20H18.474" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 5C9 4.44772 9.44772 4 10 4H14C14.5523 4 15 4.44772 15 5V10C15 10.5523 15.4477 11 16 11H18L12.7071 16.2929C12.3166 16.6834 11.6834 16.6834 11.2929 16.2929L6 11H8C8.55228 11 9 10.5523 9 10V5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
                             </svg>
                             SVG
                         </button>
                         <button class="modal-btn secondary" data-action="png">
-                            <svg viewBox="0 0 24 24" width="16" height="16">
-                                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" fill="currentColor"/>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.52588 20H18.474" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 5C9 4.44772 9.44772 4 10 4H14C14.5523 4 15 4.44772 15 5V10C15 10.5523 15.4477 11 16 11H18L12.7071 16.2929C12.3166 16.6834 11.6834 16.6834 11.2929 16.2929L6 11H8C8.55228 11 9 10.5523 9 10V5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
                             </svg>
                             PNG
                         </button>
@@ -770,14 +772,16 @@ document.addEventListener('DOMContentLoaded', async () => {
                                             </div>
                                             <div class="download-buttons">
                                                 <button class="modal-btn primary" data-action="svg">
-                                                    <svg viewBox="0 0 24 24" width="16" height="16">
-                                                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" fill="currentColor"/>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M5.52588 20H18.474" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M9 5C9 4.44772 9.44772 4 10 4H14C14.5523 4 15 4.44772 15 5V10C15 10.5523 15.4477 11 16 11H18L12.7071 16.2929C12.3166 16.6834 11.6834 16.6834 11.2929 16.2929L6 11H8C8.55228 11 9 10.5523 9 10V5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
                                                     </svg>
                                                     SVG
                                                 </button>
                                                 <button class="modal-btn secondary" data-action="png">
-                                                    <svg viewBox="0 0 24 24" width="16" height="16">
-                                                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" fill="currentColor"/>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M5.52588 20H18.474" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M9 5C9 4.44772 9.44772 4 10 4H14C14.5523 4 15 4.44772 15 5V10C15 10.5523 15.4477 11 16 11H18L12.7071 16.2929C12.3166 16.6834 11.6834 16.6834 11.2929 16.2929L6 11H8C8.55228 11 9 10.5523 9 10V5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
                                                     </svg>
                                                     PNG
                                                 </button>
@@ -1304,8 +1308,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             </div>
             <div class="modal-footer">
                 <button class="modal-btn primary" id="downloadAllBtn">
-                    <svg viewBox="0 0 24 24" width="16" height="16">
-                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" fill="currentColor"/>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.52588 20H18.474" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 5C9 4.44772 9.44772 4 10 4H14C14.5523 4 15 4.44772 15 5V10C15 10.5523 15.4477 11 16 11H18L12.7071 16.2929C12.3166 16.6834 11.6834 16.6834 11.2929 16.2929L6 11H8C8.55228 11 9 10.5523 9 10V5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
                     </svg>
                     Download All
                 </button>

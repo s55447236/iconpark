@@ -1586,5 +1586,84 @@ body.dropdown-open {
     fill: currentColor;
 }
 
+/* 按钮基础样式 */
+.modal-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+/* 主按钮样式 */
+.modal-btn.primary {
+    background: #1a73e8;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.modal-btn.primary:hover {
+    background: #1557b0;
+}
+
+.modal-btn.primary svg {
+    width: 16px;
+    height: 16px;
+}
+
+.modal-btn.primary path {
+    stroke: currentColor;
+    stroke-width: 2;
+}
+
+/* 次按钮样式 */
+.modal-btn.secondary {
+    background: #f1f3f4;
+    color: #1a1a1a;
+}
+
+.modal-btn.secondary:hover {
+    background: #e8eaed;
+}
+
+/* 按钮图标样式 */
+.modal-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.modal-btn path {
+    stroke-width: 2;
+}
+
+/* 下载按钮组样式 */
+.download-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+/* 模态框底部样式 */
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px;
+    border-top: 1px solid #e8eaed;
+}
+
 
 
