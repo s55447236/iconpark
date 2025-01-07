@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             </div>
         </div>
         <div class="search-box">
-            <input type="text" id="searchInput" placeholder="搜索图标..." />
+            <input type="text" id="searchInput" placeholder="search icon..." />
             <button id="searchButton">
                 ${searchIcon}
             </button>
