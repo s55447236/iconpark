@@ -226,6 +226,9 @@ h1 {
     z-index: 1100;
     margin-top: 4px;
     padding: 4px 0;
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .category-select.active .category-dropdown {
@@ -1478,6 +1481,11 @@ h1 {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+/* 当下拉框显示时禁用背景滚动 */
+body.dropdown-open {
+    overflow: hidden;
 }
 
 

@@ -728,31 +728,24 @@
     "path": "icons/Editor/palette.svg"
   },
   {
-    "name": "paint-brush",
-    "title": "Paint Brush",
+    "name": "opacity",
+    "title": "Opacity",
     "category": "Editor",
-    "fileName": "paint-brush.svg",
-    "path": "icons/Editor/paint-brush.svg"
+    "fileName": "opacity.svg",
+    "path": "icons/Editor/opacity.svg"
   },
   {
-    "name": "paint-roller",
-    "title": "Paint Roller",
+    "name": "pen-01",
+    "title": "Pen 01",
     "category": "Editor",
-    "fileName": "paint-roller.svg",
-    "path": "icons/Editor/paint-roller.svg"
+    "fileName": "pen-01.svg",
+    "path": "icons/Editor/pen-01.svg"
   },
   {
-    "name": "paragraph-spacing",
-    "title": "Paragraph Spacing",
+    "name": "pen-02",
+    "title": "Pen 02",
     "category": "Editor",
-    "fileName": "paragraph-spacing.svg",
-    "path": "icons/Editor/paragraph-spacing.svg"
-  },
-  {
-    "name": "paragraph",
-    "title": "Paragraph",
-    "category": "Editor",
-    "fileName": "paragraph.svg",
-    "path": "icons/Editor/paragraph.svg"
+    "fileName": "pen-02.svg",
+    "path": "icons/Editor/pen-02.svg"
   }
 ]

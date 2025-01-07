@@ -184,25 +184,42 @@ document.addEventListener('DOMContentLoaded', async () => {
     const categoryOptions = categorySelect.querySelectorAll('.category-option');
 
     // 添加下拉框交互
-    categoryBtn.addEventListener('click', () => {
+    categoryBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); // 阻止事件冒泡
         categorySelect.classList.toggle('active');
         const dropdown = categorySelect.querySelector('.category-dropdown');
+        
         if (categorySelect.classList.contains('active')) {
             const btnRect = categoryBtn.getBoundingClientRect();
+            const containerRect = searchContainer.getBoundingClientRect();
+            
+            // 计算下拉框的位置
             dropdown.style.position = 'fixed';
             dropdown.style.top = `${btnRect.bottom + 4}px`;
             dropdown.style.left = `${btnRect.left}px`;
             dropdown.style.width = `${btnRect.width}px`;
             dropdown.style.zIndex = '1100';
             dropdown.classList.add('show');
+            
+            // 禁用背景滚动
+            document.body.classList.add('dropdown-open');
+            
+            // 计算最大高度
+            const windowHeight = window.innerHeight;
+            const dropdownTop = btnRect.bottom + 4;
+            const maxHeight = windowHeight - dropdownTop - 20; // 20px 作为底部边距
+            dropdown.style.maxHeight = `${Math.min(300, maxHeight)}px`;
         } else {
             dropdown.classList.remove('show');
+            // 恢复背景滚动
+            document.body.classList.remove('dropdown-open');
         }
     });
 
     // 添加分类选择事件
     categoryOptions.forEach(option => {
-        option.addEventListener('click', () => {
+        option.addEventListener('click', (e) => {
+            e.stopPropagation(); // 阻止事件冒泡
             const selectedId = option.dataset.id;
             const selectedName = option.textContent.trim();
             
@@ -216,20 +233,30 @@ document.addEventListener('DOMContentLoaded', async () => {
             // 关闭下拉框
             categorySelect.classList.remove('active');
             categorySelect.querySelector('.category-dropdown').classList.remove('show');
+            // 恢复背景滚动
+            document.body.classList.remove('dropdown-open');
             
             // 触发搜索
             handleSearch();
         });
     });
 
+    // 点击其他区域关闭下拉框
     document.addEventListener('click', (e) => {
         if (!categorySelect.contains(e.target)) {
             categorySelect.classList.remove('active');
             const dropdown = categorySelect.querySelector('.category-dropdown');
             if (dropdown) {
                 dropdown.classList.remove('show');
+                // 恢复背景滚动
+                document.body.classList.remove('dropdown-open');
             }
         }
+    });
+
+    // 阻止下拉框内的滚动传播到背景
+    categorySelect.querySelector('.category-dropdown').addEventListener('wheel', (e) => {
+        e.stopPropagation();
     });
 
     // 优化搜索功能
