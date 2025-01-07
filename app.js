@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // 收藏图标
     const starIcon = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M19.3333 7L9.38956 17L4 11.5913" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>`;
 
     // 加号图标
@@ -695,7 +695,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                         iconItem.innerHTML = `
                             <div class="icon-preview">
-                                ${svgContent}
+                                ${svgContent.replace(/width="[^"]*"/, 'width="20"').replace(/height="[^"]*"/, 'height="20"')}
                             </div>
                             <div class="icon-name">${icon.name}</div>
                             <button class="favorite-btn" title="${favorites.includes(icon.name) ? '已收藏' : '加入收藏'}">
@@ -766,7 +766,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                                     <div class="modal-body">
                                         <div class="preview-section">
                                             <div class="modal-preview">
-                                                ${svgContent}
+                                                ${svgContent.replace(/width="[^"]*"/, 'width="20"').replace(/height="[^"]*"/, 'height="20"')}
                                             </div>
                                             <div class="preview-name">${icon.name}</div>
                                         </div>
@@ -1392,11 +1392,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                     iconItem.className = 'favorite-item';
                     iconItem.innerHTML = `
                         <div class="icon-preview">
-                            ${svgContent}
+                            ${svgContent.replace(/width="[^"]*"/, 'width="20"').replace(/height="[^"]*"/, 'height="20"')}
                         </div>
                         <div class="icon-name">${icon.name}</div>
                         <button class="remove-favorite" title="移除收藏">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6 6l12 12m0-12L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                             </svg>
                         </button>
