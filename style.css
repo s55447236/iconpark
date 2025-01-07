@@ -631,6 +631,7 @@ h1 {
     opacity: 1;
 }
 
+/* 下载按钮 */
 .download-btn {
     composes: btn-base;
     background: #1a73e8;
@@ -652,9 +653,25 @@ h1 {
     stroke-width: 2;
 }
 
-.download-btn path {
-    stroke: currentColor;
-    stroke-width: 2;
+/* 下载全部按钮 */
+.download-all-btn {
+    composes: btn-base;
+    background: #1a73e8;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.download-all-btn:hover {
+    background: #1557b0;
+}
+
+.download-all-btn svg {
+    width: 16px;
+    height: 16px;
 }
 
 /* 导航栏收藏按钮样式更新 */
@@ -1221,52 +1238,24 @@ h1 {
     width: 20px;
     height: 20px;
     color: #1a1a1a;
-}
-
-.nav-btn path {
     stroke: currentColor;
     stroke-width: 2;
     fill: none;
 }
 
 .nav-btn.favorites {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
     padding: 6px 12px;
     border-radius: 6px;
-    background: none;
-    border: none;
-    color: #1a1a1a;
     font-size: 14px;
-    cursor: pointer;
-    transition: all 0.2s ease;
 }
 
-.nav-btn.favorites:hover {
-    background: rgba(0, 0, 0, 0.05);
+.nav-btn.download {
+    padding: 8px 12px;
 }
 
-.nav-btn svg {
-    width: 20px;
-    height: 20px;
-    stroke: currentColor;
-    stroke-width: 2;
-    fill: none;
-}
-
-.nav-btn.download svg,
-.nav-btn.favorites svg,
-.nav-btn.donate svg {
-    color: #1a1a1a;
-}
-
-.nav-btn.download path,
-.nav-btn.favorites path,
-.nav-btn.donate path {
-    stroke: currentColor;
-    stroke-width: 2;
-    fill: none;
+.nav-btn.download svg {
+    width: 16px;
+    height: 16px;
 }
 
 /* 主要按钮 */
@@ -1389,38 +1378,13 @@ h1 {
     height: 36px;
 }
 
-/* 按钮样式 */
-.modal-btn {
-    height: 36px;
-    padding: 0 16px;
-    border: none;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    display: inline-flex;
+/* 控制组样式 */
+.control-group {
+    display: flex;
+    gap: 8px;
     align-items: center;
-    justify-content: center;
-    gap: 6px;
-    transition: all 0.2s;
-}
-
-.modal-btn.primary {
-    background: #1a73e8;
-    color: white;
-}
-
-.modal-btn.primary:hover {
-    background: #1557b0;
-}
-
-.modal-btn.secondary {
-    background: #f3f4f6;
-    color: #333;
-}
-
-.modal-btn.secondary:hover {
-    background: #e5e7eb;
+    position: relative;
+    z-index: 1001;
 }
 
 /* 预览区域样式 */
@@ -1449,15 +1413,6 @@ h1 {
 .preview-name {
     font-size: 20px;
     color: #333;
-}
-
-/* 控制组样式 */
-.control-group {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    position: relative;
-    z-index: 1001;
 }
 
 /* 确保下拉框在其他元素之上 */
