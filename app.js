@@ -38,52 +38,66 @@ document.addEventListener('DOMContentLoaded', async () => {
     // 版本更新记录
     const versionHistory = `
         <div class="version-item">
-            <h3>v2.5.1 (2024-01-03)</h3>
+            <h3>v2.5.2 (2024-01-07)</h3>
             <ul class="update-list">
                 <li class="tag tag-update">UPDATE</li>
-                <li>优化搜索框和分类选择按钮的交互体验</li>
-                <li>改进 hover 和 focus 状态的视觉效果</li>
-                <li>统一控件高度，提升界面一致性</li>
-            </ul>
-            <ul class="add-list">
-                <li class="tag tag-add">ADD</li>
-                <li>新增收藏操作的 Toast 提示</li>
-                <li>优化图标收藏状态的显示效果</li>
+                <li>Improved download button styles and icon consistency</li>
+                <li>Enhanced modal button layouts and interactions</li>
+                <li>Optimized SVG icon rendering in buttons</li>
             </ul>
             <ul class="fix-list">
                 <li class="tag tag-fix">FIX</li>
-                <li>修复分类选择按钮的箭头图标显示问题</li>
-                <li>修复部分图标描边样式不一致的问题</li>
+                <li>Fixed missing download icon in category selection modal</li>
+                <li>Fixed button alignment issues in modals</li>
+            </ul>
+        </div>
+        <div class="version-item">
+            <h3>v2.5.1 (2024-01-03)</h3>
+            <ul class="update-list">
+                <li class="tag tag-update">UPDATE</li>
+                <li>Optimized search bar and category selection button interactions</li>
+                <li>Improved hover and focus state visual effects</li>
+                <li>Unified control heights for better interface consistency</li>
+            </ul>
+            <ul class="add-list">
+                <li class="tag tag-add">ADD</li>
+                <li>Added toast notifications for favorite operations</li>
+                <li>Enhanced favorite icon status display</li>
+            </ul>
+            <ul class="fix-list">
+                <li class="tag tag-fix">FIX</li>
+                <li>Fixed arrow icon display in category selection button</li>
+                <li>Fixed inconsistent icon stroke styles</li>
             </ul>
         </div>
         <div class="version-item">
             <h3>v2.5.0 (2024-01-02)</h3>
             <ul class="add-list">
                 <li class="tag tag-add">ADD</li>
-                <li>新增 122 个图标：copyleft、reply-all、collage、ink-bottle、dashboard-2、dashboard-3、usb、draft、delete-column、delete-row、flow-chart、h-1 到 h-6、insert-column-left、insert-column-right、insert-row-bottom、insert-row-top、merge-cells-horizontal、merge-cells-vertical、mind-map、node-tree、organization-chart、question-mark</li>
+                <li>Added 122 new icons: copyleft, reply-all, collage, ink-bottle, dashboard-2, dashboard-3, usb, draft, delete-column, delete-row, flow-chart, h-1 to h-6, insert-column-left, insert-column-right, insert-row-bottom, insert-row-top, merge-cells-horizontal, merge-cells-vertical, mind-map, node-tree, organization-chart, question-mark</li>
             </ul>
             <ul class="update-list">
                 <li class="tag tag-update">UPDATE</li>
-                <li>根据最新的 logo 样式，重新设计了 discord 和 gitlab 图标</li>
+                <li>Redesigned discord and gitlab icons based on latest logo styles</li>
             </ul>
             <ul class="fix-list">
                 <li class="tag tag-fix">FIX</li>
-                <li>修改了 iconfont 的基线，现在图标应该与文字垂直对齐</li>
+                <li>Modified iconfont baseline for better text alignment</li>
             </ul>
         </div>
         <div class="version-item">
             <h3>v1.0.0 (2024-01-01)</h3>
             <ul class="add-list">
                 <li class="tag tag-add">ADD</li>
-                <li>初始版本发布</li>
-                <li>支持箭头图标组</li>
-                <li>支持通用图标组</li>
-                <li>支持形状图标组</li>
-                <li>支持文件图标组</li>
-                <li>支持图标搜索功能</li>
-                <li>支持图标收藏功能</li>
-                <li>支持 SVG 和 PNG 格式下载</li>
-                <li>支持图标颜色和尺寸调整</li>
+                <li>Initial release</li>
+                <li>Support for arrow icon set</li>
+                <li>Support for general icon set</li>
+                <li>Support for shape icon set</li>
+                <li>Support for file icon set</li>
+                <li>Icon search functionality</li>
+                <li>Icon favorite functionality</li>
+                <li>SVG and PNG format downloads</li>
+                <li>Icon color and size adjustments</li>
             </ul>
         </div>
     `;
@@ -322,7 +336,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     versionModal.innerHTML = `
         <div class="modal-content">
             <div class="modal-header">
-                <h2>版本历史</h2>
+                <h2>Version History</h2>
                 <button class="modal-close">&times;</button>
             </div>
             <div class="modal-body">
